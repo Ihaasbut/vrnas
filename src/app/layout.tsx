@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Chakra_Petch } from "next/font/google";
+import "@/assets/styles/globals.css";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const chakraPetch = Chakra_Petch({
     subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"],
+    style: ["normal", "italic"],
+    display: "swap",
+    variable: "--font-chakra-petch",
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
+const fonts = `${chakraPetch.variable}`;
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -22,10 +23,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            lang="en"
-            className={`${geistSans.variable} ${geistMono.variable}`}
-        >
+        <html lang="en" className={fonts}>
             <body>{children}</body>
         </html>
     );
