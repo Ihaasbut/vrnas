@@ -1,2 +1,13 @@
 .button {
+  @include mobile {
+    background-color: red;
+  }
+
+  @include tablet {
+    background-color: blue;
+  }
+  
+  @include desktop {
+    background-color: green;
+  }
 }
