@@ -1,11 +1,7 @@
 import Button from "@/components/button/Button";
 
 function HomeContent() {
-    return (
-        <div>
-            <Button />
-        </div>
-    );
+  return <Button />;
 }
 
 export default HomeContent;
