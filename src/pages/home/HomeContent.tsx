@@ -1,6 +1,8 @@
 import Button from "@/components/button/Button";
 import styles from "./HomeContent.module.scss";
 
+import cn from "classnames";
+
 function HomeContent() {
     return (
         <div>
