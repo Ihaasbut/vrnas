@@ -7,3 +7,13 @@
 body {
     font-family: var(--font-chakra-petch), sans-serif;
 }
+
+.border-linear {
+    border: 1px solid transparent;
+    border-image: $color-brand 1;
+}
+
+.border-linear-2 {
+    border: 1px solid transparent;
+    border-image: $color-white-fade 1;
+}
