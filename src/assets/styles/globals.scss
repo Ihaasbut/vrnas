@@ -7,3 +7,12 @@
 body {
     font-family: var(--font-chakra-petch), sans-serif;
 }
+
+.text-linear {
+    background: $color-linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
+}
