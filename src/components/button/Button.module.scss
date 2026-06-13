@@ -17,8 +17,7 @@
     cursor: pointer;
     color: $color-white;
     position: relative;
-    z-index: 0;
-    overflow: hidden;
+    width: fit-content;
 
     &::before {
         content: "";

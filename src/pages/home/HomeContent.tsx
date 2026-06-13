@@ -13,11 +13,13 @@ function HomeContent() {
                         Get started
                     </Typography>
                 </Button>
+
                 <Button variant="outline">
                     <Typography variant="button-1" as={"span"}>
                         learn more
                     </Typography>
                 </Button>
+                
                 <Button variant="ghost">
                     <Typography variant="button-2" as={"span"}>
                         Contacts
