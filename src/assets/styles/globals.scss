@@ -6,6 +6,11 @@
 
 body {
     font-family: var(--font-chakra-petch), sans-serif;
+    background-color: $color-black-100;
+}
+
+button {
+    font-family: var(--font-chakra-petch), sans-serif;
 }
 
 .border-brand {
@@ -19,7 +24,7 @@ body {
 }
 
 .text-linear {
-    background: $color-linear;
+    background: $color-brand;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
