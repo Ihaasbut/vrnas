@@ -3,19 +3,19 @@ import { ReactNode } from "react";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 type ContainerProps = {
-  children: ReactNode;
-  inlinePadding?: string;
+    children: ReactNode;
+    inlinePadding?: string;
 };
 
 function Container({ children, inlinePadding }: ContainerProps) {
-  const { isMobile } = useClientBreakpoint();
-  const defaultInlinePadding = isMobile ? "16px" : "120px";
+    const { isDesktop } = useClientBreakpoint();
+    const defaultInlinePadding = !isDesktop ? "16px" : "120px";
 
-  return (
-    <div style={{ paddingInline: inlinePadding || defaultInlinePadding }}>
-      {children}
-    </div>
-  );
+    return (
+        <div style={{ paddingInline: inlinePadding || defaultInlinePadding }}>
+            {children}
+        </div>
+    );
 }
 
 export default Container;

@@ -7,7 +7,7 @@ import Container from "@/components/Container";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 function HomeContent() {
-  const { isMobile } = useClientBreakpoint();
+  const { isDesktop } = useClientBreakpoint();
 
   return (
     <div>
@@ -33,7 +33,7 @@ function HomeContent() {
         </Button>
 
         <div style={{ backgroundColor: "red" }}>
-          <Container inlinePadding={isMobile ? "0" : "120px 0"}>
+          <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
             <div style={{ backgroundColor: "blue" }}>
               <h1>Hello World</h1>
             </div>
