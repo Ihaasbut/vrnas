@@ -3,45 +3,45 @@
 import Button from "@/components/button/Button";
 import Typography from "@/components/typography/Typography";
 import styles from "./HomeContent.module.scss";
-import Container from "@/components/Container";
+import Container from "@/components/container/Container";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 function HomeContent() {
-  const { isDesktop } = useClientBreakpoint();
+    const { isDesktop } = useClientBreakpoint();
 
-  return (
-    <div>
-      <h1 className='text-linear'>Hello World</h1>
+    return (
+        <div>
+            <h1 className="text-linear">Hello World</h1>
 
-      <div className={styles.buttons}>
-        <Button variant='fill'>
-          <Typography variant='button-1' as={"span"}>
-            Get started
-          </Typography>
-        </Button>
+            <div className={styles.buttons}>
+                <Button variant="fill">
+                    <Typography variant="button-1" as={"span"}>
+                        Get started
+                    </Typography>
+                </Button>
 
-        <Button variant='outline'>
-          <Typography variant='button-1' as={"span"}>
-            learn more
-          </Typography>
-        </Button>
+                <Button variant="outline">
+                    <Typography variant="button-1" as={"span"}>
+                        learn more
+                    </Typography>
+                </Button>
 
-        <Button variant='ghost'>
-          <Typography variant='button-2' as={"span"}>
-            Contacts
-          </Typography>
-        </Button>
+                <Button variant="ghost">
+                    <Typography variant="button-2" as={"span"}>
+                        Contacts
+                    </Typography>
+                </Button>
 
-        <div style={{ backgroundColor: "red" }}>
-          <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
-            <div style={{ backgroundColor: "blue" }}>
-              <h1>Hello World</h1>
+                <div style={{ backgroundColor: "red" }}>
+                    <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
+                        <div style={{ backgroundColor: "blue" }}>
+                            <h1>Hello World</h1>
+                        </div>
+                    </Container>
+                </div>
             </div>
-          </Container>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default HomeContent;
