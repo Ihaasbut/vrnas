@@ -14,19 +14,19 @@ function HomeContent() {
             <h1 className="text-linear">Hello World</h1>
 
             <div className={styles.buttons}>
-                <Button variant="fill">
+                <Button variant="fill" onClick={() => {}}>
                     <Typography variant="button-1" as={"span"}>
                         Get started
                     </Typography>
                 </Button>
 
-                <Button variant="outline">
+                <Button variant="outline" onClick={() => {}}>
                     <Typography variant="button-1" as={"span"}>
                         learn more
                     </Typography>
                 </Button>
 
-                <Button variant="ghost">
+                <Button variant="ghost" onClick={() => {}}>
                     <Typography variant="button-2" as={"span"}>
                         Contacts
                     </Typography>
@@ -39,6 +39,15 @@ function HomeContent() {
                         </div>
                     </Container>
                 </div>
+
+                <Button variant="ghost" onClick={() => {}} isSkipPadding>
+                    <div
+                        style={{
+                            width: "40px",
+                            height: "40px",
+                        }}
+                    ></div>
+                </Button>
             </div>
         </div>
     );
