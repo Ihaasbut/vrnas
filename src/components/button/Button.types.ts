@@ -5,5 +5,6 @@ export type ButtonVariant = "fill" | "outline" | "ghost";
 export type ButtonProps = {
     variant: ButtonVariant;
     children: ReactNode;
-    onClick?: () => void;
+    onClick: () => void;
+    isSkipPadding?: boolean;
 };
