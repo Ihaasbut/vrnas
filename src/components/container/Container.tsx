@@ -1,11 +1,5 @@
-import { ReactNode } from "react";
-
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
-
-type ContainerProps = {
-    children: ReactNode;
-    inlinePadding?: string;
-};
+import { ContainerProps } from "./Container.types";
 
 function Container({ children, inlinePadding }: ContainerProps) {
     const { isDesktop } = useClientBreakpoint();
