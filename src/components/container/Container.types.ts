@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
 export type ContainerProps = {
-    children: ReactNode;
-    inlinePadding?: string;
+   children: ReactNode;
+   inlinePadding?: string;
 };

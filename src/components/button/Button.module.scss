@@ -13,62 +13,62 @@
 // }
 
 .button {
-    padding: 18px 38px;
-    cursor: pointer;
-    color: $color-white;
-    position: relative;
-    width: fit-content;
+   padding: 18px 38px;
+   cursor: pointer;
+   color: $color-white;
+   position: relative;
+   width: fit-content;
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: $color-brand;
-        transition: opacity 0.3s ease-in-out;
-        z-index: -1;
-    }
+   &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: $color-brand;
+      transition: opacity 0.3s ease-in-out;
+      z-index: -1;
+   }
 }
 
 .fill {
-    background: transparent;
+   background: transparent;
 
-    &::before {
-        background: $color-brand;
-    }
+   &::before {
+      background: $color-brand;
+   }
 
-    @include hover {
-        &::before {
-            opacity: 0;
-        }
-    }
+   @include hover {
+      &::before {
+         opacity: 0;
+      }
+   }
 }
 
 .outline {
-    background: rgba(255, 255, 255, 0.06);
+   background: rgba(255, 255, 255, 0.06);
 
-    &::before {
-        background: $color-brand;
-        opacity: 0;
-    }
+   &::before {
+      background: $color-brand;
+      opacity: 0;
+   }
 
-    @include hover {
-        &::before {
-            opacity: 1;
-        }
-    }
+   @include hover {
+      &::before {
+         opacity: 1;
+      }
+   }
 }
 
 .ghost {
-    background: transparent;
+   background: transparent;
 
-    &::before {
-        background: $color-brand;
-        opacity: 0;
-    }
+   &::before {
+      background: $color-brand;
+      opacity: 0;
+   }
 
-    @include hover {
-        &::before {
-            opacity: 1;
-        }
-    }
+   @include hover {
+      &::before {
+         opacity: 1;
+      }
+   }
 }

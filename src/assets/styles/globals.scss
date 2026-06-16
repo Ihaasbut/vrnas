@@ -1,35 +1,35 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 body {
-    font-family: var(--font-chakra-petch), sans-serif;
-    background-color: $color-black-100;
-    max-width: 1440px;
-    margin: 0 auto;
+   font-family: var(--font-chakra-petch), sans-serif;
+   background-color: $color-black-100;
+   max-width: 1440px;
+   margin: 0 auto;
 }
 
 button {
-    font-family: var(--font-chakra-petch), sans-serif;
+   font-family: var(--font-chakra-petch), sans-serif;
 }
 
 .border-brand {
-    border: 1px solid transparent;
-    border-image: $color-brand 1;
+   border: 1px solid transparent;
+   border-image: $color-brand 1;
 }
 
 .border-white-fade {
-    border: 1px solid transparent;
-    border-image: $color-white-fade 1;
+   border: 1px solid transparent;
+   border-image: $color-white-fade 1;
 }
 
 .text-linear {
-    background: $color-brand;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    width: max-content;
+   background: $color-brand;
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+   -webkit-text-fill-color: transparent;
+   width: max-content;
 }
