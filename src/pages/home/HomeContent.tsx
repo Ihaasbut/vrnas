@@ -5,6 +5,7 @@ import Typography from "@/components/typography/Typography";
 import styles from "./HomeContent.module.scss";
 import Container from "@/components/container/Container";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+import ArcGlow from "@/components/arc-glow/ArcGlow";
 
 function HomeContent() {
    const { isDesktop } = useClientBreakpoint();
@@ -49,6 +50,15 @@ function HomeContent() {
                ></div>
             </Button>
          </div>
+
+         <ArcGlow
+            config={{
+               width: "300px",
+               height: "300px",
+               left: "20%",
+               top: "0",
+            }}
+         />
       </div>
    );
 }
