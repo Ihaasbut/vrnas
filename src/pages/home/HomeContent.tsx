@@ -5,13 +5,29 @@ import Typography from "@/components/typography/Typography";
 import styles from "./HomeContent.module.scss";
 import Container from "@/components/container/Container";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 import ArcGlow from "@/components/arc-glow/ArcGlow";
 
 function HomeContent() {
    const { isDesktop } = useClientBreakpoint();
 
+   const breadcrumbs = [
+      {
+         title: "Home",
+         link: "/",
+      },
+      {
+         title: "About",
+         link: "/about",
+      },
+      {
+         title: "Contact",
+         link: "/contact",
+      },
+   ];
+
    return (
-      <div>
+      <Container>
          <h1 className="text-linear">Hello World</h1>
 
          <div className={styles.buttons}>
@@ -59,7 +75,17 @@ function HomeContent() {
                top: "0",
             }}
          />
-      </div>
+         <Button variant="ghost" onClick={() => {}} isSkipPadding>
+            <div
+               style={{
+                  width: "40px",
+                  height: "40px",
+               }}
+            ></div>
+         </Button>
+
+         <Breadcrumbs breadcrumbs={breadcrumbs} />
+      </Container>
    );
 }
 

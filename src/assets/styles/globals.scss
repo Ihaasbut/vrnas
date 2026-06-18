@@ -9,6 +9,18 @@ body {
    background-color: $color-black-100;
    max-width: 1440px;
    margin: 0 auto;
+   color: $color-white;
+}
+
+a {
+   color: $color-white;
+   text-decoration: none;
+   -webkit-tap-highlight-color: transparent;
+   user-select: none;
+   -webkit-user-select: none;
+
+   @include hover {
+   }
 }
 
 button {

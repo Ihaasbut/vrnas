@@ -1,0 +1,22 @@
+.breadcrumbs,
+.breadcrumb {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.breadcrumb {
+   &:last-child {
+      overflow: hidden;
+   }
+}
+
+.breadcrumbText {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+.breadcrumb:last-child a {
+   color: $color-grey-1;
+}
