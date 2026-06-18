@@ -2,15 +2,7 @@ import Link from "next/link";
 import BreadcrumbsArrowIcon from "../icons/BreadcrumbsArrowIcon";
 import styles from "./Breadcrumbs.module.scss";
 import Typography from "../typography/Typography";
-
-type Breadcrumb = {
-   title: string;
-   link: string;
-};
-
-type BreadcrumbsProps = {
-   breadcrumbs: Breadcrumb[];
-};
+import { BreadcrumbsProps } from "./Breadcrumbs.types";
 
 function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
    return (
