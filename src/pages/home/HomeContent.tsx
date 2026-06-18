@@ -5,6 +5,7 @@ import Typography from "@/components/typography/Typography";
 import styles from "./HomeContent.module.scss";
 import Container from "@/components/container/Container";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+import ArcGlow from "@/components/arc-glow/ArcGlow";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
 function HomeContent() {
@@ -30,7 +31,7 @@ function HomeContent() {
          <Container>
             <h1 className="text-linear">Hello World</h1>
 
-            {/* <div className={styles.buttons}>
+            <div className={styles.buttons}>
                <Button variant="fill" onClick={() => {}}>
                   <Typography variant="button-1" as={"span"}>
                      Get started
@@ -49,6 +50,14 @@ function HomeContent() {
                   </Typography>
                </Button>
 
+               <div style={{ backgroundColor: "red" }}>
+                  <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
+                     <div style={{ backgroundColor: "blue" }}>
+                        <h1>Hello World</h1>
+                     </div>
+                  </Container>
+               </div>
+
                <Button variant="ghost" onClick={() => {}} isSkipPadding>
                   <div
                      style={{
@@ -57,7 +66,24 @@ function HomeContent() {
                      }}
                   ></div>
                </Button>
-            </div> */}
+            </div>
+
+            <ArcGlow
+               config={{
+                  width: "300px",
+                  height: "300px",
+                  left: "20%",
+                  top: "0",
+               }}
+            />
+            <Button variant="ghost" onClick={() => {}} isSkipPadding>
+               <div
+                  style={{
+                     width: "40px",
+                     height: "40px",
+                  }}
+               ></div>
+            </Button>
 
             <Breadcrumbs breadcrumbs={breadcrumbs} />
          </Container>
