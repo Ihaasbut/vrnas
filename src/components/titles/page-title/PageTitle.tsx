@@ -17,9 +17,11 @@ function PageTitle({ title, breadcrumbs }: PageTitleProps) {
       transform: "translate(-50%, -50%)",
    };
 
+   const currentHeading = isMobile ? "heading-3" : "heading-1";
+
    return (
       <div className={cn(styles["page-title"], "border-brand")}>
-         <Typography variant={isMobile ? "heading-3" : "heading-1"} as="h2">
+         <Typography variant={currentHeading} as="h2">
             {title}
          </Typography>
 

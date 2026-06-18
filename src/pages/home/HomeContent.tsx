@@ -25,8 +25,6 @@ function HomeContent() {
 
    return (
       <Container>
-         {/* <h1 className="text-linear">Hello World</h1> */}
-
          <PageTitle title="About us" breadcrumbs={breadcrumbs} />
 
          <BlockTitle
@@ -35,7 +33,7 @@ function HomeContent() {
             isCenter
          />
 
-         {/* <div className={styles.buttons}>
+         <div className={styles.buttons}>
             <Button variant="fill" onClick={() => {}}>
                <Typography variant="button-1" as={"span"}>
                   Get started
@@ -81,7 +79,7 @@ function HomeContent() {
             ></div>
          </Button>
 
-         <Breadcrumbs breadcrumbs={breadcrumbs} /> */}
+         <Breadcrumbs breadcrumbs={breadcrumbs} />
       </Container>
    );
 }
