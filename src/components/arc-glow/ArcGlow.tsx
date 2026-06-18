@@ -1,5 +1,3 @@
-import Image from "next/image";
-import arcGlowImage from "@/assets/images/arc-glow.svg";
 import styles from "./ArcGlow.module.scss";
 
 type ArcGlowConf = {
@@ -9,6 +7,7 @@ type ArcGlowConf = {
    top?: string;
    right?: string;
    bottom?: string;
+   transform?: string;
 };
 
 type ArcGlowProps = {
@@ -16,7 +15,7 @@ type ArcGlowProps = {
 };
 
 function ArcGlow({ config }: ArcGlowProps) {
-   const { width, height, left, top, right, bottom } = config;
+   const { width, height, left, top, right, bottom, transform } = config;
 
    return (
       <div
@@ -27,15 +26,10 @@ function ArcGlow({ config }: ArcGlowProps) {
             top: top,
             right: right,
             bottom: bottom,
+            transform: transform,
          }}
          className={styles.arcGlow}
-      >
-         <Image
-            src={arcGlowImage}
-            alt="Arc Glow"
-            style={{ objectFit: "contain" }}
-         />
-      </div>
+      ></div>
    );
 }
 
