@@ -51,6 +51,19 @@ function HomeContent() {
                   Contacts
                </Typography>
             </Button>
+               <Button variant="ghost" onClick={() => {}}>
+                  <Typography variant="button-2" as={"span"}>
+                     Contacts
+                  </Typography>
+               </Button>
+
+               <div style={{ backgroundColor: "red" }}>
+                  <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
+                     <div style={{ backgroundColor: "blue" }}>
+                        <h1>Hello World</h1>
+                     </div>
+                  </Container>
+               </div>
 
             <div style={{ backgroundColor: "red" }}>
                <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
@@ -60,6 +73,24 @@ function HomeContent() {
                </Container>
             </div>
 
+               <Button variant="ghost" onClick={() => {}} isSkipPadding>
+                  <div
+                     style={{
+                        width: "40px",
+                        height: "40px",
+                     }}
+                  ></div>
+               </Button>
+            </div>
+
+            <ArcGlow
+               config={{
+                  width: "300px",
+                  height: "300px",
+                  left: "20%",
+                  top: "0",
+               }}
+            />
             <Button variant="ghost" onClick={() => {}} isSkipPadding>
                <div
                   style={{
