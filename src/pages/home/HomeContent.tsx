@@ -8,6 +8,7 @@ import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 import PageTitle from "@/components/titles/page-title/PageTitle";
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
+import ArcGlow from "@/components/arc-glow/ArcGlow";
 
 function HomeContent() {
    const { isDesktop } = useClientBreakpoint();
@@ -51,19 +52,11 @@ function HomeContent() {
                   Contacts
                </Typography>
             </Button>
-               <Button variant="ghost" onClick={() => {}}>
-                  <Typography variant="button-2" as={"span"}>
-                     Contacts
-                  </Typography>
-               </Button>
-
-               <div style={{ backgroundColor: "red" }}>
-                  <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
-                     <div style={{ backgroundColor: "blue" }}>
-                        <h1>Hello World</h1>
-                     </div>
-                  </Container>
-               </div>
+            <Button variant="ghost" onClick={() => {}}>
+               <Typography variant="button-2" as={"span"}>
+                  Contacts
+               </Typography>
+            </Button>
 
             <div style={{ backgroundColor: "red" }}>
                <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
@@ -73,24 +66,14 @@ function HomeContent() {
                </Container>
             </div>
 
-               <Button variant="ghost" onClick={() => {}} isSkipPadding>
-                  <div
-                     style={{
-                        width: "40px",
-                        height: "40px",
-                     }}
-                  ></div>
-               </Button>
+            <div style={{ backgroundColor: "red" }}>
+               <Container inlinePadding={!isDesktop ? "0" : "120px 0"}>
+                  <div style={{ backgroundColor: "blue" }}>
+                     <h1>Hello World</h1>
+                  </div>
+               </Container>
             </div>
 
-            <ArcGlow
-               config={{
-                  width: "300px",
-                  height: "300px",
-                  left: "20%",
-                  top: "0",
-               }}
-            />
             <Button variant="ghost" onClick={() => {}} isSkipPadding>
                <div
                   style={{
@@ -100,6 +83,23 @@ function HomeContent() {
                ></div>
             </Button>
          </div>
+
+         <ArcGlow
+            config={{
+               width: "300px",
+               height: "300px",
+               left: "20%",
+               top: "0",
+            }}
+         />
+         <Button variant="ghost" onClick={() => {}} isSkipPadding>
+            <div
+               style={{
+                  width: "40px",
+                  height: "40px",
+               }}
+            ></div>
+         </Button>
 
          <Button variant="ghost" onClick={() => {}} isSkipPadding>
             <div
