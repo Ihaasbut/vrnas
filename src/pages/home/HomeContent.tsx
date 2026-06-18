@@ -6,7 +6,8 @@ import styles from "./HomeContent.module.scss";
 import Container from "@/components/container/Container";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
-import ArcGlow from "@/components/arc-glow/ArcGlow";
+import PageTitle from "@/components/titles/page-title/PageTitle";
+import BlockTitle from "@/components/titles/block-title/BlockTitle";
 
 function HomeContent() {
    const { isDesktop } = useClientBreakpoint();
@@ -20,17 +21,21 @@ function HomeContent() {
          title: "About",
          link: "/about",
       },
-      {
-         title: "Contact",
-         link: "/contact",
-      },
    ];
 
    return (
       <Container>
-         <h1 className="text-linear">Hello World</h1>
+         {/* <h1 className="text-linear">Hello World</h1> */}
 
-         <div className={styles.buttons}>
+         <PageTitle title="About us" breadcrumbs={breadcrumbs} />
+
+         <BlockTitle
+            title="about us"
+            description="Bring your events to life like never before with our VR services."
+            isCenter
+         />
+
+         {/* <div className={styles.buttons}>
             <Button variant="fill" onClick={() => {}}>
                <Typography variant="button-1" as={"span"}>
                   Get started
@@ -67,14 +72,6 @@ function HomeContent() {
             </Button>
          </div>
 
-         <ArcGlow
-            config={{
-               width: "300px",
-               height: "300px",
-               left: "20%",
-               top: "0",
-            }}
-         />
          <Button variant="ghost" onClick={() => {}} isSkipPadding>
             <div
                style={{
@@ -84,7 +81,7 @@ function HomeContent() {
             ></div>
          </Button>
 
-         <Breadcrumbs breadcrumbs={breadcrumbs} />
+         <Breadcrumbs breadcrumbs={breadcrumbs} /> */}
       </Container>
    );
 }

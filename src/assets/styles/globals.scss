@@ -15,11 +15,9 @@ body {
 a {
    color: $color-white;
    text-decoration: none;
-   -webkit-tap-highlight-color: transparent;
-   user-select: none;
-   -webkit-user-select: none;
 
-   @include hover {
+   &:focus {
+      outline: none;
    }
 }
 
@@ -28,12 +26,10 @@ button {
 }
 
 .border-brand {
-   border: 1px solid transparent;
    border-image: $color-brand 1;
 }
 
 .border-white-fade {
-   border: 1px solid transparent;
    border-image: $color-white-fade 1;
 }
 
