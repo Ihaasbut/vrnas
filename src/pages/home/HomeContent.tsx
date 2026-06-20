@@ -84,14 +84,6 @@ function HomeContent() {
             </Button>
          </div>
 
-         <ArcGlow
-            config={{
-               width: "300px",
-               height: "300px",
-               left: "20%",
-               top: "0",
-            }}
-         />
          <Button variant="ghost" onClick={() => {}} isSkipPadding>
             <div
                style={{

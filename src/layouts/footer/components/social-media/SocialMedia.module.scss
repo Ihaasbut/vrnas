@@ -1,0 +1,21 @@
+.social {
+   width: 45px;
+   height: 45px;
+   min-width: 45px;
+
+   @include mobile {
+      width: 35px;
+      height: 35px;
+      min-width: 35px;
+   }
+}
+
+.socials {
+   display: inline-flex;
+   gap: 20px;
+   align-items: center;
+
+   @include mobile {
+      gap: 15px;
+   }
+}

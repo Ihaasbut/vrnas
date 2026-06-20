@@ -1,0 +1,42 @@
+import { NavProps } from "./Nav.types";
+import styles from "./Nav.module.scss";
+import Typography from "@/components/typography/Typography";
+import Link from "next/link";
+import cn from "classnames";
+
+function Nav({ sections }: NavProps) {
+   return (
+      <div className={styles.sections}>
+         {sections.map((section) => (
+            <div key={section.title} className={styles.section}>
+               <Typography variant="heading-10" as={"h3"}>
+                  {section.title}
+               </Typography>
+
+               <ul className={styles.links}>
+                  {section.links.map((link) => {
+                     const Icon = link.icon;
+
+                     return (
+                        <li key={link.title}>
+                           <Link
+                              href={link.href}
+                              className={cn(styles.link, "default-link")}
+                           >
+                              {Icon && <Icon />}
+
+                              <Typography variant="body-1" as={"span"}>
+                                 {link.title}
+                              </Typography>
+                           </Link>
+                        </li>
+                     );
+                  })}
+               </ul>
+            </div>
+         ))}
+      </div>
+   );
+}
+
+export default Nav;

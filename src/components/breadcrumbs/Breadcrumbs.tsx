@@ -10,7 +10,7 @@ function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
          {breadcrumbs.map((breadcrumb, index) => (
             <div key={breadcrumb.title} className={styles.breadcrumb}>
                {index !== breadcrumbs.length - 1 ? (
-                  <Link href={breadcrumb.link}>
+                  <Link href={breadcrumb.link} className="default-link">
                      <Typography
                         variant="heading-11"
                         as="span"
