@@ -1,0 +1,35 @@
+.sections {
+   display: flex;
+   justify-content: space-between;
+   width: 65%;
+   gap: 30px;
+   flex-wrap: wrap;
+
+   @include mobile {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 100px;
+   }
+}
+
+.section {
+   gap: 16px;
+   display: flex;
+   flex-direction: column;
+}
+
+.links {
+   gap: 16px;
+   display: flex;
+   flex-direction: column;
+}
+
+.link {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+
+.link svg {
+   min-width: 20px;
+}

@@ -1,0 +1,47 @@
+.footer {
+   background-image: url("../../assets/images/footer-background-desktop.webp");
+   background-size: 1011px 498px;
+   background-position: left bottom;
+   background-repeat: no-repeat;
+   padding-top: 115px;
+   padding-bottom: 40px;
+
+   @include mobile {
+      background-image: url("../../assets/images/footer-background-mobile.webp");
+      background-size: 100% auto;
+      padding-top: 92px;
+      padding-bottom: 21px;
+   }
+}
+
+.logo {
+   width: 101px;
+   height: auto;
+}
+
+.left {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 35%;
+   padding-right: 30px;
+
+   @include mobile {
+      flex-direction: row;
+      gap: 52px;
+      align-items: center;
+      justify-content: flex-start;
+   }
+}
+
+.content {
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid transparent;
+   padding-bottom: 33px;
+
+   @include mobile {
+      flex-direction: column;
+      gap: 56px;
+   }
+}
