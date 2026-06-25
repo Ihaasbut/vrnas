@@ -1,1 +1,1 @@
-export const COPYRIGHT_TEXT = "Copyright 2023, All Rights Reserved";
+export const COPYRIGHT_TEXT = "2023. Все права защищены";

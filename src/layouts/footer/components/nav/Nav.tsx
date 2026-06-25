@@ -1,4 +1,4 @@
-import { NavProps } from "./Nav.types";
+import { NavLink, NavLinkSection, NavProps } from "./Nav.types";
 import styles from "./Nav.module.scss";
 import Typography from "@/components/typography/Typography";
 import Link from "next/link";
@@ -7,14 +7,14 @@ import cn from "classnames";
 function Nav({ sections }: NavProps) {
    return (
       <div className={styles.sections}>
-         {sections.map((section) => (
+         {sections.map((section: NavLinkSection) => (
             <div key={section.title} className={styles.section}>
                <Typography variant="heading-10" as={"h3"}>
                   {section.title}
                </Typography>
 
                <ul className={styles.links}>
-                  {section.links.map((link) => {
+                  {section.links.map((link: NavLink) => {
                      const Icon = link.icon;
 
                      return (

@@ -6,60 +6,60 @@ import TelephoneIcon from "@/components/icons/TelephoneIcon";
 export const NAV_SECTIONS: NavProps = {
    sections: [
       {
-         title: "Quicklinks",
+         title: "Быстрые ссылки",
          links: [
             {
-               title: "Home",
+               title: "Главная",
                href: "/",
             },
             {
-               title: "Pricing Plan",
+               title: "Тарифы",
                href: "/about",
             },
             {
-               title: "Service",
+               title: "Услуги",
                href: "/contact",
             },
             {
-               title: "Blog",
+               title: "Блог",
                href: "/about",
             },
             {
-               title: "Our Team",
+               title: "Наша команда",
                href: "/contact",
             },
          ],
       },
       {
-         title: "Support",
+         title: "Поддержка",
          links: [
             {
-               title: "About us",
+               title: "О нас",
                href: "/",
             },
             {
-               title: "Contact us",
+               title: "Связаться с нами",
                href: "/about",
             },
             {
-               title: "FAQ",
+               title: "Частые вопросы",
                href: "/contact",
             },
             {
-               title: "Tems & Conditions",
+               title: "Условия использования",
                href: "/about",
             },
             {
-               title: "Privacy Policy",
+               title: "Политика конфиденциальности",
                href: "/contact",
             },
          ],
       },
       {
-         title: "Need Help?",
+         title: "Нужна помощь?",
          links: [
             {
-               title: "Tanjung Sari Street no.48, Pontianak City",
+               title: "ул. Тверская, д. 12, Москва",
                href: "/",
                icon: LocationIcon,
             },
@@ -69,7 +69,7 @@ export const NAV_SECTIONS: NavProps = {
                icon: MailIcon,
             },
             {
-               title: "+123 456 7890",
+               title: "+7 (495) 782-34-91",
                href: "/contact",
                icon: TelephoneIcon,
             },
