@@ -4,12 +4,12 @@ import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 import { BlockTitleProps } from "./BlockTitle.types";
 
 function BlockTitle({ title, description, isCenter }: BlockTitleProps) {
-   const { isMobile } = useClientBreakpoint();
+   const { isDesktop } = useClientBreakpoint();
 
    const alignItems = isCenter ? "center" : "left";
    const textAlign = isCenter ? "center" : "left";
 
-   const currentHeading = isMobile ? "heading-5" : "heading-2";
+   const currentHeading = !isDesktop ? "heading-5" : "heading-2";
 
    return (
       <div

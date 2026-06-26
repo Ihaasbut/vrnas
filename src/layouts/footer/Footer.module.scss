@@ -5,6 +5,7 @@
    background-repeat: no-repeat;
    padding-top: 115px;
    padding-bottom: 40px;
+   margin-top: 64px;
 
    @include mobile {
       background-image: url("../../assets/images/footer-background-mobile.webp");

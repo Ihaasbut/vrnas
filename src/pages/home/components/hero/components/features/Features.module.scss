@@ -1,0 +1,30 @@
+.features {
+   background-color: $color-black-50;
+   padding: 42px 63px;
+   display: flex;
+   justify-content: space-between;
+   gap: 50px;
+   border: 1px solid transparent;
+
+   @include tablet {
+      flex-direction: column;
+      padding: 36px;
+   }
+}
+
+.feature {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+
+   p {
+      color: $color-grey-1;
+   }
+
+   svg {
+      width: 70px;
+      height: 70px;
+      min-width: 70px;
+      margin-bottom: 30px;
+   }
+}

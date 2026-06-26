@@ -1,5 +1,3 @@
-"use client";
-
 import Copyright from "./components/copyright/Copyright";
 import { COPYRIGHT_TEXT } from "./components/copyright/Copyright.consts";
 import styles from "./Footer.module.scss";

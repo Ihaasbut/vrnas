@@ -7,17 +7,17 @@ import styles from "./PageTitle.module.scss";
 import cn from "classnames";
 
 function PageTitle({ title, breadcrumbs }: PageTitleProps) {
-   const { isMobile } = useClientBreakpoint();
+   const { isDesktop } = useClientBreakpoint();
 
    const PAGE_TITLE_CONFIG = {
-      width: isMobile ? "299px" : "449px",
-      height: isMobile ? "98px" : "147px",
+      width: !isDesktop ? "299px" : "449px",
+      height: !isDesktop ? "98px" : "147px",
       left: "50%",
       top: "50%",
       transform: "translate(-50%, -50%)",
    };
 
-   const currentHeading = isMobile ? "heading-3" : "heading-1";
+   const currentHeading = !isDesktop ? "heading-3" : "heading-1";
 
    return (
       <div className={cn(styles["page-title"], "border-brand")}>

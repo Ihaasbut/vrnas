@@ -65,12 +65,12 @@ export const NAV_SECTIONS: NavProps = {
             },
             {
                title: "Support@VRNas.com",
-               href: "/about",
+               href: "mailto:Support@VRNas.com",
                icon: MailIcon,
             },
             {
                title: "+7 (495) 782-34-91",
-               href: "/contact",
+               href: "tel:+74957823491",
                icon: TelephoneIcon,
             },
          ],

@@ -6,7 +6,7 @@ function Copyright({ text }: CopyrightProps) {
    return (
       <div className={styles.copyright}>
          <Typography variant="body-1" as="p">
-            © {text}
+            {text}
          </Typography>
       </div>
    );
