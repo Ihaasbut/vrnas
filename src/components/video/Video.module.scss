@@ -1,18 +1,9 @@
 .video {
-   width: 196px;
-   height: 128px;
    background: transparent;
    border: none;
    cursor: pointer;
    position: absolute;
-   bottom: 66px;
-   left: 350px;
    transition: transform 0.2s ease-in-out;
-
-   @include tablet {
-      bottom: 144px;
-      left: 0;
-   }
 
    @include hover {
       transform: scale(1.05);

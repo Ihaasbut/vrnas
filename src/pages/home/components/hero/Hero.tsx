@@ -12,7 +12,7 @@ import { HERO_DATA } from "./Hero.const";
 import { HERO_FEATURES_DATA } from "./components/features/Features.consts";
 import Clients from "./components/clients/Clients";
 import { HERO_CLIENTS_DATA } from "./components/clients/Clients.consts";
-import Video from "./components/video/Video";
+import Video from "../../../../components/video/Video";
 
 function Hero() {
    const {
@@ -30,13 +30,20 @@ function Hero() {
    const inlinePadding = !isDesktop ? "16px 0" : "60px";
    const bannerImageCurrent = !isDesktop ? bannerImageMobile : bannerImage;
 
-   const PAGE_TITLE_CONFIG = {
+   const ARC_GLOW_CONFIG = {
       width: !isDesktop ? "289px" : "567px",
       height: !isDesktop ? "163px" : "340px",
       right: "0",
       top: "50%",
       transform: !isDesktop ? "none" : "translateY(-50%)",
       blur: !isDesktop ? "62px" : "76px",
+   };
+
+   const VIDEO_CONFIG = {
+      left: !isDesktop ? "0" : "350px",
+      bottom: !isDesktop ? "144px" : "66px",
+      width: "196px",
+      height: "128px",
    };
 
    return (
@@ -72,10 +79,10 @@ function Hero() {
                      className={styles.banner}
                   />
 
-                  <ArcGlow config={PAGE_TITLE_CONFIG} />
+                  <ArcGlow config={ARC_GLOW_CONFIG} />
                </div>
 
-               <Video />
+               <Video config={VIDEO_CONFIG} />
             </div>
          </Container>
 
