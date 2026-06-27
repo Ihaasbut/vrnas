@@ -1,7 +1,11 @@
+"use client";
+
 import Typography from "@/components/typography/Typography";
-import styles from "./BlockTitle.module.scss";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+
 import { BlockTitleProps } from "./BlockTitle.types";
+
+import styles from "./BlockTitle.module.scss";
 
 function BlockTitle({ title, description, isCenter }: BlockTitleProps) {
    const { isDesktop } = useClientBreakpoint();

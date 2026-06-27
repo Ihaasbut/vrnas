@@ -1,8 +1,11 @@
-import { NavLink, NavLinkSection, NavProps } from "./Nav.types";
-import styles from "./Nav.module.scss";
-import Typography from "@/components/typography/Typography";
 import Link from "next/link";
 import cn from "classnames";
+
+import Typography from "@/components/typography/Typography";
+
+import { NavLink, NavLinkSection, NavProps } from "./Nav.types";
+
+import styles from "./Nav.module.scss";
 
 function Nav({ sections }: NavProps) {
    return (

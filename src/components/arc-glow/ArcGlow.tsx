@@ -1,7 +1,8 @@
 "use client";
 
-import styles from "./ArcGlow.module.scss";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+
+import styles from "./ArcGlow.module.scss";
 
 type ArcGlowConf = {
    width: string;

@@ -1,18 +1,22 @@
 "use client";
 
+import Image from "next/image";
+
+import ArcGlow from "@/components/arc-glow/ArcGlow";
+import Button from "@/components/button/Button";
 import Container from "@/components/container/Container";
-import styles from "./Hero.module.scss";
 import Typography from "@/components/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
-import Button from "@/components/button/Button";
-import Image from "next/image";
-import ArcGlow from "@/components/arc-glow/ArcGlow";
-import Features from "./components/features/Features";
-import { HERO_DATA } from "./Hero.const";
-import { HERO_FEATURES_DATA } from "./components/features/Features.consts";
+
+import Video from "../../../../components/video/Video";
+
 import Clients from "./components/clients/Clients";
 import { HERO_CLIENTS_DATA } from "./components/clients/Clients.consts";
-import Video from "../../../../components/video/Video";
+import Features from "./components/features/Features";
+import { HERO_FEATURES_DATA } from "./components/features/Features.consts";
+import { HERO_DATA } from "./Hero.const";
+
+import styles from "./Hero.module.scss";
 
 function Hero() {
    const {

@@ -1,10 +1,13 @@
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
-import { PageTitleProps } from "./PageTitle.types";
-import Typography from "@/components/typography/Typography";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
-import ArcGlow from "@/components/arc-glow/ArcGlow";
-import styles from "./PageTitle.module.scss";
 import cn from "classnames";
+
+import ArcGlow from "@/components/arc-glow/ArcGlow";
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import Typography from "@/components/typography/Typography";
+import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+
+import { PageTitleProps } from "./PageTitle.types";
+
+import styles from "./PageTitle.module.scss";
 
 function PageTitle({ title, breadcrumbs }: PageTitleProps) {
    const { isDesktop } = useClientBreakpoint();

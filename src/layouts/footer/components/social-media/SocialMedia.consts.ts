@@ -1,9 +1,9 @@
-import { SocialMediaProps } from "./SocialMedia.types";
-
-import GithubIcon from "@/components/icons/social/GithubIcon";
 import FacebookIcon from "@/components/icons/social/FacebookIcon";
-import TwitterIcon from "@/components/icons/social/TwitterIcon";
+import GithubIcon from "@/components/icons/social/GithubIcon";
 import InstagramIcon from "@/components/icons/social/InstagramIcon";
+import TwitterIcon from "@/components/icons/social/TwitterIcon";
+
+import { SocialMediaProps } from "./SocialMedia.types";
 
 export const SOCIAL_MEDIA_ITEMS: SocialMediaProps = {
    socials: [

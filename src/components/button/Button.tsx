@@ -1,6 +1,8 @@
-import styles from "./Button.module.scss";
 import cn from "classnames";
+
 import { ButtonProps } from "./Button.types";
+
+import styles from "./Button.module.scss";
 
 function Button({
    children,

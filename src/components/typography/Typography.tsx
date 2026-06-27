@@ -1,6 +1,8 @@
-import styles from "./Typography.module.scss";
 import cn from "classnames";
+
 import { TypographyProps } from "./Typography.types";
+
+import styles from "./Typography.module.scss";
 
 function Typography({
    as: Component = "p",

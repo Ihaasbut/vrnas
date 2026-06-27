@@ -1,8 +1,11 @@
 import Link from "next/link";
+
 import BreadcrumbsArrowIcon from "../icons/BreadcrumbsArrowIcon";
-import styles from "./Breadcrumbs.module.scss";
 import Typography from "../typography/Typography";
+
 import { BreadcrumbsProps } from "./Breadcrumbs.types";
+
+import styles from "./Breadcrumbs.module.scss";
 
 function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
    return (

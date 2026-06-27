@@ -1,7 +1,10 @@
-import { HeroFeature, HeroFeaturesProps } from "./Features.types";
-import styles from "./Features.module.scss";
 import cn from "classnames";
+
 import Typography from "@/components/typography/Typography";
+
+import { HeroFeature, HeroFeaturesProps } from "./Features.types";
+
+import styles from "./Features.module.scss";
 
 function Features({ features }: HeroFeaturesProps) {
    return (

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Chakra_Petch } from "next/font/google";
-import "@/assets/styles/globals.scss";
+
 import Footer from "@/layouts/footer/Footer";
 import Header from "@/layouts/header/Header";
+
 import ClientLayoutGate from "../layouts/ClientLayoutGate";
+
+import "@/assets/styles/globals.scss";
 
 const chakraPetch = Chakra_Petch({
    subsets: ["latin"],

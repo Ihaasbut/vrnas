@@ -1,12 +1,12 @@
 .hero {
-   background-image: url("../../../../assets/images/hero/hero-bg-left-bottom-desktop.svg");
+   background-image: url("../../../../assets/images/home/hero/hero-bg-left-bottom-desktop.svg");
    background-size: 1100px auto;
    background-position: 0% 70%;
    background-repeat: no-repeat;
    overflow: hidden;
 
    @include tablet {
-      background-image: url("../../../../assets/images/hero/hero-bg-left-bottom-mobile.svg");
+      background-image: url("../../../../assets/images/home/hero/hero-bg-left-bottom-mobile.svg");
       background-size: 100% auto;
       background-position: 0% 22%;
    }
