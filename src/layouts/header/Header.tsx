@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
-
-import Logo from "@/assets/images/Logo.webp";
+import styles from "./Header.module.scss";
+import Image from "next/image";
+import Logo from "@/assets/images/logo.webp";
+import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 import Button from "@/components/button/Button";
 import Container from "@/components/container/Container";
 import Typography from "@/components/typography/Typography";
@@ -42,7 +44,7 @@ function Header() {
          <Container>
             <div className={styles.header}>
                <Link href="/">
-                  <Image src={Logo} alt="logo" className={styles.logo} />
+                  <Image src={Logo} alt="Логотип" className={styles.logo} />
                </Link>
 
                {isDesktop && <Nav navLinks={NAV_LINKS.navLinks} />}

@@ -74,13 +74,13 @@ ul {
 }
 
 .page-bg {
-   background-image: url("../../assets/images/page-bg-top-right-desktop.svg");
+   background-image: url("../../assets/images/page-bg-top-right-desk.svg");
    background-size: 780px auto;
    background-position: top right;
    background-repeat: no-repeat;
 
    @include tablet {
-      background-image: url("../../assets/images/page-bg-top-right-mobile.svg");
+      background-image: url("../../assets/images/page-bg-top-right-mob.svg");
       background-size: 90% auto;
    }
 }
