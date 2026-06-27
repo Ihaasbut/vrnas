@@ -6,7 +6,7 @@ import SocialMedia from "./components/social-media/SocialMedia";
 import Container from "@/components/container/Container";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/assets/images/Logo.webp";
+import Logo from "@/assets/images/logo.webp";
 import Nav from "./components/nav/Nav";
 import { NAV_SECTIONS } from "./components/nav/Nav.consts";
 import cn from "classnames";
@@ -18,7 +18,7 @@ function Footer() {
             <div className={cn(styles.content, "border-brand")}>
                <div className={styles.left}>
                   <Link href="/">
-                     <Image src={Logo} alt="logo" className={styles.logo} />
+                     <Image src={Logo} alt="Логотип" className={styles.logo} />
                   </Link>
 
                   <SocialMedia socials={SOCIAL_MEDIA_ITEMS.socials} />
