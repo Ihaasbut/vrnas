@@ -3,6 +3,7 @@ import { Chakra_Petch } from "next/font/google";
 import "@/assets/styles/globals.scss";
 import Footer from "@/layouts/footer/Footer";
 import Header from "@/layouts/header/Header";
+import ClientLayoutGate from "../layouts/ClientLayoutGate";
 
 const chakraPetch = Chakra_Petch({
    subsets: ["latin"],
@@ -27,9 +28,13 @@ export default function RootLayout({
    return (
       <html lang="en" className={fonts}>
          <body>
-            <Header />
-            {children}
-            <Footer />
+            <ClientLayoutGate>
+               <div className="page-bg">
+                  <Header />
+                  {children}
+                  <Footer />
+               </div>
+            </ClientLayoutGate>
          </body>
       </html>
    );

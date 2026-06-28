@@ -1,13 +1,8 @@
 .arcGlow {
    position: absolute;
-   filter: blur(42px);
    z-index: -1;
    background-image: url("../../assets/images/arc-glow.svg");
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-
-   @include mobile {
-      filter: blur(32px);
-   }
 }

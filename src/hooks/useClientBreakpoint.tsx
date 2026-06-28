@@ -30,8 +30,13 @@ function readClientDeviceState(): ClientDeviceState {
 }
 
 export function useClientBreakpoint(): ClientDeviceState {
+   const deviceState =
+      typeof window !== "undefined"
+         ? DEFAULT_DEVICE_STATE
+         : readClientDeviceState();
+
    const [clientDeviceState, setClientDeviceState] =
-      useState(DEFAULT_DEVICE_STATE);
+      useState<ClientDeviceState>(deviceState);
 
    useEffect(() => {
       const handleChange = () => setClientDeviceState(readClientDeviceState());

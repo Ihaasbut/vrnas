@@ -1,4 +1,7 @@
+"use client";
+
 import styles from "./ArcGlow.module.scss";
+import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 type ArcGlowConf = {
    width: string;
@@ -8,6 +11,7 @@ type ArcGlowConf = {
    right?: string;
    bottom?: string;
    transform?: string;
+   blur?: string;
 };
 
 type ArcGlowProps = {
@@ -15,7 +19,18 @@ type ArcGlowProps = {
 };
 
 function ArcGlow({ config }: ArcGlowProps) {
-   const { width, height, left, top, right, bottom, transform } = config;
+   const { isDesktop } = useClientBreakpoint();
+
+   const {
+      width,
+      height,
+      left,
+      top,
+      right,
+      bottom,
+      transform,
+      blur = !isDesktop ? "32px" : "42px",
+   } = config;
 
    return (
       <div
@@ -27,6 +42,7 @@ function ArcGlow({ config }: ArcGlowProps) {
             right: right,
             bottom: bottom,
             transform: transform,
+            filter: `blur(${blur})`,
          }}
          className={styles.arcGlow}
       ></div>
