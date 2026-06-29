@@ -42,7 +42,7 @@ function AboutUs() {
             <div className={styles.main}>
                <div className={styles.left}>
                   <div className={styles.leftWrapper}>
-                     <ArcGlow config={ARC_GLOW_CONFIG} />
+                     <ArcGlow className={styles.arcGlow} />
 
                      <div className={styles.image}>
                         <Image

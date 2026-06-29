@@ -83,3 +83,17 @@
    height: 100%;
    object-fit: contain;
 }
+
+.arcGlow {
+   width: 600px;
+   height: 180px;
+   left: 50%;
+   top: 51%;
+   transform: translate(-50%, -50%);
+   filter: blur(86px);
+
+   @include tablet {
+      width: 495px;
+      height: 170px;
+   }
+}

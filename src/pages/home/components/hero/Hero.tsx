@@ -34,15 +34,6 @@ function Hero() {
    const inlinePadding = !isDesktop ? "16px 0" : "60px";
    const bannerImageCurrent = !isDesktop ? bannerImageMobile : bannerImage;
 
-   const ARC_GLOW_CONFIG = {
-      width: !isDesktop ? "289px" : "567px",
-      height: !isDesktop ? "163px" : "340px",
-      right: "0",
-      top: "50%",
-      transform: !isDesktop ? "none" : "translateY(-50%)",
-      blur: !isDesktop ? "62px" : "76px",
-   };
-
    const VIDEO_CONFIG = {
       left: !isDesktop ? "0" : "350px",
       bottom: !isDesktop ? "144px" : "66px",
@@ -82,8 +73,7 @@ function Hero() {
                      alt={bannerAlt}
                      className={styles.banner}
                   />
-
-                  <ArcGlow config={ARC_GLOW_CONFIG} />
+                  <ArcGlow className={styles.arcGlow} />{" "}
                </div>
 
                <Video config={VIDEO_CONFIG} />
