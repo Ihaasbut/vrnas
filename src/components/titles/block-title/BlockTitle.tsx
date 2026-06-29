@@ -27,7 +27,7 @@ function BlockTitle({ title, description, isCenter }: BlockTitleProps) {
             {title}
          </Typography>
 
-         <Typography variant={currentHeading} as="p">
+         <Typography variant={currentHeading} as="h4">
             {description}
          </Typography>
       </div>

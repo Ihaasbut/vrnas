@@ -3,7 +3,7 @@
    background-size: 1100px auto;
    background-position: 0% 70%;
    background-repeat: no-repeat;
-   overflow: hidden;
+   overflow-x: clip;
 
    @include tablet {
       background-image: url("../../../../assets/images/home/hero/hero-bg-left-bottom-mobile.svg");
@@ -55,7 +55,6 @@
 
 .right {
    height: 626px;
-   position: relative;
 
    @include tablet {
       height: 422px;
@@ -67,4 +66,6 @@
    width: 100%;
    object-fit: contain;
    object-position: bottom;
+   position: relative;
+   z-index: 5;
 }

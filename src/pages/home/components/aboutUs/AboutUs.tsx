@@ -1,21 +1,39 @@
+"use client";
+
 import Image from "next/image";
 
-import aboutUsImage from "@/assets/images/home/aboutUs/about-us-man.webp";
+import aboutUsManImage from "@/assets/images/home/aboutUs/about-us-man.webp";
+import ArcGlow from "@/components/arc-glow/ArcGlow";
+import Button from "@/components/button/Button";
 import Container from "@/components/container/Container";
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
 import Typography from "@/components/typography/Typography";
 import Video from "@/components/video/Video";
+import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
-import { ABOUT_US_CONFIG } from "./About.consts";
+import List from "./components/list/List";
+import { ABOUT_US_LIST_ITEMS } from "./components/list/List.consts";
+import { ABOUT_US_CONFIG } from "./AboutUs.consts";
 
 import styles from "./AboutUs.module.scss";
 
 function AboutUs() {
+   const { isDesktop } = useClientBreakpoint();
+
    const VIDEO_CONFIG = {
-      left: "0",
-      bottom: "0",
-      width: "100%",
-      height: "100%",
+      right: !isDesktop ? "0" : "6%",
+      bottom: "-22px",
+      width: !isDesktop ? "147px" : "196px",
+      height: !isDesktop ? "97px" : "127px",
+   };
+
+   const ARC_GLOW_CONFIG = {
+      width: !isDesktop ? "495px" : "600px",
+      height: !isDesktop ? "170px" : "140px",
+      left: "50%",
+      top: "51%",
+      transform: "translate(-50%, -50%)",
+      blur: "86px",
    };
 
    return (
@@ -23,11 +41,19 @@ function AboutUs() {
          <Container>
             <div className={styles.main}>
                <div className={styles.left}>
-                  <div className={styles.image}>
-                     <Image src={aboutUsImage} alt="About Us" />
-                  </div>
+                  <div className={styles.leftWrapper}>
+                     <ArcGlow config={ARC_GLOW_CONFIG} />
 
-                  <Video config={VIDEO_CONFIG} />
+                     <div className={styles.image}>
+                        <Image
+                           src={aboutUsManImage}
+                           alt="О нас"
+                           className={styles.imageMan}
+                        />
+                     </div>
+
+                     <Video config={VIDEO_CONFIG} />
+                  </div>
                </div>
 
                <div className={styles.right}>
@@ -39,6 +65,14 @@ function AboutUs() {
                   <Typography variant="body-1" as="p">
                      {ABOUT_US_CONFIG.text}
                   </Typography>
+
+                  <List items={ABOUT_US_LIST_ITEMS.items} />
+
+                  <Button variant="fill" onClick={() => {}}>
+                     <Typography variant="button-1" as="span">
+                        Читать подробнее
+                     </Typography>
+                  </Button>
                </div>
             </div>
          </Container>
