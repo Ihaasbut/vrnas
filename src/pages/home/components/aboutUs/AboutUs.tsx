@@ -27,15 +27,6 @@ function AboutUs() {
       height: !isDesktop ? "97px" : "127px",
    };
 
-   const ARC_GLOW_CONFIG = {
-      width: !isDesktop ? "495px" : "600px",
-      height: !isDesktop ? "170px" : "140px",
-      left: "50%",
-      top: "51%",
-      transform: "translate(-50%, -50%)",
-      blur: "86px",
-   };
-
    return (
       <section className={styles.aboutUs}>
          <Container>
