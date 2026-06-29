@@ -87,3 +87,15 @@
       transform: none;
    }
 }
+
+.video {
+   left: 350px;
+   bottom: 66px;
+   width: 196px;
+   height: 128px;
+
+   @include tablet {
+      left: 0;
+      bottom: 144px;
+   }
+}

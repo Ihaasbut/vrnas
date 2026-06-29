@@ -34,13 +34,6 @@ function Hero() {
    const inlinePadding = !isDesktop ? "16px 0" : "60px";
    const bannerImageCurrent = !isDesktop ? bannerImageMobile : bannerImage;
 
-   const VIDEO_CONFIG = {
-      left: !isDesktop ? "0" : "350px",
-      bottom: !isDesktop ? "144px" : "66px",
-      width: "196px",
-      height: "128px",
-   };
-
    return (
       <div className={styles.hero}>
          <Container inlinePadding={inlinePadding}>
@@ -73,10 +66,10 @@ function Hero() {
                      alt={bannerAlt}
                      className={styles.banner}
                   />
-                  <ArcGlow className={styles.arcGlow} />{" "}
+                  <ArcGlow className={styles.arcGlow} />
                </div>
 
-               <Video config={VIDEO_CONFIG} />
+               <Video className={styles.video} />
             </div>
          </Container>
 

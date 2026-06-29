@@ -97,3 +97,16 @@
       height: 170px;
    }
 }
+
+.video {
+   right: 6%;
+   bottom: -22px;
+   width: 196px;
+   height: 127px;
+
+   @include tablet {
+      width: 147px;
+      height: 97px;
+      right: 0;
+   }
+}
