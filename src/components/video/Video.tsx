@@ -1,27 +1,16 @@
 import Image from "next/image";
+import cn from "classnames";
 
 import videoImage from "@/assets/images/home/hero/hero-video.webp";
 import videoPlayIcon from "@/assets/images/video-play.svg";
 
-import { VideoConfig } from "./Video.types";
+import { VideoProps } from "./Video.types";
 
 import styles from "./Video.module.scss";
 
-function Video({ config }: VideoConfig) {
-   const { left, right, bottom, top, width, height } = config;
-
+function Video({ className }: VideoProps) {
    return (
-      <button
-         className={styles.video}
-         style={{
-            left: left,
-            top: top,
-            right: right,
-            bottom: bottom,
-            width: width,
-            height: height,
-         }}
-      >
+      <button className={cn(styles.video, className)}>
          <div className={styles.wrapper}>
             <Image src={videoImage} alt="Видео" className={styles.videoImage} />
 

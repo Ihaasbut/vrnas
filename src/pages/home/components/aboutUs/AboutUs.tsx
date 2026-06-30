@@ -9,7 +9,6 @@ import Container from "@/components/container/Container";
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
 import Typography from "@/components/typography/Typography";
 import Video from "@/components/video/Video";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import List from "./components/list/List";
 import { ABOUT_US_LIST_ITEMS } from "./components/list/List.consts";
@@ -18,15 +17,6 @@ import { ABOUT_US_CONFIG } from "./AboutUs.consts";
 import styles from "./AboutUs.module.scss";
 
 function AboutUs() {
-   const { isDesktop } = useClientBreakpoint();
-
-   const VIDEO_CONFIG = {
-      right: !isDesktop ? "0" : "6%",
-      bottom: "-22px",
-      width: !isDesktop ? "147px" : "196px",
-      height: !isDesktop ? "97px" : "127px",
-   };
-
    return (
       <section className={styles.aboutUs}>
          <Container>
@@ -43,7 +33,7 @@ function AboutUs() {
                         />
                      </div>
 
-                     <Video config={VIDEO_CONFIG} />
+                     <Video className={styles.video} />
                   </div>
                </div>
 
