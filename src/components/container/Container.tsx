@@ -1,6 +1,7 @@
 "use client";
 
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+
 import { ContainerProps } from "./Container.types";
 
 function Container({ children, inlinePadding }: ContainerProps) {

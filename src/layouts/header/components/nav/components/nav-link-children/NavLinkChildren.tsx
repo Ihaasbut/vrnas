@@ -1,9 +1,11 @@
 import Link from "next/link";
 import cn from "classnames";
+
 import Typography from "@/components/typography/Typography";
 
-import styles from "./NavLinkChildren.module.scss";
 import { NavLinkChild, NavLinkChildrenProps } from "./NavLinkChildren.types";
+
+import styles from "./NavLinkChildren.module.scss";
 
 function NavLinkChildren({
    childrenLinks,

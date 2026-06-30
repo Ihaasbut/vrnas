@@ -1,13 +1,16 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import styles from "./Nav.module.scss";
-import { NavLink, NavProps } from "./Nav.types";
+import Link from "next/link";
 import cn from "classnames";
-import Typography from "@/components/typography/Typography";
-import NavLinkChildren from "./components/nav-link-children/NavLinkChildren";
+
 import HeaderArrowIcon from "@/components/icons/social/HeaderArrowIcon";
+import Typography from "@/components/typography/Typography";
+
+import NavLinkChildren from "./components/nav-link-children/NavLinkChildren";
+import { NavLink, NavProps } from "./Nav.types";
+
+import styles from "./Nav.module.scss";
 
 function Nav({ navLinks }: NavProps) {
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);

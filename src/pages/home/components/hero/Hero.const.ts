@@ -1,6 +1,7 @@
+import bannerImage from "@/assets/images/home/hero/hero-banner.webp";
+import bannerImageMobile from "@/assets/images/home/hero/hero-banner-mobile.webp";
+
 import { HeroData } from "./Hero.types";
-import bannerImage from "@/assets/images/hero/hero-banner.webp";
-import bannerImageMobile from "@/assets/images/hero/hero-banner-mobile.webp";
 
 export const HERO_DATA: HeroData = {
    title: "Погрузи себя\nв мир VR",

@@ -1,12 +1,12 @@
 .hero {
-   background-image: url("../../../../assets/images/hero/hero-bg-left-bottom-desktop.svg");
+   background-image: url("../../../../assets/images/home/hero/hero-bg-left-bottom-desktop.svg");
    background-size: 1100px auto;
    background-position: 0% 70%;
    background-repeat: no-repeat;
-   overflow: hidden;
+   overflow-x: clip;
 
    @include tablet {
-      background-image: url("../../../../assets/images/hero/hero-bg-left-bottom-mobile.svg");
+      background-image: url("../../../../assets/images/home/hero/hero-bg-left-bottom-mobile.svg");
       background-size: 100% auto;
       background-position: 0% 22%;
    }
@@ -67,4 +67,23 @@
    width: 100%;
    object-fit: contain;
    object-position: bottom;
+   position: relative;
+   z-index: 5;
+}
+
+.arcGlow {
+   width: 100%;
+   height: 50%;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   filter: blur(76px);
+
+   @include tablet {
+      top: 37%;
+      filter: blur(62px);
+      width: 289px;
+      height: 242px;
+      transform: none;
+   }
 }

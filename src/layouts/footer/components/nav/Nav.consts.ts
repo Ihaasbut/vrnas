@@ -1,7 +1,8 @@
-import { NavProps } from "./Nav.types";
 import LocationIcon from "@/components/icons/LocationIcon";
 import MailIcon from "@/components/icons/MailIcon";
 import TelephoneIcon from "@/components/icons/TelephoneIcon";
+
+import { NavProps } from "./Nav.types";
 
 export const NAV_SECTIONS: NavProps = {
    sections: [

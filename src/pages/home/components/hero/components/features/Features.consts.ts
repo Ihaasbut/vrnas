@@ -1,6 +1,7 @@
 import CustomizationIcon from "@/components/icons/hero/CustomizationIcon";
 import ExpertiseIcon from "@/components/icons/hero/ExpertiseIcon";
 import ServiceIcon from "@/components/icons/hero/ServiceIcon";
+
 import { HeroFeaturesProps } from "./Features.types";
 
 export const HERO_FEATURES_DATA: HeroFeaturesProps = {

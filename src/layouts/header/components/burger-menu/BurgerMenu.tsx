@@ -1,4 +1,5 @@
 import Button from "@/components/button/Button";
+
 import styles from "./BurgerMenu.module.scss";
 
 function BurgerMenu() {

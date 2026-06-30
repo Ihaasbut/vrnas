@@ -7,4 +7,5 @@ export type ButtonProps = {
    children: ReactNode;
    onClick: () => void;
    isSkipPadding?: boolean;
+   className?: string;
 };

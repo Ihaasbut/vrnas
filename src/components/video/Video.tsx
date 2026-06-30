@@ -1,8 +1,11 @@
 import Image from "next/image";
-import styles from "./Video.module.scss";
-import videoImage from "@/assets/images/hero/hero-video.webp";
+
+import videoImage from "@/assets/images/home/hero/hero-video.webp";
 import videoPlayIcon from "@/assets/images/video-play.svg";
+
 import { VideoConfig } from "./Video.types";
+
+import styles from "./Video.module.scss";
 
 function Video({ config }: VideoConfig) {
    const { left, right, bottom, top, width, height } = config;
