@@ -1,6 +1,8 @@
 import Image from "next/image";
+
 import videoImage from "@/assets/images/home/hero/hero-video.webp";
 import videoPlayIcon from "@/assets/images/video-play.svg";
+
 import { VideoConfig } from "./Video.types";
 
 import styles from "./Video.module.scss";

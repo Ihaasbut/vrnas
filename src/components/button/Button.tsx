@@ -9,10 +9,16 @@ function Button({
    variant,
    onClick,
    isSkipPadding = false,
+   className = "",
 }: ButtonProps) {
    return (
       <button
-         className={cn(styles.button, styles[variant], "border-brand")}
+         className={cn(
+            styles.button,
+            styles[variant],
+            "border-brand",
+            className,
+         )}
          onClick={onClick}
          style={{ ...(isSkipPadding && { padding: 0 }) }}
       >

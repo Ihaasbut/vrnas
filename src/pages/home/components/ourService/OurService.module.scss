@@ -1,0 +1,46 @@
+.ourService {
+   margin-top: 150px;
+   overflow-x: clip;
+
+   @include tablet {
+      margin-top: 105px;
+   }
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 30px;
+
+   @include tablet {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+   }
+}
+
+.textWrapper {
+   width: 60%;
+   position: relative;
+
+   p {
+      color: $color-grey-1;
+   }
+
+   @include tablet {
+      width: 100%;
+   }
+}
+
+.arcGlow {
+   width: 454px;
+   height: 199px;
+   right: -16%;
+   top: 0;
+   filter: blur(86px);
+
+   @include tablet {
+      display: none;
+   }
+}
