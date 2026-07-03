@@ -45,6 +45,7 @@
    gap: 60px;
    border: 1px solid transparent;
    position: relative;
+   text-decoration: none;
 
    &:nth-child(3n + 2) {
       transform: translateY(57px);
@@ -81,5 +82,9 @@
 
    p {
       color: $color-grey-1;
+   }
+
+   h5 {
+      color: $color-white;
    }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import cn from "classnames";
 
 import Button from "@/components/button/Button";
@@ -16,7 +17,8 @@ function Services() {
       <div className={styles.services}>
          {SERVICES_DATA.services.map((service: Service) => {
             return (
-               <div
+               <Link
+                  href={service.link}
                   className={cn(styles.service, "border-white-fade")}
                   key={service.title}
                >
@@ -43,7 +45,7 @@ function Services() {
                         </Typography>
                      </Button>
                   </div>
-               </div>
+               </Link>
             );
          })}
       </div>
