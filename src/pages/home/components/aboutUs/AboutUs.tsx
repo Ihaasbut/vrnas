@@ -1,14 +1,13 @@
 "use client";
 
 import aboutUsManImage from "@/assets/images/home/aboutUs/about-us-man.webp";
-import Button from "@/components/button/Button";
-import Container from "@/components/container/Container";
 import ImgTextBlock from "@/components/ImgTextBlock/ImgTextBlock";
-import Typography from "@/components/typography/Typography";
+import List from "@/components/list/List";
+import Button from "@/components/ui/button/Button";
+import Container from "@/components/ui/container/Container";
+import Typography from "@/components/ui/typography/Typography";
 
-import List from "./components/list/List";
-import { ABOUT_US_LIST_ITEMS } from "./components/list/List.consts";
-import { ABOUT_US_CONFIG } from "./AboutUs.consts";
+import { ABOUT_US_CONFIG, ABOUT_US_LIST_ITEMS } from "./AboutUs.consts";
 
 import styles from "./AboutUs.module.scss";
 

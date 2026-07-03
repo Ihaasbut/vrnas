@@ -1,7 +1,7 @@
-import FacebookIcon from "@/components/icons/social/FacebookIcon";
-import GithubIcon from "@/components/icons/social/GithubIcon";
-import InstagramIcon from "@/components/icons/social/InstagramIcon";
-import TwitterIcon from "@/components/icons/social/TwitterIcon";
+import FacebookIcon from "@/components/ui/icons/social/FacebookIcon";
+import GithubIcon from "@/components/ui/icons/social/GithubIcon";
+import InstagramIcon from "@/components/ui/icons/social/InstagramIcon";
+import TwitterIcon from "@/components/ui/icons/social/TwitterIcon";
 
 import { SocialMediaProps } from "./SocialMedia.types";
 

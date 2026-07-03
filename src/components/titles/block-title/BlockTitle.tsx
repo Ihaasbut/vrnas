@@ -1,6 +1,6 @@
 "use client";
 
-import Typography from "@/components/typography/Typography";
+import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import { BlockTitleProps } from "./BlockTitle.types";

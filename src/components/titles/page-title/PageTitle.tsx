@@ -1,8 +1,8 @@
 import cn from "classnames";
 
-import ArcGlow from "@/components/arc-glow/ArcGlow";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
-import Typography from "@/components/typography/Typography";
+import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
+import Breadcrumbs from "@/components/ui/breadcrumbs/Breadcrumbs";
+import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import { PageTitleProps } from "./PageTitle.types";

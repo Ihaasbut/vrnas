@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import HeroClientsIcon from "@/components/icons/hero/HeroClientsIcon";
-import Typography from "@/components/typography/Typography";
+import HeroClientsIcon from "@/components/ui/icons/hero/HeroClientsIcon";
+import Typography from "@/components/ui/typography/Typography";
 
 import { HeroClientImage, HeroClientsProps } from "./Clients.types";
 

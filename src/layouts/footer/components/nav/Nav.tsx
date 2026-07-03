@@ -1,7 +1,7 @@
 import Link from "next/link";
 import cn from "classnames";
 
-import Typography from "@/components/typography/Typography";
+import Typography from "@/components/ui/typography/Typography";
 
 import { NavLink, NavLinkSection, NavProps } from "./Nav.types";
 

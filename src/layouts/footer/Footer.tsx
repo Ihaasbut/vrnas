@@ -3,7 +3,7 @@ import Link from "next/link";
 import cn from "classnames";
 
 import Logo from "@/assets/images/logo.webp";
-import Container from "@/components/container/Container";
+import Container from "@/components/ui/container/Container";
 
 import Copyright from "./components/copyright/Copyright";
 import { COPYRIGHT_TEXT } from "./components/copyright/Copyright.consts";

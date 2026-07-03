@@ -6,9 +6,9 @@ import Link from "next/link";
 import cn from "classnames";
 
 import Logo from "@/assets/images/logo.webp";
-import Button from "@/components/button/Button";
-import Container from "@/components/container/Container";
-import Typography from "@/components/typography/Typography";
+import Button from "@/components/ui/button/Button";
+import Container from "@/components/ui/container/Container";
+import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import BurgerMenu from "./components/burger-menu/BurgerMenu";

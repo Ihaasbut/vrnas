@@ -1,14 +1,15 @@
-import ArcGlow from "@/components/arc-glow/ArcGlow";
-import Container from "@/components/container/Container";
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
-import Typography from "@/components/typography/Typography";
+import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
+import Container from "@/components/ui/container/Container";
+import Typography from "@/components/ui/typography/Typography";
 
 import Services from "./components/services/Services";
 import { OUR_SERVICE_CONFIG } from "./OurService.consts";
+import { OurServiceProps } from "./OurService.types";
 
 import styles from "./OurService.module.scss";
 
-function OurService() {
+function OurService({ withArcGlow = false }: OurServiceProps) {
    return (
       <section className={styles.ourService}>
          <Container>
@@ -23,7 +24,7 @@ function OurService() {
                      {OUR_SERVICE_CONFIG.text}
                   </Typography>
 
-                  <ArcGlow className={styles.arcGlow} />
+                  {withArcGlow && <ArcGlow className={styles.arcGlow} />}
                </div>
             </div>
 

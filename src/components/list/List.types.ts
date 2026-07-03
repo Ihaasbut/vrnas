@@ -1,5 +1,5 @@
 export type ListEl = {
-   title: string;
+   label: string;
 };
 
 export type ListProps = {

@@ -1,4 +1,4 @@
-import Typography from "../../../../components/typography/Typography";
+import Typography from "../../../../components/ui/typography/Typography";
 
 import { CopyrightProps } from "./Copyright.types";
 

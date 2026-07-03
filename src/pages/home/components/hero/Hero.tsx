@@ -2,18 +2,18 @@
 
 import Image from "next/image";
 
-import ArcGlow from "@/components/arc-glow/ArcGlow";
-import Button from "@/components/button/Button";
-import Container from "@/components/container/Container";
-import Typography from "@/components/typography/Typography";
+import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
+import Button from "@/components/ui/button/Button";
+import Container from "@/components/ui/container/Container";
+import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
+import Features from "../../../../components/features/Features";
+import { FEATURES_DATA } from "../../../../components/features/Features.consts";
 import Video from "../../../../components/video/Video";
 
 import Clients from "./components/clients/Clients";
 import { HERO_CLIENTS_DATA } from "./components/clients/Clients.consts";
-import Features from "./components/features/Features";
-import { HERO_FEATURES_DATA } from "./components/features/Features.consts";
 import { HERO_DATA } from "./Hero.const";
 
 import styles from "./Hero.module.scss";
@@ -74,7 +74,7 @@ function Hero() {
          </Container>
 
          <Container>
-            <Features features={HERO_FEATURES_DATA.features} />
+            <Features features={FEATURES_DATA.features} />
          </Container>
       </div>
    );

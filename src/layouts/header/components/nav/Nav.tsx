@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import cn from "classnames";
 
-import HeaderArrowIcon from "@/components/icons/social/HeaderArrowIcon";
-import Typography from "@/components/typography/Typography";
+import HeaderArrowIcon from "@/components/ui/icons/social/HeaderArrowIcon";
+import Typography from "@/components/ui/typography/Typography";
 
 import NavLinkChildren from "./components/nav-link-children/NavLinkChildren";
 import { NavLink, NavProps } from "./Nav.types";

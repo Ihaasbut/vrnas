@@ -1,15 +1,15 @@
 import cn from "classnames";
 
-import Typography from "@/components/typography/Typography";
+import Typography from "@/components/ui/typography/Typography";
 
-import { HeroFeature, HeroFeaturesProps } from "./Features.types";
+import { Feature, FeaturesProps } from "./Features.types";
 
 import styles from "./Features.module.scss";
 
-function Features({ features }: HeroFeaturesProps) {
+function Features({ features }: FeaturesProps) {
    return (
       <div className={cn(styles.features, "border-white-fade")}>
-         {features.map((feature: HeroFeature) => {
+         {features.map((feature: Feature) => {
             const Icon = feature.icon;
 
             return (

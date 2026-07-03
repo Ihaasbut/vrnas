@@ -1,5 +1,5 @@
-import CheckboxIcon from "@/components/icons/CheckboxIcon";
-import Typography from "@/components/typography/Typography";
+import CheckboxIcon from "@/components/ui/icons/CheckboxIcon";
+import Typography from "@/components/ui/typography/Typography";
 
 import { ListEl, ListProps } from "./List.types";
 
@@ -9,11 +9,11 @@ function List({ items }: ListProps) {
    return (
       <ul className={styles.list}>
          {items.map((item: ListEl) => (
-            <li key={item.title} className={styles.item}>
+            <li key={item.label} className={styles.item}>
                <CheckboxIcon />
 
                <Typography variant="body-3" as="span">
-                  {item.title}
+                  {item.label}
                </Typography>
             </li>
          ))}

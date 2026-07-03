@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
 
-import Button from "@/components/button/Button";
-import Typography from "@/components/typography/Typography";
+import Button from "@/components/ui/button/Button";
+import Typography from "@/components/ui/typography/Typography";
 
 import { SERVICES_DATA } from "./Services.consts";
 import { Service } from "./Services.types";

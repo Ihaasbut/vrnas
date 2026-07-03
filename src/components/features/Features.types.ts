@@ -1,11 +1,11 @@
 import { ComponentType } from "react";
 
-export type HeroFeature = {
+export type Feature = {
    icon: ComponentType;
    title: string;
    description: string;
 };
 
-export type HeroFeaturesProps = {
-   features: HeroFeature[];
+export type FeaturesProps = {
+   features: Feature[];
 };

@@ -1,6 +1,6 @@
-import LocationIcon from "@/components/icons/LocationIcon";
-import MailIcon from "@/components/icons/MailIcon";
-import TelephoneIcon from "@/components/icons/TelephoneIcon";
+import LocationIcon from "@/components/ui/icons/LocationIcon";
+import MailIcon from "@/components/ui/icons/MailIcon";
+import TelephoneIcon from "@/components/ui/icons/TelephoneIcon";
 
 import { NavProps } from "./Nav.types";
 

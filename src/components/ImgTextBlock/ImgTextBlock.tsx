@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 import cn from "classnames";
 
-import ArcGlow from "../arc-glow/ArcGlow";
+import ArcGlow from "../ui/arc-glow/ArcGlow";
 import BlockTitle from "../titles/block-title/BlockTitle";
 import Video from "../video/Video";
 
