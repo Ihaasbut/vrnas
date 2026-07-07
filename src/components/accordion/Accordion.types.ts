@@ -9,4 +9,5 @@ export type AccordionEl = {
 export type AccordionProps = {
    accordionElements: [AccordionEl, ...AccordionEl[]];
    className?: string;
+   isBg?: boolean;
 };

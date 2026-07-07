@@ -6,11 +6,12 @@ import Typography from "@/components/ui/typography/Typography";
 
 import { AccordionProps } from "./Accordion.types";
 
-import styles from "./accordionWithoutBg/AccordionWithoutBg.module.scss";
+import styles from "./Accordion.module.scss";
 
 export default function AccordionBlock({
    accordionElements,
    className,
+   isBg = false,
 }: AccordionProps) {
    const firstAccordionElementId = accordionElements[0].id;
 
@@ -19,7 +20,9 @@ export default function AccordionBlock({
          allowMultiple
          transition
          transitionTimeout={250}
-         className={cn(styles.accordion, className)}
+         className={cn(styles.accordion, className, {
+            [styles.accordionBg]: isBg,
+         })}
       >
          {accordionElements.map((accordionEl) => (
             <AccordionItem
@@ -41,7 +44,7 @@ export default function AccordionBlock({
                      </span>
                   </div>
                }
-               className={styles.item}
+               className={cn(styles.item, "border-white-fade")}
                contentProps={{
                   className: styles.content,
                }}

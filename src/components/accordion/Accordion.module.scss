@@ -1,0 +1,74 @@
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+}
+
+.content {
+   transition: height 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.arrow {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.2s ease;
+}
+
+.accordion button[aria-expanded="false"] .arrow {
+   transform: rotate(180deg);
+}
+
+.panel {
+   padding-block: 12px 0;
+}
+
+.accordion button {
+   background: none;
+   border: none;
+   cursor: pointer;
+   text-align: left;
+   width: 100%;
+   color: $color-white;
+   border-bottom: 1px solid $color-grey-1;
+   padding-bottom: 12px;
+}
+
+.item {
+   padding-top: 48px;
+   padding-bottom: 12px;
+
+   &:first-child {
+      padding-top: 0;
+   }
+}
+
+.accordionBg .item {
+   margin-bottom: 24px;
+   background: $color-black-50;
+   padding: 24px;
+   border: 1px solid transparent;
+
+   &:has(button[aria-expanded="true"]) {
+      border-image: $color-brand 1 !important;
+      padding: 24px 24px 32px;
+   }
+
+   @include tablet {
+      padding: 20px 14px;
+      &:has(button[aria-expanded="true"]) {
+         padding: 29px 14px 36px;
+      }
+   }
+}
+
+.accordionBg button {
+   border-bottom: none;
+   padding-bottom: 0;
+
+   &[aria-expanded="true"] {
+      border-bottom: 1px solid $color-grey-1;
+      padding-bottom: 12px;
+   }
+}
