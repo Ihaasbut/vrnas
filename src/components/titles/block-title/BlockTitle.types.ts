@@ -1,5 +1,5 @@
 export type BlockTitleProps = {
+   section: string;
    title: string;
-   description: string;
    isCenter?: boolean;
 };

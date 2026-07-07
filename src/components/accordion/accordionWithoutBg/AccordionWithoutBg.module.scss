@@ -1,0 +1,44 @@
+.content {
+   transition: height 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.arrow {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.2s ease;
+}
+
+.panel {
+   padding-block: 12px 0;
+}
+
+.accordion button {
+   background: none;
+   border: none;
+   cursor: pointer;
+   text-align: left;
+   width: 100%;
+   color: $color-white;
+   border-bottom: 1px solid $color-grey-1;
+   padding-bottom: 12px;
+}
+
+.accordion button[aria-expanded="false"] .arrow {
+   transform: rotate(180deg);
+}
+
+.item {
+   padding-top: 48px;
+   padding-bottom: 12px;
+
+   &:first-child {
+      padding-top: 0;
+   }
+}

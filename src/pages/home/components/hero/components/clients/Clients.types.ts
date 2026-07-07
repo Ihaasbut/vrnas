@@ -12,5 +12,5 @@ export type HeroClientsProps = {
 export type HeroClients = {
    clientsCount: string;
    clientsLabel: string;
-   clientsImage: HeroClientImage[];
+   clientsImage: [HeroClientImage, ...HeroClientImage[]];
 };

@@ -3,5 +3,5 @@ export type ListEl = {
 };
 
 export type ListProps = {
-   items: ListEl[];
+   items: [ListEl, ...ListEl[]];
 };

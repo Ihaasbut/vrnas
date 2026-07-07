@@ -1,28 +1,19 @@
-import { ReactNode } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import cn from "classnames";
 
-import ArcGlow from "../ui/arc-glow/ArcGlow";
 import BlockTitle from "../titles/block-title/BlockTitle";
+import ArcGlow from "../ui/arc-glow/ArcGlow";
 import Video from "../video/Video";
 
-import styles from "./ImgTextBlock.module.scss";
+import { ImgTextBlockProps } from "./ImgTextBlock.types";
 
-export type ImgTextBlockProps = {
-   children: ReactNode;
-   image: StaticImageData;
-   title: string;
-   description: string;
-   isReverse?: boolean;
-   isReverseVideo?: boolean;
-   bgClassName?: string;
-};
+import styles from "./ImgTextBlock.module.scss";
 
 function ImgTextBlock({
    children,
    image,
+   section,
    title,
-   description,
    isReverse = false,
    isReverseVideo = false,
    bgClassName = "",
@@ -47,7 +38,7 @@ function ImgTextBlock({
          </div>
 
          <div className={styles.right}>
-            <BlockTitle title={title} description={description} />
+            <BlockTitle section={section} title={title} />
 
             {children}
          </div>

@@ -12,14 +12,6 @@ import styles from "./PageTitle.module.scss";
 function PageTitle({ title, breadcrumbs }: PageTitleProps) {
    const { isDesktop } = useClientBreakpoint();
 
-   const PAGE_TITLE_CONFIG = {
-      width: !isDesktop ? "299px" : "449px",
-      height: !isDesktop ? "98px" : "147px",
-      left: "50%",
-      top: "50%",
-      transform: "translate(-50%, -50%)",
-   };
-
    const currentHeading = !isDesktop ? "heading-3" : "heading-1";
 
    return (
@@ -30,7 +22,7 @@ function PageTitle({ title, breadcrumbs }: PageTitleProps) {
 
          <Breadcrumbs breadcrumbs={breadcrumbs} />
 
-         <ArcGlow config={PAGE_TITLE_CONFIG} />
+         <ArcGlow className={styles.arcGlow} />
       </div>
    );
 }

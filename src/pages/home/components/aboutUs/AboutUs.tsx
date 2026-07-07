@@ -7,32 +7,31 @@ import Button from "@/components/ui/button/Button";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
 
-import { ABOUT_US_CONFIG, ABOUT_US_LIST_ITEMS } from "./AboutUs.consts";
+import { ABOUT_US_CONFIG } from "./AboutUs.consts";
 
 import styles from "./AboutUs.module.scss";
 
 function AboutUs() {
-   const { sectionTitle, title, text, buttonText } = ABOUT_US_CONFIG;
-   const { items } = ABOUT_US_LIST_ITEMS;
+   const { section, title, text, buttonLabel, listItems } = ABOUT_US_CONFIG;
 
    return (
       <section className={styles.aboutUs}>
          <Container>
             <ImgTextBlock
                image={aboutUsManImage}
-               title={sectionTitle}
-               description={title}
+               section={section}
+               title={title}
                bgClassName={styles.bg}
             >
                <Typography variant="body-1" as="p">
                   {text}
                </Typography>
 
-               <List items={items} />
+               <List items={listItems} />
 
                <Button variant="fill" onClick={() => {}}>
                   <Typography variant="button-1" as="span">
-                     {buttonText}
+                     {buttonLabel}
                   </Typography>
                </Button>
             </ImgTextBlock>

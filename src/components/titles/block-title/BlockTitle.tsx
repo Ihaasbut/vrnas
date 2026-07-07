@@ -7,7 +7,7 @@ import { BlockTitleProps } from "./BlockTitle.types";
 
 import styles from "./BlockTitle.module.scss";
 
-function BlockTitle({ title, description, isCenter }: BlockTitleProps) {
+function BlockTitle({ title, section, isCenter }: BlockTitleProps) {
    const { isDesktop } = useClientBreakpoint();
 
    const alignItems = isCenter ? "center" : "left";
@@ -24,11 +24,11 @@ function BlockTitle({ title, description, isCenter }: BlockTitleProps) {
          }}
       >
          <Typography variant="caption-1" as="h3" className="text-linear">
-            {title}
+            {section}
          </Typography>
 
          <Typography variant={currentHeading} as="h4">
-            {description}
+            {title}
          </Typography>
       </div>
    );

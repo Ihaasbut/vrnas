@@ -1,19 +1,14 @@
 import aboutUsManImage from "@/assets/images/home/aboutUs/about-us-man.webp";
 
-import { ListProps } from "../../../../components/list/List.types";
-
 import { AboutUsProps } from "./AboutUs.types";
 
 export const ABOUT_US_CONFIG: AboutUsProps = {
-   sectionTitle: "О нас",
+   section: "О нас",
    title: "Оживи мероприятия с\u00A0нашими VR‑сервисами.",
    text: "VRNas — ведущий поставщик услуг виртуальной реальности для образования, развлечений, архитектуры и мероприятий. Наша миссия — сделать возможности виртуальной реальности доступными для всех, позволяя исследовать новые миры, учиться по-новому и воспринимать события в совершенно новом свете.",
-   buttonText: "Читать подробнее",
+   buttonLabel: "Читать подробнее",
    image: aboutUsManImage,
-};
-
-export const ABOUT_US_LIST_ITEMS: ListProps = {
-   items: [
+   listItems: [
       {
          label: "Передовые технологии",
       },

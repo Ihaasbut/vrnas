@@ -1,0 +1,20 @@
+.bg-home {
+   background-size: 70% 90%;
+   background-position: 59px 95%;
+}
+
+.whyChooseUs {
+   padding-top: 150px;
+
+   @include tablet {
+      padding-top: 8px;
+   }
+}
+
+.accordion {
+   width: 95%;
+
+   @include tablet {
+      width: 100%;
+   }
+}

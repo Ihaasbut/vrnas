@@ -1,9 +1,8 @@
-import { StaticImageData } from "next/image";
+import { ImgTextBlockProps } from "@/components/ImgTextBlock/ImgTextBlock.types";
+import { ListProps } from "@/components/list/List.types";
 
-export type AboutUsProps = {
-   sectionTitle: string;
-   title: string;
+export type AboutUsProps = Omit<ImgTextBlockProps, "children"> & {
    text: string;
-   buttonText: string;
-   image: StaticImageData;
+   buttonLabel: string;
+   listItems: ListProps["items"];
 };
