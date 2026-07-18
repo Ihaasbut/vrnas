@@ -1,3 +1,4 @@
+import WhatClientsSaying from "@/components/whatClientsSaying/WhatClientsSaying";
 import WhyChooseUs from "@/components/whyChooseUs/WhyChooseUs";
 
 import OurService from "../../components/ourService/OurService";
@@ -13,6 +14,7 @@ function HomeContent() {
          <AboutUs />
          <OurService withArcGlow />
          <WhyChooseUs data={WHY_CHOOSE_US_DATA_CONFIG.data} />
+         <WhatClientsSaying />
       </>
    );
 }

@@ -64,6 +64,33 @@ ul {
    }
 }
 
+.border-white-fade-circle {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   border-radius: 50%;
+   background: $color-white-fade;
+
+   &::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      background: $color-black-100;
+      transition: opacity 0.2s ease-in-out;
+   }
+   > * {
+      position: relative;
+      z-index: 1;
+   }
+   @include hover {
+      &::before {
+         opacity: 0;
+      }
+   }
+}
+
 .text-linear {
    background: $color-brand;
    background-clip: text;
