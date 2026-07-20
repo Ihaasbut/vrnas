@@ -2,26 +2,26 @@ import Image from "next/image";
 import cn from "classnames";
 
 import videoImage from "@/assets/images/home/hero/hero-video.webp";
-import videoPlayIcon from "@/assets/images/video-play.svg";
+import miniVideoPlayIcon from "@/assets/images/mini-video-play.svg";
 
-import { VideoProps } from "./Video.types";
+import { MiniVideoProps } from "./MiniVideo.types";
 
-import styles from "./Video.module.scss";
+import styles from "./MiniVideo.module.scss";
 
-function Video({ className }: VideoProps) {
+function MiniVideo({ className }: MiniVideoProps) {
    return (
       <button className={cn(styles.video, className)}>
          <div className={styles.wrapper}>
             <Image src={videoImage} alt="Видео" className={styles.videoImage} />
 
             <Image
-               src={videoPlayIcon}
+               src={miniVideoPlayIcon}
                alt="Видео плеер"
-               className={styles.videoPlayIcon}
+               className={styles.miniVideoPlayIcon}
             />
          </div>
       </button>
    );
 }
 
-export default Video;
+export default MiniVideo;

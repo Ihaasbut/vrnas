@@ -15,8 +15,8 @@ function OurService({ withArcGlow = false }: OurServiceProps) {
          <Container>
             <div className={styles.header}>
                <BlockTitle
-                  title={OUR_SERVICE_CONFIG.sectionTitle}
-                  description={OUR_SERVICE_CONFIG.title}
+                  section={OUR_SERVICE_CONFIG.sectionTitle}
+                  title={OUR_SERVICE_CONFIG.title}
                />
 
                <div className={styles.textWrapper}>

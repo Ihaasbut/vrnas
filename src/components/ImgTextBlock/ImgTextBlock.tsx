@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import BlockTitle from "../titles/block-title/BlockTitle";
 import ArcGlow from "../ui/arc-glow/ArcGlow";
-import Video from "../video/Video";
+import MiniVideo from "../video/mini-video/MiniVideo";
 
 import { ImgTextBlockProps } from "./ImgTextBlock.types";
 
@@ -28,7 +28,7 @@ function ImgTextBlock({
                   <Image src={image} alt="string" className={styles.imageMan} />
                </div>
 
-               <Video
+               <MiniVideo
                   className={cn(
                      styles.video,
                      isReverseVideo && styles.reverseVideo,

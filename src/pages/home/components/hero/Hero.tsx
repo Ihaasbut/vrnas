@@ -10,7 +10,7 @@ import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import Features from "../../../../components/features/Features";
 import { FEATURES_DATA } from "../../../../components/features/Features.consts";
-import Video from "../../../../components/video/Video";
+import MiniVideo from "../../../../components/video/mini-video/MiniVideo";
 
 import Clients from "./components/clients/Clients";
 import { HERO_CLIENTS_DATA } from "./components/clients/Clients.consts";
@@ -69,7 +69,7 @@ function Hero() {
                   <ArcGlow className={styles.arcGlow} />
                </div>
 
-               <Video className={styles.video} />
+               <MiniVideo className={styles.video} />
             </div>
          </Container>
 
