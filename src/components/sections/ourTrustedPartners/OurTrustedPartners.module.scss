@@ -1,0 +1,24 @@
+.ourTrustedPartners {
+   margin-top: 150px;
+   display: flex;
+   flex-direction: column;
+   gap: 58px;
+
+   @include tablet {
+      margin-top: 100px;
+      gap: 24px;
+   }
+}
+
+.imageWrapper {
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+   max-width: 1054px;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+}

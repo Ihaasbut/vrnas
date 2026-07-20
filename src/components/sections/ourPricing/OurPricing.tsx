@@ -1,7 +1,7 @@
-import BlockTitle from "../titles/block-title/BlockTitle";
-import ArcGlow from "../ui/arc-glow/ArcGlow";
-import Container from "../ui/container/Container";
-import Typography from "../ui/typography/Typography";
+import BlockTitle from "../../titles/block-title/BlockTitle";
+import ArcGlow from "../../ui/arc-glow/ArcGlow";
+import Container from "../../ui/container/Container";
+import Typography from "../../ui/typography/Typography";
 
 import PricingTable from "./components/pricingTable/PricingTable";
 import { OUR_PRICING_CONFIG } from "./OurPricing.consts";

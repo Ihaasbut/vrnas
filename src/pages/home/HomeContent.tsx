@@ -1,8 +1,9 @@
-import OurPricing from "@/components/ourPricing/OurPricing";
-import WhatClientsSaying from "@/components/whatClientsSaying/WhatClientsSaying";
-import WhyChooseUs from "@/components/whyChooseUs/WhyChooseUs";
+import OurPricing from "@/components/sections/ourPricing/OurPricing";
+import OurTrustedPartners from "@/components/sections/ourTrustedPartners/OurTrustedPartners";
+import WhatClientsSaying from "@/components/sections/whatClientsSaying/WhatClientsSaying";
+import WhyChooseUs from "@/components/sections/whyChooseUs/WhyChooseUs";
 
-import OurService from "../../components/ourService/OurService";
+import OurService from "../../components/sections/ourService/OurService";
 
 import AboutUs from "./components/aboutUs/AboutUs";
 import GetStarted from "./components/getStarted/GetStarted";
@@ -19,6 +20,7 @@ function HomeContent() {
          <GetStarted />
          <WhatClientsSaying />
          <OurPricing />
+         <OurTrustedPartners />
       </>
    );
 }

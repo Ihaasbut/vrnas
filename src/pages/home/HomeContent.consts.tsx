@@ -1,6 +1,6 @@
 import whyChooseUsImage from "@/assets/images/home/whyChooseUs/why-choose-us-home.webp";
+import { WhyChooseUsProps } from "@/components/sections/whyChooseUs/WhyChooseUs.types";
 import Typography from "@/components/ui/typography/Typography";
-import { WhyChooseUsProps } from "@/components/whyChooseUs/WhyChooseUs.types";
 
 export const WHY_CHOOSE_US_DATA_CONFIG: WhyChooseUsProps = {
    data: {

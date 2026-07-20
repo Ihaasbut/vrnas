@@ -1,6 +1,6 @@
-import AccordionWithoutBg from "../accordion/Accordion";
-import ImgTextBlock from "../ImgTextBlock/ImgTextBlock";
-import Container from "../ui/container/Container";
+import AccordionWithoutBg from "@/components/accordion/Accordion";
+import ImgTextBlock from "@/components/ImgTextBlock/ImgTextBlock";
+import Container from "@/components/ui/container/Container";
 
 import { WhyChooseUsProps } from "./WhyChooseUs.types";
 

@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import cn from "classnames";
 
-import BlockTitle from "../titles/block-title/BlockTitle";
-import Container from "../ui/container/Container";
+import BlockTitle from "../../titles/block-title/BlockTitle";
+import Container from "../../ui/container/Container";
 
 import TestimonialClient from "./testimonial-client/TestimonialClient";
 import {

@@ -1,4 +1,4 @@
-import { BlockTitleProps } from "../titles/block-title/BlockTitle.types";
+import { BlockTitleProps } from "../../titles/block-title/BlockTitle.types";
 
 import { Testimonial } from "./testimonial-client/TestimonialClient.types";
 
