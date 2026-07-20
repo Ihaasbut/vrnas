@@ -1,3 +1,4 @@
+import OurPricing from "@/components/ourPricing/OurPricing";
 import WhatClientsSaying from "@/components/whatClientsSaying/WhatClientsSaying";
 import WhyChooseUs from "@/components/whyChooseUs/WhyChooseUs";
 
@@ -17,6 +18,7 @@ function HomeContent() {
          <WhyChooseUs data={WHY_CHOOSE_US_DATA_CONFIG.data} />
          <GetStarted />
          <WhatClientsSaying />
+         <OurPricing />
       </>
    );
 }

@@ -1,0 +1,62 @@
+.ourPricingWrapper {
+   margin-top: 100px;
+   position: relative;
+   overflow-x: clip;
+
+   p {
+      color: $color-grey-1;
+   }
+}
+
+.arcGlow {
+   width: 826px;
+   height: 363px;
+   right: 50px;
+   bottom: 50px;
+   filter: blur(59px);
+   z-index: -1;
+
+   @include tablet {
+      filter: blur(86px);
+      height: 200px;
+      width: 600px;
+      right: 0;
+   }
+}
+
+.withArcGlow {
+   width: 454px;
+   height: 199px;
+   left: -5%;
+   top: 10%;
+   filter: blur(86px);
+   z-index: -1;
+
+   @include tablet {
+      display: none;
+   }
+}
+
+.titleWrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+
+   @include tablet {
+      gap: 16px;
+   }
+}
+
+.ourPricingInner {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.titleDescription {
+   max-width: 625px;
+
+   @include tablet {
+      max-width: 100%;
+   }
+}
