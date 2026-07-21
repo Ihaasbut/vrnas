@@ -11,6 +11,20 @@
 
    @include mobile {
       padding: 64px 0;
-      margin-top: 90px;
+   }
+}
+
+.arcGlow {
+   width: 449px;
+   height: 119px;
+   position: absolute;
+   inset: 0;
+   margin: auto;
+   z-index: -1;
+   filter: blur(40px);
+
+   @include tablet {
+      width: 300px;
+      height: 100px;
    }
 }
