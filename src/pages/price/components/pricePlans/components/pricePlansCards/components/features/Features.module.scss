@@ -1,0 +1,15 @@
+.features {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   flex: 1;
+
+   svg {
+      min-width: 25px;
+   }
+}
+
+.feature {
+   display: flex;
+   gap: 6px;
+}

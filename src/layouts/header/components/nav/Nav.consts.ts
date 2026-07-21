@@ -18,7 +18,7 @@ export const NAV_LINKS = {
          children: [
             {
                title: "Тарифы",
-               href: "/pricing",
+               href: "/price",
             },
             {
                title: "Наша команда",

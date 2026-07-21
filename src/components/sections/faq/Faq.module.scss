@@ -1,0 +1,50 @@
+.faqWrapper {
+   margin-top: 150px;
+   margin-inline: auto;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   overflow-x: clip;
+
+   @include tablet {
+      margin-top: 100px;
+   }
+
+   p {
+      color: $color-grey-1;
+   }
+}
+
+.faqDescription {
+   text-align: center;
+}
+
+.faqTitle {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+.faqInner {
+   display: flex;
+   flex-direction: column;
+   gap: 48px;
+   max-width: 800px;
+
+   @include tablet {
+      gap: 24px;
+   }
+}
+
+.arcGlow {
+   width: 454px;
+   height: 199px;
+   right: 0;
+   top: 0;
+   filter: blur(86px);
+   z-index: -1;
+
+   @include tablet {
+      display: none;
+   }
+}
