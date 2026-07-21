@@ -1,3 +1,4 @@
+import Newsletter from "@/components/sections/newsletter/Newsletter";
 import OurPricing from "@/components/sections/ourPricing/OurPricing";
 import OurTrustedPartners from "@/components/sections/ourTrustedPartners/OurTrustedPartners";
 import WhatClientsSaying from "@/components/sections/whatClientsSaying/WhatClientsSaying";
@@ -21,6 +22,7 @@ function HomeContent() {
          <WhatClientsSaying />
          <OurPricing />
          <OurTrustedPartners />
+         <Newsletter />
       </>
    );
 }
