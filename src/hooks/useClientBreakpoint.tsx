@@ -31,10 +31,9 @@ function readClientDeviceState(): ClientDeviceState {
 
 export function useClientBreakpoint(): ClientDeviceState {
    const deviceState =
-      typeof window !== "undefined"
+      typeof window === "undefined"
          ? DEFAULT_DEVICE_STATE
          : readClientDeviceState();
-
    const [clientDeviceState, setClientDeviceState] =
       useState<ClientDeviceState>(deviceState);
 
