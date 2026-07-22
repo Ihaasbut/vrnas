@@ -41,7 +41,7 @@ function Header() {
       >
          <Container>
             <div className={styles.header}>
-               <Link href="/">
+               <Link href="/" className={styles.logoLink}>
                   <Image src={Logo} alt="Логотип" className={styles.logo} />
                </Link>
 
