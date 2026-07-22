@@ -8,7 +8,6 @@ import Container from "@/components/ui/container/Container";
 import Copyright from "./components/copyright/Copyright";
 import { COPYRIGHT_TEXT } from "./components/copyright/Copyright.consts";
 import Nav from "./components/nav/Nav";
-import { NAV_SECTIONS } from "./components/nav/Nav.consts";
 import SocialMedia from "./components/social-media/SocialMedia";
 import { SOCIAL_MEDIA_ITEMS } from "./components/social-media/SocialMedia.consts";
 
@@ -27,7 +26,7 @@ function Footer() {
                   <SocialMedia socials={SOCIAL_MEDIA_ITEMS.socials} />
                </div>
 
-               <Nav sections={NAV_SECTIONS.sections} />
+               <Nav />
             </div>
 
             <Copyright text={COPYRIGHT_TEXT} />

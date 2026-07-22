@@ -10,7 +10,3 @@ export type NavLinkSection = {
    title: string;
    links: NavLink[];
 };
-
-export type NavProps = {
-   sections: NavLinkSection[];
-};
