@@ -1,6 +1,8 @@
-import styles from "./SocialMedia.module.scss";
-import { SocialMediaProps } from "./SocialMedia.types";
 import cn from "classnames";
+
+import { SocialMediaProps } from "./SocialMedia.types";
+
+import styles from "./SocialMedia.module.scss";
 
 function SocialMedia({ socials }: SocialMediaProps) {
    return (

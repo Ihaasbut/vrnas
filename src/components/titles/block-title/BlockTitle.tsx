@@ -1,9 +1,13 @@
-import Typography from "@/components/typography/Typography";
-import styles from "./BlockTitle.module.scss";
+"use client";
+
+import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+
 import { BlockTitleProps } from "./BlockTitle.types";
 
-function BlockTitle({ title, description, isCenter }: BlockTitleProps) {
+import styles from "./BlockTitle.module.scss";
+
+function BlockTitle({ title, section, isCenter }: BlockTitleProps) {
    const { isDesktop } = useClientBreakpoint();
 
    const alignItems = isCenter ? "center" : "left";
@@ -20,11 +24,11 @@ function BlockTitle({ title, description, isCenter }: BlockTitleProps) {
          }}
       >
          <Typography variant="caption-1" as="h3" className="text-linear">
-            {title}
+            {section}
          </Typography>
 
-         <Typography variant={currentHeading} as="p">
-            {description}
+         <Typography variant={currentHeading} as="h4">
+            {title}
          </Typography>
       </div>
    );

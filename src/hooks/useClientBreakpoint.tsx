@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 // Синхронизировать с src/assets/styles/mixins.scss
 const MEDIA_QUERIES = {
    mobile: "(max-width: 767px)",
-   tablet: "(min-width: 768px) and (max-width: 1023px)",
+   tablet: "(min-width: 767px) and (max-width: 1024px)",
    desktop: "(min-width: 1024px)",
 } as const;
 
@@ -31,10 +31,9 @@ function readClientDeviceState(): ClientDeviceState {
 
 export function useClientBreakpoint(): ClientDeviceState {
    const deviceState =
-      typeof window !== "undefined"
+      typeof window === "undefined"
          ? DEFAULT_DEVICE_STATE
          : readClientDeviceState();
-
    const [clientDeviceState, setClientDeviceState] =
       useState<ClientDeviceState>(deviceState);
 

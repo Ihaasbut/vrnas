@@ -1,19 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
-import styles from "./Header.module.scss";
-import Image from "next/image";
+
 import Logo from "@/assets/images/logo.webp";
+import Button from "@/components/ui/button/Button";
+import Container from "@/components/ui/container/Container";
+import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
-import Button from "@/components/button/Button";
-import Typography from "@/components/typography/Typography";
-import { HEADER_BUTTON_TEXT, HEADER_SCROLL_OFFSET } from "./Header.consts";
+
+import BurgerMenu from "./components/burger-menu/BurgerMenu";
 import Nav from "./components/nav/Nav";
 import { NAV_LINKS } from "./components/nav/Nav.consts";
-import Container from "@/components/container/Container";
-import BurgerMenu from "./components/burger-menu/BurgerMenu";
+import { HEADER_BUTTON_TEXT, HEADER_SCROLL_OFFSET } from "./Header.consts";
+
+import styles from "./Header.module.scss";
 
 function Header() {
    const { isDesktop } = useClientBreakpoint();
@@ -38,7 +41,7 @@ function Header() {
       >
          <Container>
             <div className={styles.header}>
-               <Link href="/">
+               <Link href="/" className={styles.logoLink}>
                   <Image src={Logo} alt="Логотип" className={styles.logo} />
                </Link>
 

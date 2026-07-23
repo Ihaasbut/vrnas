@@ -1,0 +1,74 @@
+// .button {
+//   @include mobile {
+//     background-color: red;
+//   }
+
+//   @include tablet {
+//     background-color: blue;
+//   }
+
+//   @include desktop {
+//     background-color: green;
+//   }
+// }
+
+.button {
+   padding: 18px 38px;
+   cursor: pointer;
+   color: $color-white;
+   position: relative;
+   width: fit-content;
+
+   &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: $color-brand;
+      transition: opacity 0.2s ease-in-out;
+      z-index: -1;
+   }
+}
+
+.fill {
+   background: transparent;
+
+   &::before {
+      background: $color-brand;
+   }
+
+   @include hover {
+      &::before {
+         opacity: 0;
+      }
+   }
+}
+
+.outline {
+   background: rgba(255, 255, 255, 0.06);
+
+   &::before {
+      background: rgba(255, 255, 255, 0.12);
+      opacity: 0;
+   }
+
+   @include hover {
+      &::before {
+         opacity: 1;
+      }
+   }
+}
+
+.ghost {
+   background: transparent;
+
+   &::before {
+      background: $color-brand;
+      opacity: 0;
+   }
+
+   @include hover {
+      &::before {
+         opacity: 1;
+      }
+   }
+}

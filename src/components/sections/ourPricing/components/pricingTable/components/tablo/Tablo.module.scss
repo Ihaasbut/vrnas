@@ -1,0 +1,21 @@
+.tablo {
+   border: 1px solid transparent;
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+   padding: 20px 70px;
+   background: $color-black-50;
+   align-items: center;
+   width: max-content;
+   white-space: nowrap;
+
+   @include tablet {
+      padding: 20px 38px;
+   }
+}
+
+.price {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}

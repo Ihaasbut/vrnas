@@ -1,18 +1,22 @@
 "use client";
 
-import Container from "@/components/container/Container";
-import styles from "./Hero.module.scss";
-import Typography from "@/components/typography/Typography";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
-import Button from "@/components/button/Button";
 import Image from "next/image";
-import ArcGlow from "@/components/arc-glow/ArcGlow";
-import Features from "./components/features/Features";
-import { HERO_DATA } from "./Hero.const";
-import { HERO_FEATURES_DATA } from "./components/features/Features.consts";
+
+import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
+import Button from "@/components/ui/button/Button";
+import Container from "@/components/ui/container/Container";
+import Typography from "@/components/ui/typography/Typography";
+import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+
+import Features from "../../../../components/features/Features";
+import { FEATURES_DATA } from "../../../../components/features/Features.consts";
+import MiniVideo from "../../../../components/video/mini-video/MiniVideo";
+
 import Clients from "./components/clients/Clients";
 import { HERO_CLIENTS_DATA } from "./components/clients/Clients.consts";
-import Video from "../../../../components/video/Video";
+import { HERO_DATA } from "./Hero.const";
+
+import styles from "./Hero.module.scss";
 
 function Hero() {
    const {
@@ -29,22 +33,6 @@ function Hero() {
    const heading = !isDesktop ? "heading-2" : "heading-1";
    const inlinePadding = !isDesktop ? "16px 0" : "60px";
    const bannerImageCurrent = !isDesktop ? bannerImageMobile : bannerImage;
-
-   const ARC_GLOW_CONFIG = {
-      width: !isDesktop ? "289px" : "567px",
-      height: !isDesktop ? "163px" : "340px",
-      right: "0",
-      top: "50%",
-      transform: !isDesktop ? "none" : "translateY(-50%)",
-      blur: !isDesktop ? "62px" : "76px",
-   };
-
-   const VIDEO_CONFIG = {
-      left: !isDesktop ? "0" : "350px",
-      bottom: !isDesktop ? "144px" : "66px",
-      width: "196px",
-      height: "128px",
-   };
 
    return (
       <div className={styles.hero}>
@@ -78,16 +66,15 @@ function Hero() {
                      alt={bannerAlt}
                      className={styles.banner}
                   />
-
-                  <ArcGlow config={ARC_GLOW_CONFIG} />
+                  <ArcGlow className={styles.arcGlow} />
                </div>
 
-               <Video config={VIDEO_CONFIG} />
+               <MiniVideo className={styles.video} />
             </div>
          </Container>
 
          <Container>
-            <Features features={HERO_FEATURES_DATA.features} />
+            <Features features={FEATURES_DATA.features} />
          </Container>
       </div>
    );

@@ -29,9 +29,14 @@
 
    @include mobile {
       flex-direction: row;
-      gap: 52px;
+      gap: 40px;
       align-items: center;
       justify-content: flex-start;
+   }
+
+   @media (max-width: 400px) {
+      flex-wrap: wrap;
+      gap: 20px;
    }
 }
 

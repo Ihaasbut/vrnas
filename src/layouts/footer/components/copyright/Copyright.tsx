@@ -1,6 +1,8 @@
-import Typography from "../../../../components/typography/Typography";
-import styles from "./Copyright.module.scss";
+import Typography from "../../../../components/ui/typography/Typography";
+
 import { CopyrightProps } from "./Copyright.types";
+
+import styles from "./Copyright.module.scss";
 
 function Copyright({ text }: CopyrightProps) {
    return (

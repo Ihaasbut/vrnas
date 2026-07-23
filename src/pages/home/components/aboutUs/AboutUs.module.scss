@@ -1,0 +1,12 @@
+.aboutUs {
+   padding-top: 120px;
+   overflow: hidden;
+
+   @include tablet {
+      padding-top: 100px;
+   }
+}
+
+.bg {
+   background-size: 75% 90%;
+}

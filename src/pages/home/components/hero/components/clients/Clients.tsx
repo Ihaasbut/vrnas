@@ -1,8 +1,11 @@
-import Typography from "@/components/typography/Typography";
-import styles from "./Clients.module.scss";
-import { HeroClientImage, HeroClientsProps } from "./Clients.types";
 import Image from "next/image";
-import HeroClientsIcon from "@/components/icons/hero/HeroClientsIcon";
+
+import HeroClientsIcon from "@/components/ui/icons/hero/HeroClientsIcon";
+import Typography from "@/components/ui/typography/Typography";
+
+import { HeroClientImage, HeroClientsProps } from "./Clients.types";
+
+import styles from "./Clients.module.scss";
 
 function Clients({ clients }: HeroClientsProps) {
    const { clientsCount, clientsLabel, clientsImage } = clients;

@@ -1,21 +1,30 @@
-import { NavLink, NavLinkSection, NavProps } from "./Nav.types";
-import styles from "./Nav.module.scss";
-import Typography from "@/components/typography/Typography";
+"use client";
+
 import Link from "next/link";
 import cn from "classnames";
 
-function Nav({ sections }: NavProps) {
+import Typography from "@/components/ui/typography/Typography";
+import { useIsNavLinkActive } from "@/hooks/useIsNavLinkActive";
+
+import { NAV_SECTIONS } from "./Nav.consts";
+
+import styles from "./Nav.module.scss";
+
+function Nav() {
+   const isNavLinkActive = useIsNavLinkActive();
+
    return (
       <div className={styles.sections}>
-         {sections.map((section: NavLinkSection) => (
+         {NAV_SECTIONS.map((section) => (
             <div key={section.title} className={styles.section}>
                <Typography variant="heading-10" as={"h3"}>
                   {section.title}
                </Typography>
 
                <ul className={styles.links}>
-                  {section.links.map((link: NavLink) => {
+                  {section.links.map((link) => {
                      const Icon = link.icon;
+                     const isActive = isNavLinkActive(link.href);
 
                      return (
                         <li key={link.title}>
@@ -25,7 +34,11 @@ function Nav({ sections }: NavProps) {
                            >
                               {Icon && <Icon />}
 
-                              <Typography variant="body-1" as={"span"}>
+                              <Typography
+                                 variant="body-1"
+                                 as={"span"}
+                                 className={cn(isActive && "text-linear")}
+                              >
                                  {link.title}
                               </Typography>
                            </Link>
