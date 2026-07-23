@@ -1,10 +1,14 @@
 import { ComponentType } from "react";
 
-export type SocialMediaProps = {
-   socials: SocialMediaItem[];
-};
-
-export type SocialMediaItem = {
+export type SocialMediaEl = {
    icon: ComponentType;
    href: string;
+};
+
+export type SocialMediaData = {
+   socials: SocialMediaEl[];
+};
+
+export type SocialMediaProps = {
+   data: SocialMediaData;
 };

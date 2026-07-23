@@ -1,12 +1,12 @@
 import { ComponentType } from "react";
 
-export type NavLink = {
+export type NavLinkEl = {
    title: string;
    href: string;
    icon?: ComponentType;
 };
 
-export type NavLinkSection = {
+export type NavLinkSectionEl = {
    title: string;
-   links: NavLink[];
+   links: NavLinkEl[];
 };

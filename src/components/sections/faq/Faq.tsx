@@ -3,7 +3,9 @@
 import { useState } from "react";
 
 import AccordionBlock from "@/components/accordion/Accordion";
+import { AccordionData } from "@/components/accordion/Accordion.types";
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
+import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
 import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
@@ -14,30 +16,30 @@ import { FaqPage, FaqProps } from "./Faq.types";
 
 import styles from "./Faq.module.scss";
 
-function Faq({
-   title,
-   section,
-   isCenter,
-   description,
-   page,
-   withArcGlow = false,
-}: FaqProps) {
+function Faq({ data, isCenter, page, withArcGlow = false }: FaqProps) {
    const [activeFilter, setActiveFilter] = useState<FaqPage>(page);
+   const { title, section, description } = data;
+
    const accordionElements = FAQ_QUESTIONS.filter(
       ({ pageQuestion }) =>
          activeFilter === "faq" || pageQuestion === activeFilter,
    );
+
+   const blockTitleData: BlockTitleData = {
+      section,
+      title,
+   };
+
+   const accordionData: AccordionData = {
+      accordionElements,
+   };
 
    return (
       <section className={styles.faqWrapper}>
          <Container>
             <div className={styles.faqInner}>
                <div className={styles.faqTitle}>
-                  <BlockTitle
-                     title={title}
-                     section={section}
-                     isCenter={isCenter}
-                  />
+                  <BlockTitle data={blockTitleData} isCenter={isCenter} />
 
                   <Typography
                      variant="body-1"
@@ -55,7 +57,7 @@ function Faq({
                   />
                )}
 
-               <AccordionBlock accordionElements={accordionElements} isBg />
+               <AccordionBlock data={accordionData} isBg />
             </div>
          </Container>
 

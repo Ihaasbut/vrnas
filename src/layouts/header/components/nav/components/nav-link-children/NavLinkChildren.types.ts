@@ -1,12 +1,16 @@
 import { RefObject } from "react";
 
-export type NavLinkChild = {
+export type NavLinkChildEl = {
    title: string;
    href: string;
 };
 
+export type NavLinkChildrenData = {
+   childrenLinks: NavLinkChildEl[];
+};
+
 export type NavLinkChildrenProps = {
-   childrenLinks: NavLinkChild[];
+   data: NavLinkChildrenData;
    dropdownRef: RefObject<HTMLDivElement | null>;
    isOpen: boolean;
    onClick: () => void;

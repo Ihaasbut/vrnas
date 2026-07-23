@@ -14,9 +14,9 @@ import styles from "./Newsletter.module.scss";
 import typographyStyles from "@/components/ui/typography/Typography.module.scss";
 
 function Newsletter() {
+   const { title, placeholder } = NEWSLETTER_DATA_CONFIG;
    const { isDesktop } = useClientBreakpoint();
    const currentHeading = isDesktop ? "heading-3" : "heading-6";
-   const { title, placeholder } = NEWSLETTER_DATA_CONFIG;
 
    return (
       <Container>

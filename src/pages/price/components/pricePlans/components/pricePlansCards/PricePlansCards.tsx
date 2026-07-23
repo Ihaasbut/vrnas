@@ -6,15 +6,22 @@ import Button from "@/components/ui/button/Button";
 import Typography from "@/components/ui/typography/Typography";
 
 import Features from "./components/features/Features";
-import { PricePlansCardsProps } from "./PricePlansCards.types";
+import { FeaturesData } from "./components/features/Features.types";
+import { PricePlanCardEl, PricePlansCardsProps } from "./PricePlansCards.types";
 
 import styles from "./PricePlansCards.module.scss";
 
-function PricePlansCards({ pricePlansCards }: PricePlansCardsProps) {
+function PricePlansCards({ data }: PricePlansCardsProps) {
+   const { pricePlansCards } = data;
+
    return (
       <div className={styles.pricePlansCards}>
-         {pricePlansCards.map((pricePlanCard) => {
+         {pricePlansCards.map((pricePlanCard: PricePlanCardEl) => {
             const currentButton = pricePlanCard.isMain ? "fill" : "ghost";
+
+            const featuresData: FeaturesData = {
+               features: pricePlanCard.features,
+            };
 
             return (
                <div
@@ -42,7 +49,7 @@ function PricePlansCards({ pricePlansCards }: PricePlansCardsProps) {
                      {pricePlanCard.description}
                   </Typography>
 
-                  <Features features={pricePlanCard.features} />
+                  <Features data={featuresData} />
 
                   <Button
                      variant={currentButton}

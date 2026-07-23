@@ -1,4 +1,4 @@
-export type Tablo = {
+export type TabloData = {
    headerText: string;
    price: string;
    buttonText: string;

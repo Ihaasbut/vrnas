@@ -7,15 +7,17 @@ import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import TestimonialClientTooltip from "./TestimonialClientTooltip/TestimonialClientTooltip";
+import { TestimonialTooltipData } from "./TestimonialClientTooltip/TestimonialClientTooltip.types";
 import type { TestimonialClientProps } from "./TestimonialClient.types";
 
 import styles from "./TestimonialClient.module.scss";
 
 function TestimonialClient({
-   client,
+   data,
    isActive,
    onActivate,
 }: TestimonialClientProps) {
+   const { client } = data;
    const { isDesktop, isTablet, isMobile } = useClientBreakpoint();
    const { desktop, tablet, mobile } = client.position;
 
@@ -34,6 +36,10 @@ function TestimonialClient({
       left: currentPosition.left,
    };
 
+   const tooltipData: TestimonialTooltipData = {
+      tooltip: client.tooltip,
+   };
+
    const tooltipStyles = isMobile
       ? {
            top: `calc(${currentPosition.top} - 12px)`,
@@ -44,8 +50,7 @@ function TestimonialClient({
       <>
          <div className={cn(styles.tooltipLayer, isActive && styles.active)}>
             <TestimonialClientTooltip
-               data={client.tooltip.data}
-               tooltipPosition={client.tooltip.tooltipPosition}
+               data={tooltipData}
                className={styles.tooltip}
                isActive={isActive}
                style={tooltipStyles}

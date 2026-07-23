@@ -2,6 +2,10 @@ export type ListEl = {
    label: string;
 };
 
+export type ListData = {
+   list: ListEl[];
+};
+
 export type ListProps = {
-   items: [ListEl, ...ListEl[]];
+   data: ListData;
 };

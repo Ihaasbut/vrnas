@@ -1,6 +1,6 @@
-export type OurPricing = {
-   sectionTitle: string;
-   title: string;
+import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
+
+export type OurPricingData = BlockTitleData & {
    text: string;
 };
 

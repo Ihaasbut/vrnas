@@ -8,11 +8,14 @@ import HeaderArrowIcon from "@/components/ui/icons/social/HeaderArrowIcon";
 import Typography from "@/components/ui/typography/Typography";
 import { useIsNavLinkActive } from "@/hooks/useIsNavLinkActive";
 
-import { NavLink, NavProps } from "./Nav.types";
+import { NavLinkEl } from "../../../nav/Nav.types";
+
+import { NavProps } from "./Nav.types";
 
 import styles from "./Nav.module.scss";
 
-function Nav({ navLinks, isOpen, onLinkClick }: NavProps) {
+function Nav({ data, isOpen, onLinkClick }: NavProps) {
+   const { navLinks } = data;
    const isNavLinkActive = useIsNavLinkActive();
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -30,9 +33,11 @@ function Nav({ navLinks, isOpen, onLinkClick }: NavProps) {
             [styles.open]: isOpen,
          })}
       >
-         {navLinks.map((link: NavLink) => {
+         {navLinks.map((link: NavLinkEl) => {
             const isParentActive = link.children
-               ? link.children.some((child) => isNavLinkActive(child.href))
+               ? link.children.some((child: NavLinkEl) =>
+                    isNavLinkActive(child.href),
+                 )
                : false;
             const isActive = isNavLinkActive(link.href);
 

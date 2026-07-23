@@ -13,13 +13,17 @@ import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import BurgerMenu from "./components/burger-menu/BurgerMenu";
 import Nav from "./components/nav/Nav";
-import { NAV_LINKS } from "./components/nav/Nav.consts";
+import { NAV_LINKS_DATA } from "./components/nav/Nav.consts";
+import { NavData } from "./components/nav/Nav.types";
 import { HEADER_BUTTON_TEXT, HEADER_SCROLL_OFFSET } from "./Header.consts";
 
 import styles from "./Header.module.scss";
 
 function Header() {
    const { isDesktop } = useClientBreakpoint();
+   const navData: NavData = {
+      navLinks: NAV_LINKS_DATA,
+   };
    const [isScrolled, setIsScrolled] = useState(false);
 
    useEffect(() => {
@@ -45,7 +49,7 @@ function Header() {
                   <Image src={Logo} alt="Логотип" className={styles.logo} />
                </Link>
 
-               {isDesktop && <Nav navLinks={NAV_LINKS.navLinks} />}
+               {isDesktop && <Nav data={navData} />}
 
                {isDesktop && (
                   <Button variant="ghost" onClick={() => {}}>

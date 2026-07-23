@@ -8,14 +8,14 @@ import Button from "@/components/ui/button/Button";
 import Typography from "@/components/ui/typography/Typography";
 
 import { SERVICES_DATA } from "./Services.consts";
-import { Service } from "./Services.types";
+import { ServiceEl } from "./Services.types";
 
 import styles from "./Services.module.scss";
 
 function Services() {
    return (
       <div className={styles.services}>
-         {SERVICES_DATA.services.map((service: Service) => {
+         {SERVICES_DATA.map((service: ServiceEl) => {
             return (
                <Link
                   href={service.link}

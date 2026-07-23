@@ -10,7 +10,8 @@ import { PageTitleProps } from "./PageTitle.types";
 
 import styles from "./PageTitle.module.scss";
 
-function PageTitle({ title, breadcrumbs }: PageTitleProps) {
+function PageTitle({ data }: PageTitleProps) {
+   const { title, breadcrumbs } = data;
    const { isDesktop } = useClientBreakpoint();
 
    const currentHeading = !isDesktop ? "heading-3" : "heading-1";

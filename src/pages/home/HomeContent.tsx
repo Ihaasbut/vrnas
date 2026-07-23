@@ -1,3 +1,4 @@
+import whyChooseUsImage from "@/assets/images/home/whyChooseUs/why-choose-us-home.webp";
 import Newsletter from "@/components/sections/newsletter/Newsletter";
 import OurPricing from "@/components/sections/ourPricing/OurPricing";
 import OurTrustedPartners from "@/components/sections/ourTrustedPartners/OurTrustedPartners";
@@ -17,7 +18,12 @@ function HomeContent() {
          <Hero />
          <AboutUs />
          <OurService withArcGlow />
-         <WhyChooseUs data={WHY_CHOOSE_US_DATA_CONFIG.data} />
+         <WhyChooseUs
+            data={WHY_CHOOSE_US_DATA_CONFIG}
+            image={whyChooseUsImage}
+            isReverse={true}
+            bgClassName="bg-home"
+         />
          <GetStarted />
          <WhatClientsSaying />
          <OurPricing />

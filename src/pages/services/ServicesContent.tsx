@@ -12,7 +12,7 @@ import { SERVICES_PAGE_TITLE } from "./ServicesContent.consts";
 function ServiceContent() {
    return (
       <>
-         <PageTitle {...SERVICES_PAGE_TITLE} />
+         <PageTitle data={SERVICES_PAGE_TITLE} />
          <OurService />
          <Stats />
          <OurPricing withArcGlow />

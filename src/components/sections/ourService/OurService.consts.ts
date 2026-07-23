@@ -1,7 +1,7 @@
-import { OurService } from "./OurService.types";
+import { OurServiceData } from "./OurService.types";
 
-export const OUR_SERVICE_CONFIG: OurService = {
-   sectionTitle: "Наш сервис",
+export const OUR_SERVICE_CONFIG: OurServiceData = {
+   section: "Наш сервис",
    title: "Наш сервис",
    text: "Мы используем новейшее VR‑оборудование и программное обеспечение, чтобы создавать качественные VR‑возможности, доступные и по разумной цене. Наша цель — обеспечить исключительный уровень обслуживания и поддержки: команда всегда на связи, чтобы ответить на ваши вопросы и помочь с любыми затруднениями.",
 };

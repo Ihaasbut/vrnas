@@ -6,8 +6,12 @@ export type AccordionEl = {
    content: ReactNode;
 };
 
-export type AccordionProps = {
+export type AccordionData = {
    accordionElements: AccordionEl[];
+};
+
+export type AccordionProps = {
+   data: AccordionData;
    className?: string;
    isBg?: boolean;
 };

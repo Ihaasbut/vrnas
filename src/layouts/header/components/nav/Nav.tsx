@@ -9,11 +9,13 @@ import Typography from "@/components/ui/typography/Typography";
 import { useIsNavLinkActive } from "@/hooks/useIsNavLinkActive";
 
 import NavLinkChildren from "./components/nav-link-children/NavLinkChildren";
-import { NavLink, NavProps } from "./Nav.types";
+import { NavLinkChildrenData } from "./components/nav-link-children/NavLinkChildren.types";
+import { NavLinkEl, NavProps } from "./Nav.types";
 
 import styles from "./Nav.module.scss";
 
-function Nav({ navLinks }: NavProps) {
+function Nav({ data }: NavProps) {
+   const { navLinks } = data;
    const isNavLinkActive = useIsNavLinkActive();
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
    const dropdownRef = useRef<HTMLDivElement>(null);
@@ -46,11 +48,14 @@ function Nav({ navLinks }: NavProps) {
 
    return (
       <div className={styles.nav}>
-         {navLinks.map((link: NavLink) => {
+         {navLinks.map((link: NavLinkEl) => {
             const isParentActive = link.children
                ? link.children.some((child) => isNavLinkActive(child.href))
                : false;
             const isActive = isNavLinkActive(link.href);
+            const navLinkChildrenData: NavLinkChildrenData = {
+               childrenLinks: link.children || [],
+            };
 
             return link.children ? (
                <div key={link.title} className={styles.linkWrapper}>
@@ -74,7 +79,7 @@ function Nav({ navLinks }: NavProps) {
                   </button>
 
                   <NavLinkChildren
-                     childrenLinks={link.children}
+                     data={navLinkChildrenData}
                      dropdownRef={dropdownRef}
                      isOpen={isDropdownOpen}
                      onClick={() => setIsDropdownOpen(false)}

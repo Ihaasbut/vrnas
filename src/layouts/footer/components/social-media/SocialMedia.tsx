@@ -1,13 +1,15 @@
 import cn from "classnames";
 
-import { SocialMediaProps } from "./SocialMedia.types";
+import { SocialMediaEl, SocialMediaProps } from "./SocialMedia.types";
 
 import styles from "./SocialMedia.module.scss";
 
-function SocialMedia({ socials }: SocialMediaProps) {
+function SocialMedia({ data }: SocialMediaProps) {
+   const { socials } = data;
+
    return (
       <div className={styles.socials}>
-         {socials.map((social) => {
+         {socials.map((social: SocialMediaEl) => {
             const Icon = social.icon;
 
             return (

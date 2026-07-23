@@ -2,9 +2,9 @@ import LocationIcon from "@/components/ui/icons/LocationIcon";
 import MailIcon from "@/components/ui/icons/MailIcon";
 import TelephoneIcon from "@/components/ui/icons/TelephoneIcon";
 
-import { NavLinkSection } from "./Nav.types";
+import { NavLinkSectionEl } from "./Nav.types";
 
-export const NAV_SECTIONS: NavLinkSection[] = [
+export const NAV_SECTIONS: NavLinkSectionEl[] = [
    {
       title: "Быстрые ссылки",
       links: [

@@ -1,11 +1,15 @@
-import { NavLinkChild } from "./components/nav-link-children/NavLinkChildren.types";
+import { NavLinkChildEl } from "./components/nav-link-children/NavLinkChildren.types";
 
-export type NavLink = {
+export type NavLinkEl = {
    title: string;
    href: string;
-   children?: NavLinkChild[];
+   children?: NavLinkChildEl[];
+};
+
+export type NavData = {
+   navLinks: NavLinkEl[];
 };
 
 export type NavProps = {
-   navLinks: NavLink[];
+   data: NavData;
 };

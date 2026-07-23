@@ -1,9 +1,11 @@
-import { NavLink } from "@/layouts/header/components/nav/Nav.types";
+import { NavLinkEl } from "@/layouts/footer/components/nav/Nav.types";
 
-export type { NavLink };
+export type NavData = {
+   navLinks: NavLinkEl[];
+};
 
 export type NavProps = {
-   navLinks: NavLink[];
+   data: NavData;
    isOpen: boolean;
    onLinkClick: () => void;
 };

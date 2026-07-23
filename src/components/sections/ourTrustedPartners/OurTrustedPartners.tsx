@@ -1,22 +1,28 @@
 import Image from "next/image";
 
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
+import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
 import Container from "@/components/ui/container/Container";
 
 import {
    OUR_TRUSTED_PARTNERS_DATA,
    OUR_TRUSTED_PARTNERS_IMAGE,
 } from "./OurTrustedPartners.consts";
+import { OurTrustedPartnersProps } from "./OurTrustedPartners.types";
 
 import styles from "./OurTrustedPartners.module.scss";
 
-function OurTrustedPartners() {
-   const { section, title, isCenter, imageAlt } = OUR_TRUSTED_PARTNERS_DATA;
+function OurTrustedPartners({ isCenter = false }: OurTrustedPartnersProps) {
+   const { section, title, imageAlt } = OUR_TRUSTED_PARTNERS_DATA;
+   const blockTitleData: BlockTitleData = {
+      section,
+      title,
+   };
 
    return (
       <Container>
          <section className={styles.ourTrustedPartners}>
-            <BlockTitle section={section} title={title} isCenter={isCenter} />
+            <BlockTitle data={blockTitleData} isCenter={isCenter} />
 
             <div className={styles.imageWrapper}>
                <Image src={OUR_TRUSTED_PARTNERS_IMAGE} alt={imageAlt} />

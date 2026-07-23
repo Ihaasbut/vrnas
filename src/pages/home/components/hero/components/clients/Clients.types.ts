@@ -5,12 +5,12 @@ export type HeroClientImage = {
    alt: string;
 };
 
-export type HeroClientsProps = {
-   clients: HeroClients;
-};
-
-export type HeroClients = {
+export type HeroClientsData = {
    clientsCount: string;
    clientsLabel: string;
    clientsImage: [HeroClientImage, ...HeroClientImage[]];
+};
+
+export type HeroClientsProps = {
+   data: HeroClientsData;
 };

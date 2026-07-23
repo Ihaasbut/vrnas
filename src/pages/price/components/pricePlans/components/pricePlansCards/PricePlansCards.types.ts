@@ -1,4 +1,4 @@
-export type PricePlanCard = {
+export type PricePlanCardEl = {
    title: string;
    price: string;
    period: string;
@@ -8,6 +8,10 @@ export type PricePlanCard = {
    isMain: boolean;
 };
 
+export type PricePlansCardsData = {
+   pricePlansCards: PricePlanCardEl[];
+};
+
 export type PricePlansCardsProps = {
-   pricePlansCards: PricePlanCard[];
+   data: PricePlansCardsData;
 };

@@ -7,7 +7,9 @@ import { BenefitsProps } from "./Benefits.types";
 
 import styles from "./Benefits.module.scss";
 
-function Benefits({ benefits }: BenefitsProps) {
+function Benefits({ data }: BenefitsProps) {
+   const { benefits } = data;
+
    return (
       <div className={styles.benefits}>
          {benefits.map((benefit) => (

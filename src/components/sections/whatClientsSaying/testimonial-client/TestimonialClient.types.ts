@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import type { TestimonialTooltip } from "./TestimonialClientTooltip/TestimonialClientTooltip.types";
+import type { TestimonialTooltipEl } from "./TestimonialClientTooltip/TestimonialClientTooltip.types";
 
 export type TestimonialBreakpointPosition = {
    top: string;
@@ -13,16 +13,20 @@ export type TestimonialPosition = {
    mobile: TestimonialBreakpointPosition;
 };
 
-export type Testimonial = {
+export type TestimonialEl = {
    id: string;
    avatar: StaticImageData;
    alt: string;
-   tooltip: TestimonialTooltip;
+   tooltip: TestimonialTooltipEl;
    position: TestimonialPosition;
 };
 
+export type TestimonialClientData = {
+   client: TestimonialEl;
+};
+
 export type TestimonialClientProps = {
-   client: Testimonial;
+   data: TestimonialClientData;
    isActive: boolean;
-   onActivate: (clientId: Testimonial["id"]) => void;
+   onActivate: (clientId: TestimonialEl["id"]) => void;
 };

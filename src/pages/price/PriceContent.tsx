@@ -1,5 +1,6 @@
 "use client";
 
+import whyChooseUsImage2 from "@/assets/images/why-choose-us.webp";
 import Faq from "@/components/sections/faq/Faq";
 import Newsletter from "@/components/sections/newsletter/Newsletter";
 import WhyChooseUs from "@/components/sections/whyChooseUs/WhyChooseUs";
@@ -15,10 +16,15 @@ import {
 function PriceContent() {
    return (
       <>
-         <PageTitle {...PRICE_PAGE_TITLE} />
-         <PricePlans />
-         <WhyChooseUs data={WHY_CHOOSE_US_DATA_CONFIG_2.data} />
-         <Faq {...FAQ_DATA_CONFIG} />
+         <PageTitle data={PRICE_PAGE_TITLE} />
+         <PricePlans isCenter />
+         <WhyChooseUs
+            data={WHY_CHOOSE_US_DATA_CONFIG_2}
+            image={whyChooseUsImage2}
+            isReverse={true}
+            bgClassName="bg-home"
+         />
+         <Faq data={FAQ_DATA_CONFIG} isCenter page="price" />
          <Newsletter />
       </>
    );

@@ -54,7 +54,7 @@ function Hero() {
                   </Button>
 
                   <div className={styles.businessProof}>
-                     <Clients clients={HERO_CLIENTS_DATA.clients} />
+                     <Clients data={HERO_CLIENTS_DATA} />
                   </div>
                </div>
 
@@ -74,7 +74,7 @@ function Hero() {
          </Container>
 
          <Container>
-            <Features features={FEATURES_DATA.features} />
+            <Features data={FEATURES_DATA} />
          </Container>
       </div>
    );

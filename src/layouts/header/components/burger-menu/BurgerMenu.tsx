@@ -5,7 +5,8 @@ import cn from "classnames";
 
 import Button from "@/components/ui/button/Button";
 
-import { NAV_LINKS } from "../nav/Nav.consts";
+import { NAV_LINKS_DATA } from "../nav/Nav.consts";
+import { NavData } from "../nav/Nav.types";
 
 import Nav from "./components/nav/Nav";
 
@@ -45,6 +46,10 @@ function BurgerMenu() {
       setIsOpen((state) => !state);
    };
 
+   const navData: NavData = {
+      navLinks: NAV_LINKS_DATA,
+   };
+
    return (
       <div className={styles.wrapper} ref={menuRef}>
          <Button
@@ -67,7 +72,7 @@ function BurgerMenu() {
          </Button>
 
          <Nav
-            navLinks={NAV_LINKS.navLinks}
+            data={navData}
             isOpen={isOpen}
             onLinkClick={() => setIsOpen(false)}
          />
