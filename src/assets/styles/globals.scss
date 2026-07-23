@@ -80,10 +80,12 @@ ul {
       background: $color-black-100;
       transition: opacity 0.2s ease-in-out;
    }
+
    > * {
       position: relative;
       z-index: 1;
    }
+
    @include hover {
       &::before {
          opacity: 0;

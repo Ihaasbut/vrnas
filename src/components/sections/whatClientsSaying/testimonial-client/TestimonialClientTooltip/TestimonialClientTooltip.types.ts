@@ -2,18 +2,19 @@ import type { CSSProperties } from "react";
 
 export type TestimonialTooltipPosition = "left" | "right";
 
-export type TestimonialTooltipData = {
+export type TestimonialTooltipEl = {
    quote: string;
    author: string;
    role: string;
-};
-
-export type TestimonialTooltip = {
-   data: TestimonialTooltipData;
    tooltipPosition: TestimonialTooltipPosition;
 };
 
-export type TestimonialClientTooltipProps = TestimonialTooltip & {
+export type TestimonialTooltipData = {
+   tooltip: TestimonialTooltipEl;
+};
+
+export type TestimonialClientTooltipProps = {
+   data: TestimonialTooltipData;
    className: string;
    isActive: boolean;
    style: CSSProperties;

@@ -3,12 +3,11 @@ import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import { STATS_DATA_CONFIG } from "./Stats.consts";
-import { Stat } from "./Stats.types";
+import { StatsEl } from "./Stats.types";
 
 import styles from "./Stats.module.scss";
 
 function Stats() {
-   const { stats } = STATS_DATA_CONFIG;
    const { isDesktop } = useClientBreakpoint();
    const currentHeading = !isDesktop ? "heading-2" : "heading-5";
 
@@ -16,7 +15,7 @@ function Stats() {
       <Container>
          <section className={styles.statsWrapper}>
             <div className={styles.statsList}>
-               {stats.map((stat: Stat) => (
+               {STATS_DATA_CONFIG.map((stat: StatsEl) => (
                   <div key={stat.label} className={styles.stat}>
                      <Typography
                         variant="caption-1"

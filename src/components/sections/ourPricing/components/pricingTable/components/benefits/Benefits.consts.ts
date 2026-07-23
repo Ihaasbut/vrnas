@@ -1,6 +1,6 @@
-import { BenefitsProps } from "./Benefits.types";
+import { BenefitsData } from "./Benefits.types";
 
-export const BENEFITS_DATA_CONFIG: BenefitsProps = {
+export const BENEFITS_DATA_CONFIG: BenefitsData = {
    benefits: [
       {
          title: "Гибкие пакеты",

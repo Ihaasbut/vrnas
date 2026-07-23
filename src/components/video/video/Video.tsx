@@ -8,7 +8,8 @@ import { VideoProps } from "./Video.types";
 
 import styles from "./Video.module.scss";
 
-export function Video({ tag, title, image }: VideoProps) {
+export function Video({ data }: VideoProps) {
+   const { tag, title, image } = data;
    const { isDesktop } = useClientBreakpoint();
    const currentVariant = isDesktop ? "heading-4" : "heading-8";
 

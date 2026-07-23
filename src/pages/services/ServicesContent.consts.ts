@@ -1,6 +1,6 @@
-import { PageTitleProps } from "@/components/titles/page-title/PageTitle.types";
+import { PageTitleData } from "@/components/titles/page-title/PageTitle.types";
 
-export const SERVICES_PAGE_TITLE: PageTitleProps = {
+export const SERVICES_PAGE_TITLE: PageTitleData = {
    title: "Наши услуги",
    breadcrumbs: [
       { title: "Главная", link: "/" },

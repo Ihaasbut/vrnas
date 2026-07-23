@@ -4,7 +4,9 @@ import { CopyrightProps } from "./Copyright.types";
 
 import styles from "./Copyright.module.scss";
 
-function Copyright({ text }: CopyrightProps) {
+function Copyright({ data }: CopyrightProps) {
+   const { text } = data;
+
    return (
       <div className={styles.copyright}>
          <Typography variant="body-1" as="p">

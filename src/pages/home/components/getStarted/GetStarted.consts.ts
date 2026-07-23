@@ -1,8 +1,8 @@
 import getStartedImage from "@/assets/images/home/getStarted/get-started-video.webp";
 
-import { GetStartedProps } from "./GetStarted.types";
+import { GetStartedData } from "./GetStarted.types";
 
-export const GET_STARTED_CONFIG: GetStartedProps = {
+export const GET_STARTED_CONFIG: GetStartedData = {
    section: "Старт",
    title: "Оживим ваши VR‑мечты",
    buttonLabel: "Начать",

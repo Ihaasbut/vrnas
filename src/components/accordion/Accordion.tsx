@@ -9,10 +9,11 @@ import { AccordionProps } from "./Accordion.types";
 import styles from "./Accordion.module.scss";
 
 export default function AccordionBlock({
-   accordionElements,
+   data,
    className,
    isBg = false,
 }: AccordionProps) {
+   const { accordionElements } = data;
    const firstAccordionElementId = accordionElements[0]?.id;
 
    return (

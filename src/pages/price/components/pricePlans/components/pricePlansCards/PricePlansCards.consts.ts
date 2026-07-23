@@ -1,6 +1,6 @@
-import { PricePlanCard } from "./PricePlansCards.types";
+import { PricePlanCardEl } from "./PricePlansCards.types";
 
-export const PRICE_PLANS_CARDS_CONFIG: PricePlanCard[] = [
+export const PRICE_PLANS_CARDS_CONFIG: PricePlanCardEl[] = [
    {
       title: "Базовый",
       price: "7 750",

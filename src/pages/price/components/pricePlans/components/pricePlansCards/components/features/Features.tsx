@@ -5,7 +5,9 @@ import { FeaturesProps } from "./Features.types";
 
 import styles from "./Features.module.scss";
 
-function Features({ features }: FeaturesProps) {
+function Features({ data }: FeaturesProps) {
+   const { features } = data;
+
    return (
       <div className={styles.features}>
          {features.map((feature) => (

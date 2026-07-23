@@ -8,14 +8,15 @@ import styles from "./TestimonialClientTooltip.module.scss";
 
 function TestimonialClientTooltip({
    data,
-   tooltipPosition,
    className,
    isActive,
    style,
 }: TestimonialClientTooltipProps) {
+   const { tooltip } = data;
+   const { quote, author, role, tooltipPosition } = tooltip;
+
    const tooltipPositionClassName =
       tooltipPosition === "left" ? styles.left : styles.right;
-   const { quote, author, role } = data;
 
    return (
       <div

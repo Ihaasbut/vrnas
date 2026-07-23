@@ -12,8 +12,7 @@ import styles from "./ImgTextBlock.module.scss";
 function ImgTextBlock({
    children,
    image,
-   section,
-   title,
+   data,
    isReverse = false,
    isReverseVideo = false,
    bgClassName = "",
@@ -38,8 +37,7 @@ function ImgTextBlock({
          </div>
 
          <div className={styles.right}>
-            <BlockTitle section={section} title={title} />
-
+            <BlockTitle data={data} isCenter />
             {children}
          </div>
       </div>

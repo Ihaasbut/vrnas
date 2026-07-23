@@ -4,16 +4,17 @@ import cn from "classnames";
 import Typography from "@/components/ui/typography/Typography";
 import { useIsNavLinkActive } from "@/hooks/useIsNavLinkActive";
 
-import { NavLinkChild, NavLinkChildrenProps } from "./NavLinkChildren.types";
+import { NavLinkChildEl, NavLinkChildrenProps } from "./NavLinkChildren.types";
 
 import styles from "./NavLinkChildren.module.scss";
 
 function NavLinkChildren({
-   childrenLinks,
+   data,
    dropdownRef,
    isOpen,
    onClick,
 }: NavLinkChildrenProps) {
+   const { childrenLinks } = data;
    const isNavLinkActive = useIsNavLinkActive();
 
    return (
@@ -27,7 +28,7 @@ function NavLinkChildren({
             "border-brand",
          )}
       >
-         {childrenLinks.map((linkChild: NavLinkChild) => {
+         {childrenLinks.map((linkChild: NavLinkChildEl) => {
             const isActive = isNavLinkActive(linkChild.href);
 
             return (

@@ -1,3 +1,7 @@
-export type CopyrightProps = {
+export type CopyrightData = {
    text: string;
+};
+
+export type CopyrightProps = {
+   data: CopyrightData;
 };

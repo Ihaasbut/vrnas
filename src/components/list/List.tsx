@@ -5,15 +5,17 @@ import { ListEl, ListProps } from "./List.types";
 
 import styles from "./List.module.scss";
 
-function List({ items }: ListProps) {
+function List({ data }: ListProps) {
+   const { list } = data;
+
    return (
       <ul className={styles.list}>
-         {items.map((item: ListEl) => (
-            <li key={item.label} className={styles.item}>
+         {list.map((el: ListEl) => (
+            <li key={el.label} className={styles.item}>
                <CheckboxIcon />
 
                <Typography variant="body-3" as="span">
-                  {item.label}
+                  {el.label}
                </Typography>
             </li>
          ))}

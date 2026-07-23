@@ -1,8 +1,12 @@
-import { BlockTitleProps } from "@/components/titles/block-title/BlockTitle.types";
+import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
 
-import { PricePlansCardsProps } from "./components/pricePlansCards/PricePlansCards.types";
+import { PricePlansCardsData } from "./components/pricePlansCards/PricePlansCards.types";
 
-export type PricePlansProps = BlockTitleProps & {
+export type PricePlansData = BlockTitleData & {
    description: string;
-   pricePlansCards: PricePlansCardsProps["pricePlansCards"];
+   pricePlansCards: PricePlansCardsData["pricePlansCards"];
+};
+
+export type PricePlansProps = {
+   isCenter?: boolean;
 };

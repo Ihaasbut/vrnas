@@ -7,8 +7,8 @@ import { HeroClientImage, HeroClientsProps } from "./Clients.types";
 
 import styles from "./Clients.module.scss";
 
-function Clients({ clients }: HeroClientsProps) {
-   const { clientsCount, clientsLabel, clientsImage } = clients;
+function Clients({ data }: HeroClientsProps) {
+   const { clientsCount, clientsLabel, clientsImage } = data;
 
    return (
       <div className={styles.clients}>

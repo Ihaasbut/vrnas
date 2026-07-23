@@ -1,8 +1,4 @@
-export type Stat = {
+export type StatsEl = {
    label: string;
    value: string;
-};
-
-export type StatsData = {
-   stats: Stat[];
 };

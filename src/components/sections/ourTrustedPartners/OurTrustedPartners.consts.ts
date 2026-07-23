@@ -7,6 +7,5 @@ export const OUR_TRUSTED_PARTNERS_IMAGE = ourTrustedPartnersImage;
 export const OUR_TRUSTED_PARTNERS_DATA: OurTrustedPartnersData = {
    section: "Наши партнеры",
    title: "Компании, с которыми мы работаем",
-   isCenter: true,
    imageAlt: "Логотипы наших партнеров",
 };

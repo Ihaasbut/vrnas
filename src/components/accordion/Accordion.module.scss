@@ -57,6 +57,7 @@
 
    @include tablet {
       padding: 20px 14px;
+
       &:has(button[aria-expanded="true"]) {
          padding: 20px 14px 36px;
       }

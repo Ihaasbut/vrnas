@@ -1,8 +1,7 @@
-import { VideoProps } from "@/components/video/video/Video.types";
+import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
+import { VideoData } from "@/components/video/video/Video.types";
 
-export type GetStartedProps = {
-   section: string;
-   title: string;
-   video: VideoProps;
+export type GetStartedData = BlockTitleData & {
+   video: VideoData;
    buttonLabel: string;
 };

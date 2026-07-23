@@ -8,8 +8,12 @@ export type FaqQuestion = AccordionEl & {
    pageQuestion: FaqQuestionPage;
 };
 
-export type FaqProps = BlockTitleProps & {
+export type FaqData = {
    description: string;
+};
+
+export type FaqProps = BlockTitleProps & {
+   data: FaqData;
    page: FaqPage;
    withArcGlow?: boolean;
 };

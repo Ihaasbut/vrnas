@@ -3,6 +3,10 @@ export type Benefit = {
    description: string;
 };
 
-export type BenefitsProps = {
+export type BenefitsData = {
    benefits: Benefit[];
+};
+
+export type BenefitsProps = {
+   data: BenefitsData;
 };

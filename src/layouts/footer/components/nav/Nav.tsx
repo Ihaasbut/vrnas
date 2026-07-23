@@ -7,6 +7,7 @@ import Typography from "@/components/ui/typography/Typography";
 import { useIsNavLinkActive } from "@/hooks/useIsNavLinkActive";
 
 import { NAV_SECTIONS } from "./Nav.consts";
+import { NavLinkEl } from "./Nav.types";
 
 import styles from "./Nav.module.scss";
 
@@ -22,7 +23,7 @@ function Nav() {
                </Typography>
 
                <ul className={styles.links}>
-                  {section.links.map((link) => {
+                  {section.links.map((link: NavLinkEl) => {
                      const Icon = link.icon;
                      const isActive = isNavLinkActive(link.href);
 

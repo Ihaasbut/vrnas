@@ -7,7 +7,8 @@ import { BlockTitleProps } from "./BlockTitle.types";
 
 import styles from "./BlockTitle.module.scss";
 
-function BlockTitle({ title, section, isCenter }: BlockTitleProps) {
+function BlockTitle({ data, isCenter }: BlockTitleProps) {
+   const { section, title } = data;
    const { isDesktop } = useClientBreakpoint();
 
    const alignItems = isCenter ? "center" : "left";

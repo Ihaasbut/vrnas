@@ -15,10 +15,7 @@ function OurPricing({ withArcGlow }: OurPricingProps) {
          <Container>
             <div className={styles.ourPricingInner}>
                <div className={styles.titleWrapper}>
-                  <BlockTitle
-                     title={OUR_PRICING_CONFIG.title}
-                     section={OUR_PRICING_CONFIG.sectionTitle}
-                  />
+                  <BlockTitle data={OUR_PRICING_CONFIG} />
 
                   <Typography
                      variant="body-1"

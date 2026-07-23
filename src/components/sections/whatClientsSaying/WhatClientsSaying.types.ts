@@ -1,8 +1,8 @@
-import { BlockTitleProps } from "../../titles/block-title/BlockTitle.types";
+import { BlockTitleData } from "../../titles/block-title/BlockTitle.types";
 
-import { Testimonial } from "./testimonial-client/TestimonialClient.types";
+import { TestimonialEl } from "./testimonial-client/TestimonialClient.types";
 
-export type WhatClientsSayingData = BlockTitleProps & {
+export type WhatClientsSayingData = BlockTitleData & {
    imageAlt: string;
-   testimonials: [Testimonial, ...Testimonial[]];
+   testimonials: [TestimonialEl, ...TestimonialEl[]];
 };

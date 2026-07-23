@@ -1,11 +1,15 @@
 import { ComponentType } from "react";
 
-export type Feature = {
+export type FeaturesData = {
+   features: FeatureEl[];
+};
+
+export type FeatureEl = {
    icon: ComponentType;
    title: string;
    description: string;
 };
 
 export type FeaturesProps = {
-   features: Feature[];
+   data: FeaturesData;
 };

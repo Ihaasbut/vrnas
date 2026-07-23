@@ -1,8 +1,8 @@
-import { ImgTextBlockProps } from "@/components/ImgTextBlock/ImgTextBlock.types";
-import { ListProps } from "@/components/list/List.types";
+import { ListEl } from "@/components/list/List.types";
+import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
 
-export type AboutUsProps = Omit<ImgTextBlockProps, "children"> & {
+export type AboutUsData = BlockTitleData & {
    text: string;
    buttonLabel: string;
-   listItems: ListProps["items"];
+   listItems: ListEl[];
 };

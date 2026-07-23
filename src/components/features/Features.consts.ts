@@ -2,9 +2,9 @@ import CustomizationIcon from "@/components/ui/icons/hero/CustomizationIcon";
 import ExpertiseIcon from "@/components/ui/icons/hero/ExpertiseIcon";
 import ServiceIcon from "@/components/ui/icons/hero/ServiceIcon";
 
-import { FeaturesProps } from "./Features.types";
+import { FeaturesData } from "./Features.types";
 
-export const FEATURES_DATA: FeaturesProps = {
+export const FEATURES_DATA: FeaturesData = {
    features: [
       {
          icon: ExpertiseIcon,
