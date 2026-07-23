@@ -1,0 +1,35 @@
+.filters {
+   display: flex;
+   justify-content: center;
+   gap: 24px;
+
+   @include tablet {
+      gap: 16px;
+   }
+}
+
+.filter {
+   padding: 12px 24px;
+   border: 1px solid transparent;
+   border-image: linear-gradient(
+         90deg,
+         rgba(12, 186, 241, 0.35) 0%,
+         rgba(233, 92, 233, 0.35) 100%
+      )
+      1;
+   background: transparent;
+   color: $color-white;
+   cursor: pointer;
+
+   @include hover {
+      border-image: $color-brand 1;
+   }
+
+   &.active {
+      border-image: $color-brand 1;
+   }
+
+   @include tablet {
+      padding: 12px 20px;
+   }
+}

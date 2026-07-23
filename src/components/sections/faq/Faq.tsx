@@ -1,10 +1,16 @@
+"use client";
+
+import { useState } from "react";
+
 import AccordionBlock from "@/components/accordion/Accordion";
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
 import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
 
-import { FaqProps } from "./Faq.types";
+import FaqFilter from "./components/filter/FaqFilter";
+import { FAQ_QUESTIONS } from "./Faq.consts";
+import { FaqPage, FaqProps } from "./Faq.types";
 
 import styles from "./Faq.module.scss";
 
@@ -13,9 +19,15 @@ function Faq({
    section,
    isCenter,
    description,
-   accordionElements,
+   page,
    withArcGlow = false,
 }: FaqProps) {
+   const [activeFilter, setActiveFilter] = useState<FaqPage>(page);
+   const accordionElements = FAQ_QUESTIONS.filter(
+      ({ pageQuestion }) =>
+         activeFilter === "faq" || pageQuestion === activeFilter,
+   );
+
    return (
       <section className={styles.faqWrapper}>
          <Container>
@@ -35,6 +47,13 @@ function Faq({
                      {description}
                   </Typography>
                </div>
+
+               {page === "faq" && (
+                  <FaqFilter
+                     activeFilter={activeFilter}
+                     onChange={setActiveFilter}
+                  />
+               )}
 
                <AccordionBlock accordionElements={accordionElements} isBg />
             </div>

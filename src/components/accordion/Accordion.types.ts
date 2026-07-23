@@ -7,7 +7,7 @@ export type AccordionEl = {
 };
 
 export type AccordionProps = {
-   accordionElements: [AccordionEl, ...AccordionEl[]];
+   accordionElements: AccordionEl[];
    className?: string;
    isBg?: boolean;
 };

@@ -13,7 +13,7 @@ export default function AccordionBlock({
    className,
    isBg = false,
 }: AccordionProps) {
-   const firstAccordionElementId = accordionElements[0].id;
+   const firstAccordionElementId = accordionElements[0]?.id;
 
    return (
       <Accordion
