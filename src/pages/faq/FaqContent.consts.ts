@@ -10,7 +10,7 @@ export const FAQ_PAGE_TITLE: PageTitleData = {
    ],
 };
 
-export const FAQ_PAGE_CONFIG: FaqData & BlockTitleProps["data"] = {
+export const FAQ_PAGE_DATA: FaqData & BlockTitleProps["data"] = {
    description:
       "Ответы на частые вопросы о нашей компании и стоимости VR-решений.",
    title: "Часто задаваемые вопросы",

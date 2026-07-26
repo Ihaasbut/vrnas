@@ -10,7 +10,7 @@ import OurService from "../../components/sections/ourService/OurService";
 import AboutUs from "./components/aboutUs/AboutUs";
 import GetStarted from "./components/getStarted/GetStarted";
 import Hero from "./components/hero/Hero";
-import { WHY_CHOOSE_US_DATA_CONFIG } from "./HomeContent.consts";
+import { WHY_CHOOSE_US_DATA } from "./HomeContent.consts";
 
 function HomeContent() {
    return (
@@ -19,7 +19,7 @@ function HomeContent() {
          <AboutUs />
          <OurService withArcGlow />
          <WhyChooseUs
-            data={WHY_CHOOSE_US_DATA_CONFIG}
+            data={WHY_CHOOSE_US_DATA}
             image={whyChooseUsImage}
             isReverse={true}
             bgClassName="bg-home"
@@ -27,7 +27,7 @@ function HomeContent() {
          <GetStarted />
          <WhatClientsSaying />
          <OurPricing />
-         <OurTrustedPartners />
+         <OurTrustedPartners isCenter />
          <Newsletter />
       </>
    );

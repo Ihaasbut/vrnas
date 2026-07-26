@@ -12,7 +12,7 @@ export const PRICE_PAGE_TITLE: PageTitleData = {
    ],
 };
 
-export const WHY_CHOOSE_US_DATA_CONFIG_2: WhyChooseUsData = {
+export const WHY_CHOOSE_US_DATA_2: WhyChooseUsData = {
    title: "Почему мы",
    section: "Почему мы",
    accordionElements: [
@@ -54,7 +54,7 @@ export const WHY_CHOOSE_US_DATA_CONFIG_2: WhyChooseUsData = {
    ],
 };
 
-export const FAQ_DATA_CONFIG: FaqData & BlockTitleData = {
+export const FAQ_DATA: FaqData & BlockTitleData = {
    title: "Часто задаваемые вопросы",
    section: "FAQ",
    description:

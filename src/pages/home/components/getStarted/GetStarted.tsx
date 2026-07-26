@@ -9,12 +9,12 @@ import Typography from "@/components/ui/typography/Typography";
 import { Video } from "@/components/video/video/Video";
 import { VideoData } from "@/components/video/video/Video.types";
 
-import { GET_STARTED_CONFIG } from "./GetStarted.consts";
+import { GET_STARTED_DATA } from "./GetStarted.consts";
 
 import styles from "./GetStarted.module.scss";
 
 function GetStarted() {
-   const { section, title, buttonLabel, video } = GET_STARTED_CONFIG;
+   const { section, title, buttonLabel, video } = GET_STARTED_DATA;
 
    const blockTitleData: BlockTitleData = {
       section,

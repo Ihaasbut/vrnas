@@ -1,7 +1,7 @@
 import { WhyChooseUsData } from "@/components/sections/whyChooseUs/WhyChooseUs.types";
 import Typography from "@/components/ui/typography/Typography";
 
-export const WHY_CHOOSE_US_DATA_CONFIG: WhyChooseUsData = {
+export const WHY_CHOOSE_US_DATA: WhyChooseUsData = {
    title: "Почему мы",
    section: "Почему мы",
    accordionElements: [

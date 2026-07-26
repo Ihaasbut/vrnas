@@ -2,7 +2,7 @@ import getStartedImage from "@/assets/images/home/getStarted/get-started-video.w
 
 import { GetStartedData } from "./GetStarted.types";
 
-export const GET_STARTED_CONFIG: GetStartedData = {
+export const GET_STARTED_DATA: GetStartedData = {
    section: "Старт",
    title: "Оживим ваши VR‑мечты",
    buttonLabel: "Начать",

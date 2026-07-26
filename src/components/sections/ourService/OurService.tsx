@@ -4,7 +4,7 @@ import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
 
 import Services from "./components/services/Services";
-import { OUR_SERVICE_CONFIG } from "./OurService.consts";
+import { OUR_SERVICE_DATA } from "./OurService.consts";
 import { OurServiceProps } from "./OurService.types";
 
 import styles from "./OurService.module.scss";
@@ -14,11 +14,11 @@ function OurService({ withArcGlow = false }: OurServiceProps) {
       <section className={styles.ourService}>
          <Container>
             <div className={styles.header}>
-               <BlockTitle data={OUR_SERVICE_CONFIG} />
+               <BlockTitle data={OUR_SERVICE_DATA} />
 
                <div className={styles.textWrapper}>
                   <Typography variant="body-1" as="p">
-                     {OUR_SERVICE_CONFIG.text}
+                     {OUR_SERVICE_DATA.text}
                   </Typography>
 
                   {withArcGlow && <ArcGlow className={styles.arcGlow} />}

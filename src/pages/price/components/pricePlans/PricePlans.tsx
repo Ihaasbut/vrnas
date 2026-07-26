@@ -5,13 +5,13 @@ import Typography from "@/components/ui/typography/Typography";
 
 import PricePlansCards from "./components/pricePlansCards/PricePlansCards";
 import { PricePlansCardsData } from "./components/pricePlansCards/PricePlansCards.types";
-import { PRICE_PLANS_CONFIG } from "./PricePlans.consts";
+import { PRICE_PLANS_DATA } from "./PricePlans.consts";
 import { PricePlansProps } from "./PricePlans.types";
 
 import styles from "./PricePlans.module.scss";
 
 function PricePlans({ isCenter }: PricePlansProps) {
-   const { title, section, description, pricePlansCards } = PRICE_PLANS_CONFIG;
+   const { title, section, description, pricePlansCards } = PRICE_PLANS_DATA;
 
    const blockTitleData: BlockTitleData = {
       title,

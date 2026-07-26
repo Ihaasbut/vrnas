@@ -9,12 +9,12 @@ import Button from "@/components/ui/button/Button";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
 
-import { ABOUT_US_CONFIG } from "./AboutUs.consts";
+import { ABOUT_US_DATA } from "./AboutUs.consts";
 
 import styles from "./AboutUs.module.scss";
 
 function AboutUs() {
-   const { section, title, text, buttonLabel, listItems } = ABOUT_US_CONFIG;
+   const { section, title, text, buttonLabel, listItems } = ABOUT_US_DATA;
 
    const imgTextBlockData: BlockTitleData = {
       section,

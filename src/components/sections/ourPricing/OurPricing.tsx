@@ -4,7 +4,7 @@ import Container from "../../ui/container/Container";
 import Typography from "../../ui/typography/Typography";
 
 import PricingTable from "./components/pricingTable/PricingTable";
-import { OUR_PRICING_CONFIG } from "./OurPricing.consts";
+import { OUR_PRICING_DATA } from "./OurPricing.consts";
 import { OurPricingProps } from "./OurPricing.types";
 
 import styles from "./OurPricing.module.scss";
@@ -15,14 +15,14 @@ function OurPricing({ withArcGlow }: OurPricingProps) {
          <Container>
             <div className={styles.ourPricingInner}>
                <div className={styles.titleWrapper}>
-                  <BlockTitle data={OUR_PRICING_CONFIG} />
+                  <BlockTitle data={OUR_PRICING_DATA} />
 
                   <Typography
                      variant="body-1"
                      as="p"
                      className={styles.titleDescription}
                   >
-                     {OUR_PRICING_CONFIG.text}
+                     {OUR_PRICING_DATA.text}
                   </Typography>
                </div>
 

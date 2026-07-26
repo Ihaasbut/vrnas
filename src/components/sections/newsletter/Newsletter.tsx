@@ -8,13 +8,13 @@ import NewsletterIcon from "@/components/ui/icons/NewsletterIcon";
 import Typography from "@/components/ui/typography/Typography";
 import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
-import { NEWSLETTER_DATA_CONFIG } from "./Newsletter.consts";
+import { NEWSLETTER_DATA } from "./Newsletter.consts";
 
 import styles from "./Newsletter.module.scss";
 import typographyStyles from "@/components/ui/typography/Typography.module.scss";
 
 function Newsletter() {
-   const { title, placeholder } = NEWSLETTER_DATA_CONFIG;
+   const { title, placeholder } = NEWSLETTER_DATA;
    const { isDesktop } = useClientBreakpoint();
    const currentHeading = isDesktop ? "heading-3" : "heading-6";
 

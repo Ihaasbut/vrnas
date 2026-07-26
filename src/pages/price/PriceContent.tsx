@@ -8,9 +8,9 @@ import PageTitle from "@/components/titles/page-title/PageTitle";
 
 import PricePlans from "./components/pricePlans/PricePlans";
 import {
-   FAQ_DATA_CONFIG,
+   FAQ_DATA,
    PRICE_PAGE_TITLE,
-   WHY_CHOOSE_US_DATA_CONFIG_2,
+   WHY_CHOOSE_US_DATA_2,
 } from "./PriceContent.consts";
 
 function PriceContent() {
@@ -19,12 +19,12 @@ function PriceContent() {
          <PageTitle data={PRICE_PAGE_TITLE} />
          <PricePlans isCenter />
          <WhyChooseUs
-            data={WHY_CHOOSE_US_DATA_CONFIG_2}
+            data={WHY_CHOOSE_US_DATA_2}
             image={whyChooseUsImage2}
             isReverse={true}
             bgClassName="bg-home"
          />
-         <Faq data={FAQ_DATA_CONFIG} isCenter page="price" />
+         <Faq data={FAQ_DATA} isCenter page="price" />
          <Newsletter />
       </>
    );
