@@ -49,7 +49,7 @@ function OurTrustedPartners({ isCenter = false }: OurTrustedPartnersProps) {
                                  "border-brand-circle",
                               )}
                            >
-                              <span>{client.name}</span>
+                              {client.name}
                            </Typography>
                         </li>
                      );

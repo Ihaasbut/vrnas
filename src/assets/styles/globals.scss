@@ -40,6 +40,7 @@ ul {
    align-items: center;
    justify-content: center;
    position: relative;
+   isolation: isolate;
    border-radius: 50%;
    background: $color-brand;
 
@@ -47,20 +48,9 @@ ul {
       content: "";
       position: absolute;
       inset: 1px;
+      z-index: -1;
       border-radius: inherit;
       background: $color-black-100;
-      transition: opacity 0.2s ease-in-out;
-   }
-
-   > * {
-      position: relative;
-      z-index: 1;
-   }
-
-   @include hover {
-      &::before {
-         opacity: 0;
-      }
    }
 }
 
@@ -69,6 +59,7 @@ ul {
    align-items: center;
    justify-content: center;
    position: relative;
+   isolation: isolate;
    border-radius: 50%;
    background: $color-white-fade;
 
@@ -76,20 +67,9 @@ ul {
       content: "";
       position: absolute;
       inset: 1px;
+      z-index: -1;
       border-radius: inherit;
       background: $color-black-100;
-      transition: opacity 0.2s ease-in-out;
-   }
-
-   > * {
-      position: relative;
-      z-index: 1;
-   }
-
-   @include hover {
-      &::before {
-         opacity: 0;
-      }
    }
 }
 
