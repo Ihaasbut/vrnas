@@ -21,7 +21,6 @@ function PriceContent() {
          <WhyChooseUs
             data={WHY_CHOOSE_US_DATA_2}
             image={whyChooseUsImage2}
-            isReverse={true}
             bgClassName="bg-home"
          />
          <Faq data={FAQ_DATA} isCenter page="price" />

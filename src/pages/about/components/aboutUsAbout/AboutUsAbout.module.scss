@@ -1,0 +1,12 @@
+.bg {
+   background-size: 110% 90%;
+}
+
+.aboutUsAbout {
+   padding-top: 120px;
+   overflow-x: clip;
+
+   @include tablet {
+      padding-top: 100px;
+   }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import aboutUsManImage from "@/assets/images/home/aboutUs/about-us-man.webp";
+import aboutUsManImage from "@/assets/images/home/aboutUsHome/about-us-man.webp";
 import ImgTextBlock from "@/components/ImgTextBlock/ImgTextBlock";
 import List from "@/components/list/List";
 import { ListData } from "@/components/list/List.types";
@@ -9,12 +9,12 @@ import Button from "@/components/ui/button/Button";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
 
-import { ABOUT_US_DATA } from "./AboutUs.consts";
+import { ABOUT_US_HOME_DATA } from "./AboutUsHome.consts";
 
-import styles from "./AboutUs.module.scss";
+import styles from "./AboutUsHome.module.scss";
 
-function AboutUs() {
-   const { section, title, text, buttonLabel, listItems } = ABOUT_US_DATA;
+function AboutUsHome() {
+   const { section, title, text, buttonLabel, listItems } = ABOUT_US_HOME_DATA;
 
    const imgTextBlockData: BlockTitleData = {
       section,
@@ -26,7 +26,7 @@ function AboutUs() {
    };
 
    return (
-      <section className={styles.aboutUs}>
+      <section className={styles.aboutUsHome}>
          <Container>
             <ImgTextBlock
                image={aboutUsManImage}
@@ -50,4 +50,4 @@ function AboutUs() {
    );
 }
 
-export default AboutUs;
+export default AboutUsHome;

@@ -30,7 +30,7 @@
    position: relative;
    width: max-content;
    z-index: 3;
-   background-image: url("../../assets/images/home/aboutUs/about-us-bg.webp");
+   background-image: url("../../assets/images/home/aboutUsHome/about-us-bg.webp");
    background-position: 0 95%;
    background-repeat: no-repeat;
    padding-left: 20px;
@@ -59,6 +59,7 @@
    width: 100%;
    position: relative;
    z-index: 3;
+   max-width: 563px;
 
    @include tablet {
       width: 390px;

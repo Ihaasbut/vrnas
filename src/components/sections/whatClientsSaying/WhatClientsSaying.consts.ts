@@ -1,4 +1,4 @@
-import whatClientsSayingImage from "@/assets/images/home/whatClientsSaying/what-clients-saying.webp";
+import whatClientsSayingImage from "@/assets/images/man-in-circle.webp";
 
 import { TESTIMONIAL_CLIENTS } from "./testimonial-client/TestimonialClient.consts";
 import type { WhatClientsSayingData } from "./WhatClientsSaying.types";

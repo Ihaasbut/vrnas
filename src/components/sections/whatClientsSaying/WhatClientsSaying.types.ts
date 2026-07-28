@@ -4,5 +4,5 @@ import { TestimonialEl } from "./testimonial-client/TestimonialClient.types";
 
 export type WhatClientsSayingData = BlockTitleData & {
    imageAlt: string;
-   testimonials: [TestimonialEl, ...TestimonialEl[]];
+   testimonials: TestimonialEl[];
 };

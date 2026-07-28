@@ -7,7 +7,7 @@ import WhyChooseUs from "@/components/sections/whyChooseUs/WhyChooseUs";
 
 import OurService from "../../components/sections/ourService/OurService";
 
-import AboutUs from "./components/aboutUs/AboutUs";
+import AboutUsHome from "./components/aboutUsHome/AboutUsHome";
 import GetStarted from "./components/getStarted/GetStarted";
 import Hero from "./components/hero/Hero";
 import { WHY_CHOOSE_US_DATA } from "./HomeContent.consts";
@@ -16,7 +16,7 @@ function HomeContent() {
    return (
       <>
          <Hero />
-         <AboutUs />
+         <AboutUsHome />
          <OurService withArcGlow />
          <WhyChooseUs
             data={WHY_CHOOSE_US_DATA}
