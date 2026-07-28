@@ -51,11 +51,11 @@ export const NAV_SECTIONS: NavLinkSectionEl[] = [
          },
          {
             title: "Условия использования",
-            href: "/about",
+            href: "/terms",
          },
          {
             title: "Политика конфиденциальности",
-            href: "/contact",
+            href: "/privacy",
          },
       ],
    },

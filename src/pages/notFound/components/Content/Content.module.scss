@@ -54,27 +54,9 @@
    }
 }
 
-.text {
+.sections {
    display: flex;
    flex-direction: column;
    gap: 16px;
-   color: $color-grey-1;
    max-width: 640px;
-}
-
-.list {
-   display: flex;
-   flex-direction: column;
-   gap: 4px;
-   padding-left: 18px;
-
-   li {
-      position: relative;
-
-      &::before {
-         content: "•";
-         position: absolute;
-         left: -14px;
-      }
-   }
 }

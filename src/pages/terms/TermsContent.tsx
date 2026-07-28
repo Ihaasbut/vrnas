@@ -1,20 +1,20 @@
 import MenSidesWrapper from "@/components/menSidesWrapper/MenSidesWrapper";
-import Faq from "@/components/sections/faq/Faq";
 import Newsletter from "@/components/sections/newsletter/Newsletter";
 import PageTitle from "@/components/titles/page-title/PageTitle";
 
-import { FAQ_PAGE_DATA, FAQ_PAGE_TITLE } from "./FaqContent.consts";
+import Terms from "./terms/Terms";
+import { TERMS_PAGE_TITLE } from "./TermsContent.consts";
 
-function FaqContent() {
+function TermsContent() {
    return (
       <>
-         <PageTitle data={FAQ_PAGE_TITLE} />
+         <PageTitle data={TERMS_PAGE_TITLE} />
          <MenSidesWrapper>
-            <Faq data={FAQ_PAGE_DATA} isCenter page="faq" />
+            <Terms />
          </MenSidesWrapper>
          <Newsletter />
       </>
    );
 }
 
-export default FaqContent;
+export default TermsContent;

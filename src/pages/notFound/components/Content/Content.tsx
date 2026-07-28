@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
 import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
+import TitleText from "@/components/titleText/TitleText";
 import Button from "@/components/ui/button/Button";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
@@ -15,18 +16,8 @@ function Content() {
    const { isDesktop } = useClientBreakpoint();
    const inlinePadding = !isDesktop ? "16px 0" : "60px 0";
 
-   const {
-      section,
-      title,
-      intro,
-      reasons,
-      optionsIntro,
-      options,
-      footer,
-      image,
-      imageAlt,
-      buttonText,
-   } = CONTENT_DATA;
+   const { section, title, sections, image, imageAlt, buttonText } =
+      CONTENT_DATA;
 
    const blockTitleData: BlockTitleData = {
       section,
@@ -40,38 +31,10 @@ function Content() {
                <div className={styles.left}>
                   <BlockTitle data={blockTitleData} />
 
-                  <div className={styles.text}>
-                     <Typography variant="body-1" as="p">
-                        {intro}
-                     </Typography>
-
-                     <ul className={styles.list}>
-                        {reasons.map(({ label }) => (
-                           <li key={label}>
-                              <Typography variant="body-1" as="span">
-                                 {label}
-                              </Typography>
-                           </li>
-                        ))}
-                     </ul>
-
-                     <Typography variant="body-1" as="p">
-                        {optionsIntro}
-                     </Typography>
-
-                     <ul className={styles.list}>
-                        {options.map(({ label }) => (
-                           <li key={label}>
-                              <Typography variant="body-1" as="span">
-                                 {label}
-                              </Typography>
-                           </li>
-                        ))}
-                     </ul>
-
-                     <Typography variant="body-1" as="p">
-                        {footer}
-                     </Typography>
+                  <div className={styles.sections}>
+                     {sections.map((item, index) => (
+                        <TitleText key={item.text?.[0] ?? index} data={item} />
+                     ))}
 
                      <Button
                         variant="fill"

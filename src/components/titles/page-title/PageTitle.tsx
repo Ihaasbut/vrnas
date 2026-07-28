@@ -1,3 +1,5 @@
+"use client";
+
 import cn from "classnames";
 
 import ArcGlow from "@/components/ui/arc-glow/ArcGlow";

@@ -1,0 +1,38 @@
+.titleText {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.text {
+   color: $color-grey-1;
+}
+
+.texts {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.list {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   padding-left: 24px;
+}
+
+.listItem {
+   position: relative;
+   color: $color-grey-1;
+
+   &::before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      top: 11px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $color-grey-1;
+   }
+}
