@@ -10,6 +10,7 @@ import OurService from "../../components/sections/ourService/OurService";
 import AboutUsHome from "./components/aboutUsHome/AboutUsHome";
 import GetStarted from "./components/getStarted/GetStarted";
 import Hero from "./components/hero/Hero";
+import OurArticles from "./components/ourArticles/OurArticles";
 import { WHY_CHOOSE_US_DATA } from "./HomeContent.consts";
 
 function HomeContent() {
@@ -29,6 +30,7 @@ function HomeContent() {
          <OurPricing />
          <OurTrustedPartners isCenter />
          <Newsletter />
+         <OurArticles />
       </>
    );
 }

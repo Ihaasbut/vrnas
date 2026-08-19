@@ -3,3 +3,22 @@
    flex-direction: column;
    gap: 12px;
 }
+
+.headingDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.headingMobile {
+   display: none;
+
+   @include tablet {
+      display: block;
+   }
+}
+
+.center {
+   align-items: center;
+   text-align: center;
+}

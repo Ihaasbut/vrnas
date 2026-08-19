@@ -63,3 +63,17 @@
    padding: 2px 10px;
    border-radius: 16px;
 }
+
+.headingDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.headingMobile {
+   display: none;
+
+   @include tablet {
+      display: block;
+   }
+}

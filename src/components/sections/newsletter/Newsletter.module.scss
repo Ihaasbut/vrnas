@@ -23,6 +23,20 @@
    }
 }
 
+.headingDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.headingMobile {
+   display: none;
+
+   @include tablet {
+      display: block;
+   }
+}
+
 .right {
    flex: 1;
    width: 100%;

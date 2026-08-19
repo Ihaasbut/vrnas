@@ -6,16 +6,12 @@ import TitleText from "@/components/titleText/TitleText";
 import Button from "@/components/ui/button/Button";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import { CONTENT_DATA } from "./Content.consts";
 
 import styles from "./Content.module.scss";
 
 function Content() {
-   const { isDesktop } = useClientBreakpoint();
-   const inlinePadding = !isDesktop ? "16px 0" : "60px 0";
-
    const { section, title, sections, image, imageAlt, buttonText } =
       CONTENT_DATA;
 
@@ -26,7 +22,7 @@ function Content() {
 
    return (
       <section className={styles.wrapper}>
-         <Container inlinePadding={inlinePadding}>
+         <Container inlinePadding="end-none">
             <div className={styles.inner}>
                <div className={styles.left}>
                   <BlockTitle data={blockTitleData} />

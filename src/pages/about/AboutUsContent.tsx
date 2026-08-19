@@ -10,6 +10,7 @@ import PageTitle from "@/components/titles/page-title/PageTitle";
 import { FAQ_DATA, WHY_CHOOSE_US_DATA_2 } from "../price/PriceContent.consts";
 
 import AboutUsAbout from "./components/aboutUsAbout/AboutUsAbout";
+import TeamAbout from "./components/team/TeamAbout";
 import WhyChooseUsFeatures from "./components/whyChooseUsFeatures/WhyChooseUsFeatures";
 import { ABOUT_US_PAGE_TITLE } from "./AboutUsContent.consts";
 
@@ -24,6 +25,7 @@ function AboutUsContent() {
             image={whyChooseUsImage2}
             bgClassName="bg-home"
          />
+         <TeamAbout />
          <OurTrustedPartners isCenter />
          <Faq data={FAQ_DATA} page="about" isCenter />
          <Newsletter />

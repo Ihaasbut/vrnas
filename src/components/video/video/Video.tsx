@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import videoPlayIcon from "@/assets/images/video-play.svg";
 import Typography from "@/components/ui/typography/Typography";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import { VideoProps } from "./Video.types";
 
@@ -10,8 +9,6 @@ import styles from "./Video.module.scss";
 
 export function Video({ data }: VideoProps) {
    const { tag, title, image } = data;
-   const { isDesktop } = useClientBreakpoint();
-   const currentVariant = isDesktop ? "heading-4" : "heading-8";
 
    return (
       <div
@@ -22,7 +19,10 @@ export function Video({ data }: VideoProps) {
             {tag}
          </Typography>
 
-         <Typography variant={currentVariant} className={styles.title}>
+         <Typography variant="heading-4" className={styles.headingDesktop}>
+            {title}
+         </Typography>
+         <Typography variant="heading-8" className={styles.headingMobile}>
             {title}
          </Typography>
 

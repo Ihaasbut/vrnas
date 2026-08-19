@@ -6,7 +6,6 @@ import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
 import Button from "@/components/ui/button/Button";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import Features from "../../../../components/features/Features";
 import { FEATURES_DATA } from "../../../../components/features/Features.consts";
@@ -28,18 +27,23 @@ function Hero() {
       buttonText,
    } = HERO_DATA;
 
-   const { isDesktop } = useClientBreakpoint();
-
-   const heading = !isDesktop ? "heading-2" : "heading-1";
-   const inlinePadding = !isDesktop ? "16px 0" : "60px";
-   const bannerImageCurrent = !isDesktop ? bannerImageMobile : bannerImage;
-
    return (
       <div className={styles.hero}>
-         <Container inlinePadding={inlinePadding}>
+         <Container inlinePadding="end-none-until-desktop">
             <div className={styles.main}>
                <div className={styles.left}>
-                  <Typography variant={heading} as="h1">
+                  <Typography
+                     variant="heading-1"
+                     as="h1"
+                     className={styles.headingDesktop}
+                  >
+                     {title}
+                  </Typography>
+                  <Typography
+                     variant="heading-2"
+                     as="h1"
+                     className={styles.headingMobile}
+                  >
                      {title}
                   </Typography>
 
@@ -62,9 +66,14 @@ function Hero() {
                   <Image
                      loading="eager"
                      priority
-                     src={bannerImageCurrent}
+                     src={bannerImage}
                      alt={bannerAlt}
-                     className={styles.banner}
+                     className={styles.bannerDesktop}
+                  />
+                  <Image
+                     src={bannerImageMobile}
+                     alt={bannerAlt}
+                     className={styles.bannerMobile}
                   />
                   <ArcGlow className={styles.arcGlow} />
                </div>

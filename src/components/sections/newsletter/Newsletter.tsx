@@ -1,12 +1,9 @@
-"use client";
-
 import cn from "classnames";
 
 import Container from "@/components/ui/container/Container";
 import MailIcon from "@/components/ui/icons/MailIcon";
 import NewsletterIcon from "@/components/ui/icons/NewsletterIcon";
 import Typography from "@/components/ui/typography/Typography";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import { NEWSLETTER_DATA } from "./Newsletter.consts";
 
@@ -15,14 +12,25 @@ import typographyStyles from "@/components/ui/typography/Typography.module.scss"
 
 function Newsletter() {
    const { title, placeholder } = NEWSLETTER_DATA;
-   const { isDesktop } = useClientBreakpoint();
-   const currentHeading = isDesktop ? "heading-3" : "heading-6";
 
    return (
       <Container>
          <section className={styles.newsletter}>
             <div className={styles.left}>
-               <Typography variant={currentHeading}>{title}</Typography>
+               <Typography
+                  variant="heading-3"
+                  as="p"
+                  className={styles.headingDesktop}
+               >
+                  {title}
+               </Typography>
+               <Typography
+                  variant="heading-6"
+                  as="p"
+                  className={styles.headingMobile}
+               >
+                  {title}
+               </Typography>
             </div>
 
             <div className={styles.right}>

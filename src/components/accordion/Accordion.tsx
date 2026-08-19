@@ -1,3 +1,5 @@
+"use client";
+
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import cn from "classnames";
 

@@ -53,6 +53,20 @@
    white-space: pre-line;
 }
 
+.headingDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.headingMobile {
+   display: none;
+
+   @include tablet {
+      display: block;
+   }
+}
+
 .right {
    height: 626px;
    position: relative;
@@ -69,6 +83,24 @@
    object-position: bottom;
    position: relative;
    z-index: 5;
+}
+
+.bannerDesktop {
+   display: none;
+
+   @include desktop {
+      display: block;
+   }
+}
+
+.bannerMobile {
+   @include tablet {
+      display: block;
+   }
+
+   @include desktop {
+      display: none;
+   }
 }
 
 .arcGlow {

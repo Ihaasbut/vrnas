@@ -1,6 +1,5 @@
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import { STATS_DATA } from "./Stats.consts";
 import { StatsEl } from "./Stats.types";
@@ -8,9 +7,6 @@ import { StatsEl } from "./Stats.types";
 import styles from "./Stats.module.scss";
 
 function Stats() {
-   const { isDesktop } = useClientBreakpoint();
-   const currentHeading = !isDesktop ? "heading-2" : "heading-5";
-
    return (
       <Container>
          <section className={styles.statsWrapper}>
@@ -25,7 +21,18 @@ function Stats() {
                         {stat.label}
                      </Typography>
 
-                     <Typography variant={currentHeading} as="p">
+                     <Typography
+                        variant="heading-5"
+                        as="p"
+                        className={styles.headingDesktop}
+                     >
+                        {stat.value}
+                     </Typography>
+                     <Typography
+                        variant="heading-2"
+                        as="p"
+                        className={styles.headingMobile}
+                     >
                         {stat.value}
                      </Typography>
                   </div>

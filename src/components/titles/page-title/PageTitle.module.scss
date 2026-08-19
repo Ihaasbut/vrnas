@@ -15,6 +15,20 @@
    }
 }
 
+.headingDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.headingMobile {
+   display: none;
+
+   @include tablet {
+      display: block;
+   }
+}
+
 .arcGlow {
    width: 449px;
    height: 119px;

@@ -41,4 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 /.vscode
-/.cursor
+
+# Локальные настройки Cursor и внутренние заметки — не в публичный репозиторий
+.cursor/
+/docs/
