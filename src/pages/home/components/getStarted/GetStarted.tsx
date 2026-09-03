@@ -1,5 +1,3 @@
-"use client";
-
 import BlockTitle from "@/components/titles/block-title/BlockTitle";
 import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";
 import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
@@ -35,7 +33,7 @@ function GetStarted() {
 
                <Video data={videoData} />
 
-               <Button variant="fill" onClick={() => {}}>
+               <Button variant="fill">
                   <Typography variant="button-1">{buttonLabel}</Typography>
                </Button>
             </div>

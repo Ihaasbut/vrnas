@@ -1,5 +1,3 @@
-"use client";
-
 import whyChooseUsImage2 from "@/assets/images/why-choose-us.webp";
 import Faq from "@/components/sections/faq/Faq";
 import Newsletter from "@/components/sections/newsletter/Newsletter";

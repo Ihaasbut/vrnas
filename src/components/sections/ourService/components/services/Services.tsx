@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
@@ -37,7 +35,6 @@ function Services() {
                   <div className={cn(styles.cta, "border-brand")}>
                      <Button
                         variant="outline"
-                        onClick={() => {}}
                         className={styles.ctaButton}
                      >
                         <Typography variant="button-1" as="span">

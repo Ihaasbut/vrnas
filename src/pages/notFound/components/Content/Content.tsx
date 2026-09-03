@@ -32,10 +32,7 @@ function Content() {
                         <TitleText key={item.text?.[0] ?? index} data={item} />
                      ))}
 
-                     <Button
-                        variant="fill"
-                        onClick={() => console.log("click")}
-                     >
+                     <Button variant="fill" href="/">
                         <Typography variant="button-1" as="span">
                            {buttonText}
                         </Typography>

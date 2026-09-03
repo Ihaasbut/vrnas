@@ -1,5 +1,3 @@
-"use client";
-
 import cn from "classnames";
 
 import Button from "@/components/ui/button/Button";
@@ -23,7 +21,7 @@ function Tablo({ className }: TabloProps) {
             </Typography>
          </div>
 
-         <Button variant="fill" onClick={() => {}}>
+         <Button variant="fill">
             <Typography variant="button-1" as={"span"}>
                {TABLO_DATA.buttonText}
             </Typography>

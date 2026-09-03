@@ -1,8 +1,9 @@
 .windowScroll {
    width: 100%;
    max-width: 730px;
+   min-width: 0;
    height: 605px;
-   padding: 32px 72px 0 97px;
+   padding: 32px 90px 0 90px;
    background-color: $color-black-50;
    display: flex;
    flex-direction: column;
@@ -10,40 +11,59 @@
    border: 1px solid transparent;
 
    @include tablet {
-      height: 605px;
       padding: 20px 16px 13px;
       gap: 20px;
+      max-width: 100%;
    }
 }
 
 .list {
+   flex: 1;
+   min-height: 0;
    overflow-y: auto;
    padding-right: 46px;
 
-   scrollbar-width: thin;
-   scrollbar-color: $color-white rgba(255, 255, 255, 0.15);
-
    &::-webkit-scrollbar {
-      width: 2px;
+      width: 4px;
+   }
+
+   &::-webkit-scrollbar-button {
+      display: none;
+      width: 0;
+      height: 0;
    }
 
    &::-webkit-scrollbar-track {
       background: rgba(255, 255, 255, 0.15);
+      background-clip: padding-box;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
    }
 
    &::-webkit-scrollbar-thumb {
       background: $color-white;
       border-radius: 0;
    }
+
+   @supports not selector(::-webkit-scrollbar) {
+      scrollbar-width: thin;
+      scrollbar-color: $color-white rgba(255, 255, 255, 0.15);
+   }
+
+   @include tablet {
+      padding-right: 10px;
+   }
 }
 
 .item {
    display: flex;
    align-items: center;
+   min-width: 0;
    padding: 32px 0;
    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
    text-decoration: none;
    color: inherit;
+   gap: 10px;
 
    li:first-child & {
       padding-top: 0;
@@ -73,6 +93,8 @@
    flex-direction: column;
    align-items: flex-start;
    gap: 8px;
+   min-width: 0;
+   flex: 1;
 }
 
 .tag {

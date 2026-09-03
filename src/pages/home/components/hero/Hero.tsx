@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
@@ -51,7 +49,7 @@ function Hero() {
                      {description}
                   </Typography>
 
-                  <Button variant="fill" onClick={() => {}}>
+                  <Button variant="fill">
                      <Typography variant="button-1" as="span">
                         {buttonText}
                      </Typography>

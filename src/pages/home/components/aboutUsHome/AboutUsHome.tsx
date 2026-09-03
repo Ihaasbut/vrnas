@@ -1,5 +1,3 @@
-"use client";
-
 import aboutUsManImage from "@/assets/images/home/aboutUsHome/about-us-man.webp";
 import ImgTextBlock from "@/components/ImgTextBlock/ImgTextBlock";
 import List from "@/components/list/List";
@@ -39,7 +37,7 @@ function AboutUsHome() {
 
                <List data={listData} />
 
-               <Button variant="fill" onClick={() => {}}>
+               <Button variant="fill">
                   <Typography variant="button-1" as="span">
                      {buttonLabel}
                   </Typography>

@@ -1,5 +1,3 @@
-"use client";
-
 import Newsletter from "@/components/sections/newsletter/Newsletter";
 import OurPricing from "@/components/sections/ourPricing/OurPricing";
 import OurService from "@/components/sections/ourService/OurService";

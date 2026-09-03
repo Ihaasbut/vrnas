@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
@@ -17,7 +15,7 @@ function WindowScroll() {
    const data = WINDOW_SCROLL_DATA;
    return (
       <div className={cn(styles.windowScroll, "border-white-fade")}>
-         <Typography variant="heading-6" as="h3" className={styles.title}>
+         <Typography variant="heading-6" as="h3">
             Recent Article
          </Typography>
 
@@ -51,7 +49,6 @@ function WindowScroll() {
                      <Button
                         variant="ghost"
                         className={styles.arrow}
-                        onClick={() => {}}
                         isSkipPadding={true}
                      >
                         <ArrowNextIcon />

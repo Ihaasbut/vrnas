@@ -1,5 +1,3 @@
-"use client";
-
 import aboutUsManImage from "@/assets/images/our-pricing-man.webp";
 import ImgTextBlock from "@/components/ImgTextBlock/ImgTextBlock";
 import { BlockTitleData } from "@/components/titles/block-title/BlockTitle.types";

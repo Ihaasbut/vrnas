@@ -1,6 +1,4 @@
-"use client";
-
-import Link from "next/link";
+import cn from "classnames";
 
 import TeamWorker from "@/components/teamWorker/TeamWorker";
 import { TEAM_WORKERS_DATA } from "@/components/teamWorker/TeamWorker.consts";
@@ -42,17 +40,15 @@ function TeamAbout() {
                ))}
             </div>
 
-            <Link href="/team" className={styles.seeAll}>
-               <Button
-                  variant="outline"
-                  onClick={() => {}}
-                  className={styles.button}
-               >
-                  <Typography variant="button-1" as="span">
-                     {buttonText}
-                  </Typography>
-               </Button>
-            </Link>
+            <Button
+               href="/team"
+               variant="outline"
+               className={cn(styles.button, styles.seeAll)}
+            >
+               <Typography variant="button-1" as="span">
+                  {buttonText}
+               </Typography>
+            </Button>
          </section>
       </Container>
    );

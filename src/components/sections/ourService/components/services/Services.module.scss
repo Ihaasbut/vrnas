@@ -35,6 +35,11 @@
 
 .ctaButton {
    z-index: 3;
+   padding: 18px 38px;
+   color: $color-white;
+   width: fit-content;
+   background: rgba(255, 255, 255, 0.06);
+   position: relative;
 }
 
 .service {

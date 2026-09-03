@@ -49,7 +49,7 @@ function Header() {
 
                <div className={styles.desktopOnly}>
                   <Nav data={navData} />
-                  <Button variant="ghost" onClick={() => {}}>
+                  <Button variant="ghost">
                      <Typography variant="button-2" as="span">
                         {HEADER_BUTTON_TEXT}
                      </Typography>

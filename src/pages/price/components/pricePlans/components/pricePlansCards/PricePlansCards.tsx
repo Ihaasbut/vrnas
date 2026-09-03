@@ -1,5 +1,3 @@
-"use client";
-
 import cn from "classnames";
 
 import Button from "@/components/ui/button/Button";
@@ -53,7 +51,6 @@ function PricePlansCards({ data }: PricePlansCardsProps) {
 
                   <Button
                      variant={currentButton}
-                     onClick={() => {}}
                      className={styles.pricePlanCardButton}
                   >
                      <Typography variant="button-1" as="span">
