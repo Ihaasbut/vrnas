@@ -13,6 +13,7 @@ import styles from "./WindowScroll.module.scss";
 
 function WindowScroll() {
    const data = WINDOW_SCROLL_DATA;
+
    return (
       <div className={cn(styles.windowScroll, "border-white-fade")}>
          <Typography variant="heading-6" as="h3">

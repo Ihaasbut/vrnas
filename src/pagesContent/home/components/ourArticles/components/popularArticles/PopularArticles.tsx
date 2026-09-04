@@ -31,11 +31,11 @@ function PopularArticles() {
                slidesPerView={1}
                loop
                pagination={{ clickable: true }}
-               // autoplay={{
-               //    delay: 3000,
-               //    disableOnInteraction: false,
-               //    pauseOnMouseEnter: true,
-               // }}
+               autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+               }}
             >
                {data.map((article: PopularArticle) => (
                   <SwiperSlide key={article.id}>
