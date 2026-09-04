@@ -1,0 +1,23 @@
+.container {
+   padding-inline: 16px;
+
+   @include desktop {
+      padding-inline: 60px;
+   }
+}
+
+.end-none-until-desktop {
+   padding-inline: 16px 0;
+
+   @include desktop {
+      padding-inline: 60px;
+   }
+}
+
+.end-none {
+   padding-inline: 16px 0;
+
+   @include desktop {
+      padding-inline: 60px 0;
+   }
+}

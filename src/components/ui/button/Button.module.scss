@@ -13,6 +13,8 @@
 // }
 
 .button {
+   display: inline-block;
+   text-decoration: none;
    padding: 18px 38px;
    cursor: pointer;
    color: $color-white;

@@ -2,6 +2,18 @@
    position: absolute;
    z-index: 3;
    pointer-events: none;
+   top: var(--pos-mobile-top);
+   left: var(--pos-mobile-left);
+
+   @media (min-width: 768px) and (max-width: 1023px) {
+      top: var(--pos-tablet-top);
+      left: var(--pos-tablet-left);
+   }
+
+   @include desktop {
+      top: var(--pos-desktop-top);
+      left: var(--pos-desktop-left);
+   }
 
    &.active {
       z-index: 10;
@@ -65,6 +77,17 @@
 .tooltip {
    position: absolute;
    transition: transform 0.2s ease-in-out;
+   top: calc(var(--pos-mobile-top) - 12px);
+
+   @media (min-width: 768px) and (max-width: 1023px) {
+      top: var(--pos-tablet-top);
+      left: var(--pos-tablet-left);
+   }
+
+   @include desktop {
+      top: var(--pos-desktop-top);
+      left: var(--pos-desktop-left);
+   }
 }
 
 .clientAvatar {

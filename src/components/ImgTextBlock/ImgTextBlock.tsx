@@ -37,7 +37,7 @@ function ImgTextBlock({
          </div>
 
          <div className={styles.right}>
-            <BlockTitle data={data} isCenter />
+            <BlockTitle data={data} />
             {children}
          </div>
       </div>

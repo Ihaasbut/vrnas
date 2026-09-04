@@ -5,6 +5,10 @@
    align-items: center;
 }
 
+.breadcrumbs {
+   flex-wrap: wrap;
+}
+
 .breadcrumb {
    &:last-child {
       overflow: hidden;

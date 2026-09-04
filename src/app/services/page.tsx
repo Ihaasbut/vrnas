@@ -1,4 +1,4 @@
-import ServiceContent from "@/pages/services/ServicesContent";
+import ServiceContent from "@/pagesContent/services/ServicesContent";
 
 export default function Services() {
    return <ServiceContent />;

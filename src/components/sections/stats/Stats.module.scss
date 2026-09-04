@@ -55,3 +55,17 @@
    gap: 12px;
    text-align: center;
 }
+
+.headingDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.headingMobile {
+   display: none;
+
+   @include tablet {
+      display: block;
+   }
+}

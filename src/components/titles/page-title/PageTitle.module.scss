@@ -8,9 +8,24 @@
    gap: 24px;
    padding: 70px 0;
    border-bottom: 1px solid transparent;
+   text-align: center;
 
    @include mobile {
       padding: 64px 0;
+   }
+}
+
+.headingDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.headingMobile {
+   display: none;
+
+   @include tablet {
+      display: block;
    }
 }
 

@@ -13,6 +13,10 @@ export const NAV_SECTIONS: NavLinkSectionEl[] = [
             href: "/",
          },
          {
+            title: "О нас",
+            href: "/about",
+         },
+         {
             title: "Тарифы",
             href: "/price",
          },
@@ -22,11 +26,11 @@ export const NAV_SECTIONS: NavLinkSectionEl[] = [
          },
          {
             title: "Блог",
-            href: "/about",
+            href: "/blog",
          },
          {
             title: "Наша команда",
-            href: "/contact",
+            href: "/team",
          },
       ],
    },
@@ -47,11 +51,11 @@ export const NAV_SECTIONS: NavLinkSectionEl[] = [
          },
          {
             title: "Условия использования",
-            href: "/about",
+            href: "/terms",
          },
          {
             title: "Политика конфиденциальности",
-            href: "/contact",
+            href: "/privacy",
          },
       ],
    },

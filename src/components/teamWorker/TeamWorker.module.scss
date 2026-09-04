@@ -1,0 +1,49 @@
+.teamWorker {
+   padding: 12px;
+   aspect-ratio: 379 / 503;
+   width: 100%;
+   min-width: 0;
+   max-width: 420px;
+   background-color: $color-black-50;
+   border: 1px solid transparent;
+   border-image: $color-white-fade 1;
+
+   @include hover {
+      border-image: $color-brand 1;
+   }
+}
+
+.image {
+   position: relative;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+
+   &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+         180deg,
+         rgba(50, 70, 188, 0) 0%,
+         rgba(25, 40, 131, 1) 100%
+      );
+      pointer-events: none;
+   }
+}
+
+.img {
+   object-fit: cover;
+}
+
+.text {
+   position: relative;
+   z-index: 1;
+   padding: 0 16px 20px;
+   text-align: center;
+
+   span {
+      color: $color-grey-1;
+   }
+}

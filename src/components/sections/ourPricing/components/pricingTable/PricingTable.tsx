@@ -5,7 +5,7 @@ import tableImage from "@/assets/images/our-pricing-man.webp";
 
 import Tablo from "./components/aside/Tablo";
 import Benefits from "./components/benefits/Benefits";
-import { BENEFITS_DATA_CONFIG } from "./components/benefits/Benefits.consts";
+import { BENEFITS_DATA } from "./components/benefits/Benefits.consts";
 
 import styles from "./PricingTable.module.scss";
 
@@ -13,7 +13,7 @@ function PricingTable() {
    return (
       <div className={cn(styles.tableWrapper, "border-white-fade")}>
          <div className={styles.left}>
-            <Benefits data={BENEFITS_DATA_CONFIG} />
+            <Benefits data={BENEFITS_DATA} />
          </div>
 
          <div className={styles.right}>

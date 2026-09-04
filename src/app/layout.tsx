@@ -4,8 +4,6 @@ import localFont from "next/font/local";
 import Footer from "@/layouts/footer/Footer";
 import Header from "@/layouts/header/Header";
 
-import ClientLayoutGate from "../layouts/ClientLayoutGate";
-
 import "@/assets/styles/globals.scss";
 
 const chakraPetch = localFont({
@@ -31,13 +29,11 @@ export default function RootLayout({
    return (
       <html lang="en" className={fonts}>
          <body>
-            <ClientLayoutGate>
-               <div className="page-bg">
-                  <Header />
-                  {children}
-                  <Footer />
-               </div>
-            </ClientLayoutGate>
+            <div className="page-bg">
+               <Header />
+               {children}
+               <Footer />
+            </div>
          </body>
       </html>
    );

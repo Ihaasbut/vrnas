@@ -1,0 +1,22 @@
+.teamWorkers {
+   margin-top: 150px;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+
+   @include tablet {
+      margin-top: 100px;
+   }
+}
+
+.teamWorkersList {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 30px;
+   margin-top: 40px;
+
+   @include mobile {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      justify-items: center;
+   }
+}

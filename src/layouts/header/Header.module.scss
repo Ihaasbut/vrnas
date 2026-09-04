@@ -27,3 +27,17 @@
       background-color: $color-black-100;
    }
 }
+
+.desktopOnly {
+   display: none;
+
+   @include desktop {
+      display: contents;
+   }
+}
+
+.untilDesktop {
+   @include desktop {
+      display: none;
+   }
+}

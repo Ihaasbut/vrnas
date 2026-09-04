@@ -4,6 +4,8 @@
    flex-direction: column;
    gap: 58px;
    margin-bottom: -90px;
+   overflow: hidden;
+   pointer-events: none;
 
    @include tablet {
       margin-top: 100px;
@@ -12,6 +14,7 @@
 }
 
 .imageWrapper {
+   position: relative;
    width: 100%;
    height: auto;
    margin: 0 auto;
@@ -21,5 +24,77 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+   }
+
+   @include mobile {
+      overflow: hidden;
+   }
+}
+
+.clients {
+   position: absolute;
+   top: 9%;
+   left: 50%;
+   width: 88%;
+   max-width: 960px;
+   aspect-ratio: 2 / 1;
+   margin: 0;
+   padding: 0;
+   transform: translateX(-51%);
+
+   @include mobile {
+      top: 8%;
+      width: 90%;
+   }
+}
+
+.client {
+   position: absolute;
+   inset: 0;
+   transform: rotate(calc(-90deg + var(--index) * 30deg));
+   transform-origin: 50% 95%;
+}
+
+.badge {
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   align-items: center;
+   justify-content: center;
+   width: 104px;
+   aspect-ratio: 1;
+   color: rgba(255, 255, 255, 0.82);
+   text-align: center;
+   translate: -50% -50%;
+   // rotate: calc(var(--index) * -30deg + 90deg);
+   animation: client-breathe 3.6s ease-in-out calc(var(--index) * -0.5s)
+      infinite;
+
+   @include tablet {
+      width: 80px;
+      font-size: 9px;
+   }
+
+   @include mobile {
+      width: 35px;
+      font-size: 6px;
+   }
+}
+
+@keyframes client-breathe {
+   0%,
+   100% {
+      scale: 1;
+   }
+
+   50% {
+      scale: 1.05;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .badge {
+      animation: none;
    }
 }

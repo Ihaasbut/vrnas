@@ -1,6 +1,6 @@
 import { StatsEl } from "./Stats.types";
 
-export const STATS_DATA_CONFIG: StatsEl[] = [
+export const STATS_DATA: StatsEl[] = [
    { label: "Довольные клиенты", value: "123k+" },
    { label: "Завершенные проекты", value: "300k+" },
    { label: "Лет опыта", value: "10+" },

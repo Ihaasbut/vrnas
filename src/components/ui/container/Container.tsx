@@ -1,15 +1,17 @@
-"use client";
-
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
+import cn from "classnames";
 
 import { ContainerProps } from "./Container.types";
 
-function Container({ children, inlinePadding }: ContainerProps) {
-   const { isDesktop } = useClientBreakpoint();
-   const defaultInlinePadding = !isDesktop ? "16px" : "60px";
+import styles from "./Container.module.scss";
 
+function Container({ children, inlinePadding }: ContainerProps) {
    return (
-      <div style={{ paddingInline: inlinePadding || defaultInlinePadding }}>
+      <div
+         className={cn(
+            styles.container,
+            inlinePadding && styles[inlinePadding],
+         )}
+      >
          {children}
       </div>
    );

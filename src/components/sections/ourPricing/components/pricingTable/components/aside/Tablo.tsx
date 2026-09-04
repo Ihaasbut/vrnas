@@ -1,11 +1,9 @@
-"use client";
-
 import cn from "classnames";
 
 import Button from "@/components/ui/button/Button";
 import Typography from "@/components/ui/typography/Typography";
 
-import { TABLO_CONFIG } from "./Tablo.consts";
+import { TABLO_DATA } from "./Tablo.consts";
 import { TabloProps } from "./Tablo.types";
 
 import styles from "./Tablo.module.scss";
@@ -15,22 +13,22 @@ function Tablo({ className }: TabloProps) {
       <div className={cn(styles.tablo, "border-brand", className)}>
          <div className={styles.price}>
             <Typography variant="caption-2" as={"span"}>
-               {TABLO_CONFIG.headerText}
+               {TABLO_DATA.headerText}
             </Typography>
 
             <Typography variant="heading-2" as={"h4"}>
-               {TABLO_CONFIG.price}
+               {TABLO_DATA.price}
             </Typography>
          </div>
 
-         <Button variant="fill" onClick={() => {}}>
+         <Button variant="fill">
             <Typography variant="button-1" as={"span"}>
-               {TABLO_CONFIG.buttonText}
+               {TABLO_DATA.buttonText}
             </Typography>
          </Button>
 
          <Typography variant="body-4" as={"p"}>
-            {TABLO_CONFIG.guarantee}
+            {TABLO_DATA.guarantee}
          </Typography>
       </div>
    );

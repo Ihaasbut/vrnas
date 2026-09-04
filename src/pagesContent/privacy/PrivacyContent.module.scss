@@ -1,0 +1,8 @@
+.privacyContent {
+   h2 {
+      @include mobile {
+         font-size: 28px;
+         line-height: 38px;
+      }
+   }
+}

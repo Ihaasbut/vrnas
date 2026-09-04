@@ -9,7 +9,6 @@ import Logo from "@/assets/images/logo.webp";
 import Button from "@/components/ui/button/Button";
 import Container from "@/components/ui/container/Container";
 import Typography from "@/components/ui/typography/Typography";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import BurgerMenu from "./components/burger-menu/BurgerMenu";
 import Nav from "./components/nav/Nav";
@@ -20,7 +19,6 @@ import { HEADER_BUTTON_TEXT, HEADER_SCROLL_OFFSET } from "./Header.consts";
 import styles from "./Header.module.scss";
 
 function Header() {
-   const { isDesktop } = useClientBreakpoint();
    const navData: NavData = {
       navLinks: NAV_LINKS_DATA,
    };
@@ -49,17 +47,18 @@ function Header() {
                   <Image src={Logo} alt="Логотип" className={styles.logo} />
                </Link>
 
-               {isDesktop && <Nav data={navData} />}
-
-               {isDesktop && (
-                  <Button variant="ghost" onClick={() => {}}>
+               <div className={styles.desktopOnly}>
+                  <Nav data={navData} />
+                  <Button variant="ghost">
                      <Typography variant="button-2" as="span">
                         {HEADER_BUTTON_TEXT}
                      </Typography>
                   </Button>
-               )}
+               </div>
 
-               {!isDesktop && <BurgerMenu />}
+               <div className={styles.untilDesktop}>
+                  <BurgerMenu />
+               </div>
             </div>
          </Container>
       </div>

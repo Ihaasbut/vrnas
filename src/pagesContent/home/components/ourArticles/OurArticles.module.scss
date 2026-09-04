@@ -1,0 +1,74 @@
+.ourArticles {
+   margin-top: 150px;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+
+   @include tablet {
+      margin-top: 100px;
+   }
+
+   @include desktop {
+      gap: 60px;
+   }
+}
+
+.heading {
+   @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+   }
+}
+
+.articles {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+
+   @include desktop {
+      position: relative;
+      display: block;
+      min-width: 0;
+   }
+}
+
+.popular {
+   @include desktop {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 48%;
+      max-width: 636px;
+      min-width: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+   }
+}
+
+.content {
+   @include desktop {
+      width: 56%;
+      min-width: 0px;
+      max-width: 827px;
+      margin-left: auto;
+   }
+}
+
+.seeAllDesktop {
+   @include tablet {
+      display: none;
+   }
+}
+
+.seeAllMobile {
+   display: none;
+
+   @include tablet {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+   }
+}

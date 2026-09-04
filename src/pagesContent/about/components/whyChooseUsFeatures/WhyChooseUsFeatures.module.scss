@@ -1,0 +1,32 @@
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   padding-top: 150px;
+   background-image: url("../../../../assets/images/home/hero/hero-bg-left-bottom-desktop.svg");
+   background-size: 988px auto;
+   background-position: 0 -193px;
+   background-repeat: no-repeat;
+   overflow-x: clip;
+
+   @include tablet {
+      background-image: url("../../../../assets/images/home/hero/hero-bg-left-bottom-mobile.svg");
+      background-size: 500px auto;
+      padding-top: 100px;
+      background-position: 0 -75px;
+   }
+
+   @include mobile {
+      background-position: 0 0;
+   }
+}
+
+.inner {
+   display: flex;
+   flex-direction: column;
+   gap: 54px;
+
+   @include tablet {
+      gap: 32px;
+   }
+}

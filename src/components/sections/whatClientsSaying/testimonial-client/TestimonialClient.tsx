@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import cn from "classnames";
+import type { CSSProperties } from "react";
 
 import ArcGlow from "@/components/ui/arc-glow/ArcGlow";
-import { useClientBreakpoint } from "@/hooks/useClientBreakpoint";
 
 import TestimonialClientTooltip from "./TestimonialClientTooltip/TestimonialClientTooltip";
 import { TestimonialTooltipData } from "./TestimonialClientTooltip/TestimonialClientTooltip.types";
@@ -18,33 +18,20 @@ function TestimonialClient({
    onActivate,
 }: TestimonialClientProps) {
    const { client } = data;
-   const { isDesktop, isTablet, isMobile } = useClientBreakpoint();
    const { desktop, tablet, mobile } = client.position;
 
-   let currentPosition;
-
-   if (isDesktop) {
-      currentPosition = desktop;
-   } else if (isTablet) {
-      currentPosition = tablet;
-   } else {
-      currentPosition = mobile;
-   }
-
-   const clientStyles = {
-      top: currentPosition.top,
-      left: currentPosition.left,
-   };
+   const positionVars = {
+      "--pos-desktop-top": desktop.top,
+      "--pos-desktop-left": desktop.left,
+      "--pos-tablet-top": tablet.top,
+      "--pos-tablet-left": tablet.left,
+      "--pos-mobile-top": mobile.top,
+      "--pos-mobile-left": mobile.left,
+   } as CSSProperties;
 
    const tooltipData: TestimonialTooltipData = {
       tooltip: client.tooltip,
    };
-
-   const tooltipStyles = isMobile
-      ? {
-           top: `calc(${currentPosition.top} - 12px)`,
-        }
-      : clientStyles;
 
    return (
       <>
@@ -53,13 +40,13 @@ function TestimonialClient({
                data={tooltipData}
                className={styles.tooltip}
                isActive={isActive}
-               style={tooltipStyles}
+               style={positionVars}
             />
          </div>
 
          <div
             className={cn(styles.client, isActive && styles.active)}
-            style={clientStyles}
+            style={positionVars}
          >
             <button
                type="button"
