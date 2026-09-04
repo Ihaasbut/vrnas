@@ -1,4 +1,4 @@
-import TeamContent from "@/pages/team/TeamContent";
+import TeamContent from "@/pagesContent/team/TeamContent";
 
 export default function TeamPage() {
    return <TeamContent />;

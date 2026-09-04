@@ -1,4 +1,4 @@
-import PriceContent from "@/pages/price/PriceContent";
+import PriceContent from "@/pagesContent/price/PriceContent";
 
 export default function Services() {
    return <PriceContent />;
