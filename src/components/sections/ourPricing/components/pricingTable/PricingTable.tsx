@@ -18,7 +18,7 @@ function PricingTable() {
 
          <div className={styles.right}>
             <div className={styles.imageWrapper}>
-               <Image src={tableImage} alt="VR pricing" />
+               <Image src={tableImage} alt="Мужчина в VR" />
             </div>
 
             <Tablo className={styles.tablo} />

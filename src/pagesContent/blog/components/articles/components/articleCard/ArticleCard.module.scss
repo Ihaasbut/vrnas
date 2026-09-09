@@ -1,0 +1,30 @@
+.card {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   background-color: $color-black-50;
+   text-decoration: none;
+   color: inherit;
+   border: 1px solid transparent;
+}
+
+.image {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   aspect-ratio: 411 / 250;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   padding: 16px 24px 32px;
+   align-items: flex-start;
+}
+
+.readMore {
+   margin-top: auto;
+   color: $color-purple-10;
+   text-decoration: underline;
+}

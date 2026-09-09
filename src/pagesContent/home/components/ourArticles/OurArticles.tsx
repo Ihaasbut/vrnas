@@ -5,7 +5,7 @@ import Typography from "@/components/ui/typography/Typography";
 
 import ContentArticles from "./components/content/ContentArticles";
 import PopularArticles from "./components/popularArticles/PopularArticles";
-import { OUR_ARTICLES_TITLE } from "./OurArticles.consts";
+import { OUR_ARTICLES_SEE_ALL, OUR_ARTICLES_TITLE } from "./OurArticles.consts";
 
 import styles from "./OurArticles.module.scss";
 
@@ -17,7 +17,7 @@ function OurArticles() {
                <BlockTitle data={OUR_ARTICLES_TITLE} />
                <Button variant="outline" className={styles.seeAllDesktop}>
                   <Typography variant="button-1" as="span">
-                     See All
+                     {OUR_ARTICLES_SEE_ALL}
                   </Typography>
                </Button>
             </div>
@@ -38,7 +38,7 @@ function OurArticles() {
             <Container>
                <Button variant="outline">
                   <Typography variant="button-1" as="span">
-                     See All
+                     {OUR_ARTICLES_SEE_ALL}
                   </Typography>
                </Button>
             </Container>

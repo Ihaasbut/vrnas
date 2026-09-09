@@ -6,7 +6,7 @@ import { HeroClientsData } from "./Clients.types";
 
 export const HERO_CLIENTS_DATA: HeroClientsData = {
    clientsCount: "32k+",
-   clientsLabel: "Happy\u00A0Client",
+   clientsLabel: "довольных\u00A0клиентов",
    clientsImage: [
       {
          image: clientImage1,

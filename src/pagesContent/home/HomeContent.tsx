@@ -29,8 +29,8 @@ function HomeContent() {
          <WhatClientsSaying />
          <OurPricing />
          <OurTrustedPartners isCenter />
-         <Newsletter />
          <OurArticles />
+         <Newsletter />
       </>
    );
 }

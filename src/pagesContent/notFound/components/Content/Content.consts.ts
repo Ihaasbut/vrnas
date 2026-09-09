@@ -31,5 +31,5 @@ export const CONTENT_DATA: ContentData = {
    ],
    buttonText: "На главную",
    image: manInCircleImage,
-   imageAlt: "Man in circle",
+   imageAlt: "Мужчина в круге",
 };

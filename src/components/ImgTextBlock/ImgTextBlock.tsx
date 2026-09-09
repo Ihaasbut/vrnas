@@ -24,7 +24,11 @@ function ImgTextBlock({
                <ArcGlow className={styles.arcGlow} />
 
                <div className={styles.image}>
-                  <Image src={image} alt="string" className={styles.imageMan} />
+                  <Image
+                     src={image}
+                     alt="Мужчина в VR"
+                     className={styles.imageMan}
+                  />
                </div>
 
                <MiniVideo
