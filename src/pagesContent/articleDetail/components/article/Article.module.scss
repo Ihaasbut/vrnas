@@ -24,8 +24,8 @@
    text-transform: uppercase;
    color: $color-grey-2;
    letter-spacing: 14%;
-   width: 100%;
-   word-wrap: normal;
+   width: max-content;
+   max-width: 100%;
 }
 
 .image {

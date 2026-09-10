@@ -3,10 +3,14 @@
    flex-direction: column;
    gap: 12px;
    width: 100%;
-}
+   min-width: 0;
 
-.tags {
-   word-spacing: 3px;
-   line-height: 28px;
-   width: 100%;
+   .tags {
+      word-spacing: 3px;
+      line-height: 28px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-wrap: anywhere;
+   }
 }
