@@ -13,11 +13,11 @@ function MenSidesWrapper({ children }: MenSidesWrapperProps) {
             {children}
 
             <div className={styles.menSidesSideLeft}>
-               <Image src={manImage} alt="Men Sides Side Left" />
+               <Image src={manImage} alt="Мужчина в VR" />
             </div>
 
             <div className={styles.menSidesSideRight}>
-               <Image src={manImage} alt="Men Sides Side Right" />
+               <Image src={manImage} alt="Мужчина в VR" />
             </div>
             <div className={styles.menSidesSideBottom}></div>
          </div>

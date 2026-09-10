@@ -1,7 +1,7 @@
 import { TermsData } from "./Terms.types";
 
 export const TERMS_DATA: TermsData = {
-   section: "TERMS & CONDITIONS",
+   section: "Условия",
    title: "Условия использования",
    description:
       "Добро пожаловать в VRNas. Пожалуйста, внимательно ознакомьтесь с настоящими Условиями использования перед тем, как пользоваться нашим сайтом и услугами.",

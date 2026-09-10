@@ -1,7 +1,7 @@
 import { PrivacyData } from "./Privacy.types";
 
 export const PRIVACY_DATA: PrivacyData = {
-   section: "PRIVACY POLICY",
+   section: "Конфиденциальность",
    title: "Политика конфиденциальности",
    description:
       "Настоящая Политика конфиденциальности описывает, как VRNas собирает, использует и защищает персональные данные посетителей сайта и клиентов.",

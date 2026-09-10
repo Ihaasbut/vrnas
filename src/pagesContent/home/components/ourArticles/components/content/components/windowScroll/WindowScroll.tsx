@@ -4,24 +4,26 @@ import cn from "classnames";
 
 import Button from "@/components/ui/button/Button";
 import ArrowNextIcon from "@/components/ui/icons/ArrowNextIcon";
+import Tag from "@/components/ui/tag/Tag";
 import Typography from "@/components/ui/typography/Typography";
+import { ARTICLES_DATA } from "@/pagesContent/blog/components/articles/Articles.consts";
+import { Article } from "@/pagesContent/blog/components/articles/Articles.types";
 
-import { WINDOW_SCROLL_DATA } from "./WindowScroll.consts";
-import { WindowScrollArticle } from "./WindowScroll.types";
+import { WINDOW_SCROLL_HEADING } from "./WindowScroll.consts";
 
 import styles from "./WindowScroll.module.scss";
 
 function WindowScroll() {
-   const data = WINDOW_SCROLL_DATA;
+   const data = ARTICLES_DATA;
 
    return (
       <div className={cn(styles.windowScroll, "border-white-fade")}>
          <Typography variant="heading-6" as="h3">
-            Recent Article
+            {WINDOW_SCROLL_HEADING}
          </Typography>
 
          <ul className={styles.list}>
-            {data.map((article: WindowScrollArticle) => (
+            {data.map((article: Article) => (
                <li key={article.id}>
                   <Link href={article.link} className={styles.item}>
                      <div className={styles.thumbnail}>
@@ -34,13 +36,7 @@ function WindowScroll() {
                      </div>
 
                      <div className={styles.content}>
-                        <Typography
-                           variant="caption-3"
-                           as="span"
-                           className={styles.tag}
-                        >
-                           {article.tag}
-                        </Typography>
+                        <Tag variant="caption-2">{article.tag}</Tag>
 
                         <Typography variant="heading-9" as="h4">
                            {article.title}

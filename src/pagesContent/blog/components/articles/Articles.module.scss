@@ -1,0 +1,22 @@
+.articles {
+   margin-top: 150px;
+
+   @include tablet {
+      margin-top: 100px;
+   }
+}
+
+.list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 32px;
+   scroll-margin-top: 110px;
+
+   @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @include mobile {
+      grid-template-columns: 1fr;
+   }
+}

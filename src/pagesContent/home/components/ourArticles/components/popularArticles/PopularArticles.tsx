@@ -6,10 +6,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import Button from "@/components/ui/button/Button";
 import ArrowNextIcon from "@/components/ui/icons/ArrowNextIcon";
+import Tag from "@/components/ui/tag/Tag";
 import Typography from "@/components/ui/typography/Typography";
+import { ARTICLES_DATA } from "@/pagesContent/blog/components/articles/Articles.consts";
+import { Article } from "@/pagesContent/blog/components/articles/Articles.types";
 
-import { POPULAR_ARTICLES_DATA } from "./PopularArticles.consts";
-import { PopularArticle } from "./PopularArticles.types";
+import {
+   POPULAR_ARTICLES_HEADING,
+   POPULAR_ARTICLES_LIMIT,
+} from "./PopularArticles.consts";
 
 import styles from "./PopularArticles.module.scss";
 
@@ -17,12 +22,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function PopularArticles() {
-   const data = POPULAR_ARTICLES_DATA;
+   const data = [...ARTICLES_DATA]
+      .sort((a, b) => b.popularity - a.popularity)
+      .slice(0, POPULAR_ARTICLES_LIMIT);
 
    return (
       <div className={styles.popularArticles}>
          <Typography variant="heading-6" as="h3">
-            Popular Article
+            {POPULAR_ARTICLES_HEADING}
          </Typography>
 
          <div className={styles.slider}>
@@ -37,7 +44,7 @@ function PopularArticles() {
                   pauseOnMouseEnter: true,
                }}
             >
-               {data.map((article: PopularArticle) => (
+               {data.map((article: Article) => (
                   <SwiperSlide key={article.id}>
                      <div className={styles.card}>
                         <Image
@@ -48,13 +55,7 @@ function PopularArticles() {
 
                         <div className={styles.overlay}>
                            <div className={styles.content}>
-                              <Typography
-                                 variant="caption-2"
-                                 as="span"
-                                 className={styles.tag}
-                              >
-                                 {article.tag}
-                              </Typography>
+                              <Tag variant="caption-2">{article.tag}</Tag>
 
                               <Typography variant="heading-9" as="h4">
                                  {article.title}

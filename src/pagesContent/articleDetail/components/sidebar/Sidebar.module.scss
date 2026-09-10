@@ -1,0 +1,11 @@
+.sidebar {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   min-width: 0;
+
+   @include desktop {
+      position: sticky;
+      top: 110px;
+   }
+}
