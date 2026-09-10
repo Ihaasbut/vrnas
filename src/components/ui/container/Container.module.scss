@@ -21,3 +21,11 @@
       padding-inline: 60px 0;
    }
 }
+
+.end-none-mobile {
+   padding-inline: 16px;
+
+   @include desktop {
+      padding-inline: 60px 0;
+   }
+}
