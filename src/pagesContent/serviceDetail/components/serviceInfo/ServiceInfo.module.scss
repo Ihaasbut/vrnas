@@ -1,0 +1,69 @@
+.serviceInfo {
+   margin-top: 80px;
+   overflow: hidden;
+}
+
+.scene {
+   position: relative;
+   width: 1247px;
+   height: 1247px;
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+.orbit {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   flex-shrink: 0;
+   border-radius: 50%;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   transform: translate(-50%, -50%);
+   pointer-events: none;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 24px;
+   width: 620px;
+   padding: 234px 16px 0;
+
+   margin: 0 auto;
+
+   @include tablet {
+      width: 100%;
+   }
+}
+
+.paragraph {
+   color: $color-grey-1;
+}
+
+.features {
+   width: 100%;
+   max-width: 430px;
+   padding: 24px;
+   background: $color-black-50;
+   border: 1px solid transparent;
+   text-align: left;
+}
+
+.featuresList {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   margin-top: 16px;
+}
+
+.feature {
+   display: flex;
+   align-items: flex-start;
+   gap: 8px;
+
+   svg {
+      min-width: 16px;
+      margin-top: 2px;
+   }
+}

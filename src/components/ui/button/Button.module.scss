@@ -20,6 +20,8 @@
    color: $color-white;
    position: relative;
    width: fit-content;
+   border-width: 1px;
+   border-style: solid;
 
    &::before {
       content: "";
