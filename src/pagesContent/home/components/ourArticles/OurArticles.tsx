@@ -23,7 +23,7 @@ function OurArticles() {
             </div>
          </Container>
 
-         <Container inlinePadding="end-none">
+         <Container inlinePadding="end-none-mobile">
             <div className={styles.articles}>
                <div className={styles.popular}>
                   <PopularArticles />
