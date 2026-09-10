@@ -43,7 +43,7 @@ export const NAV_SECTIONS: NavLinkSectionEl[] = [
          },
          {
             title: "Связаться с нами",
-            href: "/about",
+            href: "/call",
          },
          {
             title: "Частые вопросы",
@@ -64,7 +64,7 @@ export const NAV_SECTIONS: NavLinkSectionEl[] = [
       links: [
          {
             title: "ул. Тверская, д. 12, Москва",
-            href: "/about",
+            href: "/street",
             icon: LocationIcon,
          },
          {
